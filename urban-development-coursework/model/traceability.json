@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "status": "algorithms_complete_classes_pending",
+  "status": "algorithms_complete_reviewed_classes_pending",
   "methodology": {
     "main_use_case_rule": [
       "P0102",
@@ -36,7 +36,7 @@
         "classification": "top_level",
         "decomposition_diagram": "ProjectCreation",
         "behavior_diagram": "ProjectCreation",
-        "status": "algorithms_complete",
+        "status": "algorithms_complete_reviewed",
         "behavior_type": "UMLActivityDiagram",
         "behavior_activity_id": "ALG2_ProjectCreation_Activity",
         "behavior_diagram_id": "ALG2_ProjectCreation_ActivityDiagram"
@@ -47,7 +47,7 @@
         "classification": "top_level",
         "decomposition_diagram": "DataManagement",
         "behavior_diagram": "DataManagement",
-        "status": "algorithms_complete",
+        "status": "algorithms_complete_reviewed",
         "behavior_type": "UMLActivityDiagram",
         "behavior_activity_id": "ALG2_DataManagement_Activity",
         "behavior_diagram_id": "ALG2_DataManagement_ActivityDiagram"
@@ -58,7 +58,7 @@
         "classification": "top_level",
         "decomposition_diagram": "ScenarioConfiguration",
         "behavior_diagram": "ScenarioConfiguration",
-        "status": "algorithms_complete",
+        "status": "algorithms_complete_reviewed",
         "behavior_type": "UMLActivityDiagram",
         "behavior_activity_id": "ALG2_ScenarioConfiguration_Activity",
         "behavior_diagram_id": "ALG2_ScenarioConfiguration_ActivityDiagram"
@@ -69,7 +69,7 @@
         "classification": "top_level",
         "decomposition_diagram": "ScenarioLaunch",
         "behavior_diagram": "ScenarioLaunch",
-        "status": "algorithms_complete",
+        "status": "algorithms_complete_reviewed",
         "behavior_type": "UMLActivityDiagram",
         "behavior_activity_id": "ALG2_ScenarioLaunch_Activity",
         "behavior_diagram_id": "ALG2_ScenarioLaunch_ActivityDiagram"
@@ -80,7 +80,7 @@
         "classification": "top_level",
         "decomposition_diagram": "ScenarioComparison",
         "behavior_diagram": "ScenarioComparison",
-        "status": "algorithms_complete",
+        "status": "algorithms_complete_reviewed",
         "behavior_type": "UMLActivityDiagram",
         "behavior_activity_id": "ALG2_ScenarioComparison_Activity",
         "behavior_diagram_id": "ALG2_ScenarioComparison_ActivityDiagram"
@@ -91,7 +91,7 @@
         "classification": "top_level",
         "decomposition_diagram": "ResultExport",
         "behavior_diagram": "ResultExport",
-        "status": "algorithms_complete",
+        "status": "algorithms_complete_reviewed",
         "behavior_type": "UMLActivityDiagram",
         "behavior_activity_id": "ALG2_ResultExport_Activity",
         "behavior_diagram_id": "ALG2_ResultExport_ActivityDiagram"
@@ -118,7 +118,7 @@
     "Component and Deployment names must use canonical architecture vocabulary."
   ],
   "algorithm_model": {
-    "status": "complete",
+    "status": "complete_reviewed",
     "logical_view": "Logical View",
     "activities": [
       "ProjectCreation",
@@ -127,7 +127,10 @@
       "ScenarioLaunch",
       "ScenarioComparison",
       "ResultExport",
-      "GenerationExecution"
+      "GenerationExecution",
+      "DatasetImport",
+      "DataQualityValidation",
+      "ScenarioValidation"
     ],
     "state_machines": [
       {
@@ -136,6 +139,64 @@
         "diagram_id": "ALG2_GenerationRunLifecycle_StatechartDiagram",
         "related_use_case": "Запустить сценарий развития"
       }
-    ]
+    ],
+    "decompositions": [
+      {
+        "name": "DatasetImport",
+        "activity_id": "ALG2_DatasetImport_Activity",
+        "diagram_id": "ALG2_DatasetImport_ActivityDiagram",
+        "use_case": "Импортировать набор геоданных",
+        "use_case_guid": "a6hJj0S/qkmCUp668DCVdQAA",
+        "called_from": [
+          "DataManagement"
+        ]
+      },
+      {
+        "name": "DataQualityValidation",
+        "activity_id": "ALG2_DataQualityValidation_Activity",
+        "diagram_id": "ALG2_DataQualityValidation_ActivityDiagram",
+        "use_case": "Проверить метаданные и качество данных",
+        "use_case_guid": "m9hevB3xEU6UeZhVLJRGogAA",
+        "called_from": [
+          "DataManagement"
+        ]
+      },
+      {
+        "name": "ScenarioValidation",
+        "activity_id": "ALG2_ScenarioValidation_Activity",
+        "diagram_id": "ALG2_ScenarioValidation_ActivityDiagram",
+        "use_case": "Проверить конфигурацию сценария",
+        "use_case_guid": "8wFw7xKE5UG0ZUuwAUGd0gAA",
+        "called_from": [
+          "ScenarioConfiguration",
+          "ScenarioLaunch"
+        ]
+      },
+      {
+        "name": "GenerationExecution",
+        "activity_id": "ALG2_GenerationExecution_Activity",
+        "diagram_id": "ALG2_GenerationExecution_ActivityDiagram",
+        "use_case": "Выполнить генерацию сценария",
+        "use_case_guid": "J10lLynXkk2VyA+uoPePHAAA",
+        "called_from": [
+          "ScenarioLaunch"
+        ]
+      }
+    ],
+    "review": {
+      "date": "2026-09-22",
+      "methodology_ranges": [
+        "P0180-P0276",
+        "P0279-P0316"
+      ],
+      "reference": "lending.uml",
+      "decisions": [
+        "Actions have one incoming control flow; alternative flows merge before an Action.",
+        "Decision branches use semantic guards and else.",
+        "Non-trivial reusable work is represented by call behavior actions with separate Activity diagrams.",
+        "Documentation explains implementation meaning, not only repeats node names.",
+        "Diagram spacing is deliberately generous to avoid overlapping labels."
+      ]
+    }
   }
 }
