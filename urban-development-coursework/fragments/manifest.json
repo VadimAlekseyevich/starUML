@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "source_baseline": "../01_functionality/urban_development_functionality.uml",
+  "output": "../dist/urban_development.uml",
+  "parts": [
+    "project_prefix.xml",
+    "views/00_use_case_view.xml",
+    "views/10_logical_view.xml",
+    "views/20_component_view.xml",
+    "views/30_deployment_view.xml",
+    "project_suffix.xml"
+  ],
+  "root_views": [
+    {
+      "name": "Use Case View",
+      "guid": "6lo7Q2fgqES9U60PoTjB7QAA"
+    },
+    {
+      "name": "Logical View",
+      "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+    },
+    {
+      "name": "Component View",
+      "guid": "W5c9nJK/gUSt4vakV5unfAAA"
+    },
+    {
+      "name": "Deployment View",
+      "guid": "AZQpziQwj064UJBj93I1gwAA"
+    }
+  ]
+}
