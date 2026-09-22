@@ -1,0 +1,58 @@
+# Canonical architecture vocabulary for future Component/Deployment UML.
+schema_version: 1
+source_repository: "VadimAlekseyevich/urban-development-generator"
+logical_components:
+  - id: frontend
+    canonical_name: "Frontend"
+    implementation: "React + TypeScript + MapLibre GL JS"
+    repository_path: "frontend/"
+  - id: backend_api
+    canonical_name: "Backend API"
+    implementation: "FastAPI"
+    repository_path: "backend/"
+  - id: algorithmic_core
+    canonical_name: "Algorithmic Core"
+    implementation: "Python domain/spatial algorithms"
+    repository_path: "core/"
+  - id: worker
+    canonical_name: "Worker"
+    implementation: "ARQ background worker"
+    repository_path: "worker/"
+  - id: database
+    canonical_name: "PostgreSQL/PostGIS"
+    implementation: "PostgreSQL + PostGIS"
+  - id: redis
+    canonical_name: "Redis"
+    implementation: "Redis queue/state infrastructure"
+deployment_services:
+  - id: frontend_service
+    compose_service: "frontend"
+    maps_to_component: frontend
+  - id: api_service
+    compose_service: "api"
+    maps_to_component: backend_api
+  - id: worker_service
+    compose_service: "worker"
+    maps_to_component: worker
+  - id: db_service
+    compose_service: "db"
+    maps_to_component: database
+  - id: redis_service
+    compose_service: "redis"
+    maps_to_component: redis
+  - id: migrate_job
+    compose_service: "migrate"
+    role: "schema migration job"
+canonical_pipeline:
+  - prepare_snapshot
+  - evaluate_constraints
+  - suitability
+  - zoning
+  - roads
+  - blocks_and_parcels
+  - buildings
+  - demography
+  - infrastructure
+  - final_validation
+  - metrics
+  - persist_manifest
