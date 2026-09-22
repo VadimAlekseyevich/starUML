@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation extract from lending.uml. Child contents intentionally omitted. -->
+<XPD:PROJECT xmlns:XPD="http://www.staruml.com" version="1">
+  <XPD:BODY>
+    <XPD:OBJ name="DocumentElement" type="UMLProject" guid="4iplebRFzUuAhGJyifbGxwAA">
+      <XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="6lo7Q2fgqES9U60PoTjB7QAA">
+        <XPD:ATTR name="Name" type="string">Use Case View</XPD:ATTR>
+        <XPD:REF name="Namespace">4iplebRFzUuAhGJyifbGxwAA</XPD:REF>
+        <!-- contents omitted -->
+      </XPD:OBJ>
+      <XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="Hoqr3g8miEazkyw1ankPKwAA">
+        <XPD:ATTR name="Name" type="string">Logical View</XPD:ATTR>
+        <XPD:REF name="Namespace">4iplebRFzUuAhGJyifbGxwAA</XPD:REF>
+        <!-- contents omitted -->
+      </XPD:OBJ>
+      <XPD:OBJ name="OwnedElements[2]" type="UMLModel" guid="W5c9nJK/gUSt4vakV5unfAAA">
+        <XPD:ATTR name="Name" type="string">Component View</XPD:ATTR>
+        <XPD:REF name="Namespace">4iplebRFzUuAhGJyifbGxwAA</XPD:REF>
+        <!-- contents omitted -->
+      </XPD:OBJ>
+      <XPD:OBJ name="OwnedElements[3]" type="UMLModel" guid="AZQpziQwj064UJBj93I1gwAA">
+        <XPD:ATTR name="Name" type="string">Deployment View</XPD:ATTR>
+        <XPD:REF name="Namespace">4iplebRFzUuAhGJyifbGxwAA</XPD:REF>
+        <!-- contents omitted -->
+      </XPD:OBJ>
+    </XPD:OBJ>
+  </XPD:BODY>
+</XPD:PROJECT>
