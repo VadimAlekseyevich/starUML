@@ -1,39 +1,26 @@
 # 5. Модель размещения
 
+## Статус источников
+
+В текущем `методичка.docx` отдельной главы по Deployment Diagram нет.
+
+Этот раздел основан на `lending.uml` [LENDING] и реальном deployment Urban Development Generator [PROJECT].
+
 ## Наблюдение по lending
 
-**[LENDING]** Рабочая Deployment Diagram `Lending` находится в `Logical View / Arch`, а верхний `Deployment View / Main` является базовой заготовкой.
-
-## Цель
-
-Deployment Model отвечает на вопросы:
-
-- какие узлы/среды существуют;
-- какие артефакты на них размещены;
-- какие сетевые связи нужны;
-- какие программные компоненты фактически исполняются где.
+Рабочая Deployment Diagram `Lending` находится в `Logical View / Arch`, тогда как верхний `Deployment View / Main` является базовой заготовкой [LENDING].
 
 ## Urban Development
 
-**[PROJECT]** Текущий Docker Compose позволяет строить модель не выдумывая инфраструктуру:
+Фактический `docker-compose.yml` задаёт основные deployment units:
 
-- пользовательский браузер;
-- frontend service;
-- backend/API service;
-- worker service;
-- PostgreSQL/PostGIS;
-- Redis;
-- локальное/внешнее storage, если оно входит в фактический deployment.
+- `frontend`;
+- `api`;
+- `worker`;
+- `db` PostgreSQL/PostGIS;
+- `redis`;
+- одноразовый `migrate` job.
 
-## Правило трассировки
+Также API/worker используют примонтированное storage.
 
-Компонент из Component Model должен быть сопоставим с артефактом/исполняемой единицей Deployment Model.
-
-Пример: логический `Backend API` → контейнер/процесс backend на соответствующем node.
-
-## Что не показываем без необходимости
-
-- каждую Python-библиотеку как узел;
-- каждый класс как компонент;
-- абстрактные доменные сущности как серверы;
-- детали облачной инфраструктуры, которой нет в проекте.
+Итоговая Deployment Diagram должна трассироваться к Component Model: логический компонент должен быть сопоставим с исполняемым artifact/service/node.
