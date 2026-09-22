@@ -1,28 +1,39 @@
-# Sequence Diagram
+# Sequence Diagram — эталон + методичка
 
-## Эталон
+## Быстрый маршрут
 
-XML: [sequence.fragment.xml](./sequence.fragment.xml)
+- Методика: `../../methodology/interactions.md`.
+- XML: `sequence.fragment.xml`.
+- Карта рисунков DOCX: `../../methodology/MEDIA_MAP.md`.
 
-Связанное изображение из эталонной курсовой:
+## XML-эталон
 
-![Interface / interaction](../../../Костыль/диаграммы/Interface.jpg)
+[sequence.fragment.xml](./sequence.fragment.xml)
 
-## Структура lending.uml
+## Где скрыта диаграмма в lending
 
-В `lending.uml` найдена одна `UMLSequenceDiagram` — `SequenceDiagram1`. Она находится внутри цепочки Collaboration/Interaction Instance Set в пакете `Interface` (`Logical View`).
+`Logical View → Interface → CollaborationInstanceSet1 → InteractionInstanceSet1 → SequenceDiagram1`.
 
-Это хороший пример того, почему документация нужна: по одному только дереву проекта Sequence Diagram легко пропустить.
+Это хороший пример того, почему нельзя искать диаграммы только по верхним View.
 
-## Для urban-development
+## Порядок проектирования
 
-Sequence Diagram имеет смысл для сценариев, где важно показать временной порядок сообщений между:
+Рекомендуемая цепочка методички:
 
-- Пользователем/Frontend;
-- Backend API;
-- Worker;
-- Core;
-- PostgreSQL/PostGIS;
-- Redis/очередью.
+`Activity/State Machine → Class → Sequence` [METHOD: P0478–P0485].
 
-Особенно полезный сценарий — «запустить генерацию и отслеживать выполнение»: он естественно показывает переход от синхронного HTTP-запроса к фоновой задаче и последующему чтению статуса/результатов.
+Для простых процессов Sequence может помочь выделить классы [METHOD: P0486–P0489].
+
+## Главное правило согласованности
+
+Имя сообщения на Sequence Diagram — операция класса, объект которого получает сообщение. Такая операция обязана существовать в Class Model [METHOD: P0496–P0501].
+
+Это одно из ключевых cross-diagram правил нашего будущего validator.
+
+## Combined Fragment
+
+`alt`, `opt`, `loop`, `strict`, `par`, `seq` описаны в [METHOD: P0461–P0470].
+
+## Controller
+
+В методическом примере Controller формирует порядок сообщений между другими объектами [METHOD: P0510]. В Urban Development конкретный control-class будет взят из нашей Class Model.
