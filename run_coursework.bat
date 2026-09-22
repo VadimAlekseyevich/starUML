@@ -1,112 +1,61 @@
 @echo off
-setlocal EnableExtensions
+setlocal EnableExtensions EnableDelayedExpansion
 chcp 65001 >nul
 
 rem ============================================================
-rem Urban Development coursework launcher
-rem 1) Pull latest changes
-rem 2) Build StarUML project
-rem 3) Validate model
-rem 4) Run methodology audit
-rem 5) Open generated .uml in StarUML
+rem Urban Development coursework launcher (StarUML 7)
+rem Canonical working model: *.mdj
 rem ============================================================
 
 set "ROOT=%~dp0"
 set "COURSE=%ROOT%urban-development-coursework"
-set "UML=%COURSE%\dist\urban_development.uml"
-set "REGISTRY=%COURSE%\model\registry.json"
-set "TRACE=%COURSE%\model\traceability.json"
+set "STARUML7=C:\Users\User\OneDrive\Desktop\Белов\StarUML7\StarUML\StarUML.exe"
 
 echo.
 echo ============================================================
-echo   Urban Development Coursework
+echo   Urban Development Coursework - StarUML 7
 echo ============================================================
 echo.
 
 cd /d "%ROOT%"
 if errorlevel 1 goto :fail_root
 
-echo [1/5] Pulling latest changes...
+echo [1/3] Pulling latest changes...
 git pull --ff-only
 if errorlevel 1 goto :fail_git
 
 echo.
-echo [2/5] Building StarUML project...
-cd /d "%COURSE%"
-if errorlevel 1 goto :fail_course
+echo [2/3] Locating StarUML 7 project...
+if not exist "%COURSE%" goto :fail_course
 
-call :python scripts\build_uml.py
-if errorlevel 1 goto :fail_build
+set "MDJ="
+set /a MDJ_COUNT=0
+
+for /r "%COURSE%" %%F in (*.mdj) do (
+    set /a MDJ_COUNT+=1
+    set "MDJ=%%~fF"
+)
+
+if !MDJ_COUNT! EQU 0 goto :fail_no_mdj
+if !MDJ_COUNT! GTR 1 goto :fail_many_mdj
+
+echo Found:
+echo !MDJ!
 
 echo.
-echo [3/5] Validating StarUML project...
-call :python scripts\validate_uml.py "dist\urban_development.uml" --registry "model\registry.json" --forbid "кредит" --forbid "заявк" --forbid "платеж" --forbid "банков"
-if errorlevel 1 goto :fail_validate
+echo [3/3] Opening project in StarUML 7...
+if not exist "%STARUML7%" goto :fail_staruml
 
-echo.
-echo [4/5] Running methodology audit...
-call :python scripts\audit_functionality.py "dist\urban_development.uml" --traceability "model\traceability.json"
-if errorlevel 1 goto :fail_audit
-
-echo.
-echo [5/5] Opening StarUML project...
-if not exist "%UML%" goto :fail_missing
-
-rem Preferred method: use the Windows .uml file association.
-start "" "%UML%"
-if errorlevel 1 goto :open_fallback
+start "" "%STARUML7%" "!MDJ!"
+if errorlevel 1 goto :fail_open
 
 echo.
 echo ============================================================
 echo   DONE
-echo   Project: %UML%
+echo   Project: !MDJ!
 echo ============================================================
 echo.
 exit /b 0
-
-:python
-where py >nul 2>nul
-if not errorlevel 1 (
-    py -3 %*
-    if errorlevel 1 exit /b 1
-    exit /b 0
-)
-
-where python >nul 2>nul
-if not errorlevel 1 (
-    python %*
-    if errorlevel 1 exit /b 1
-    exit /b 0
-)
-
-echo ERROR: Python was not found in PATH.
-echo Install Python 3 or add python/py to PATH.
-exit /b 1
-
-:open_fallback
-echo Windows could not open the .uml association. Trying common StarUML paths...
-
-if exist "%ProgramFiles%\StarUML\StarUML.exe" (
-    start "" "%ProgramFiles%\StarUML\StarUML.exe" "%UML%"
-    exit /b 0
-)
-
-if exist "%ProgramFiles(x86)%\StarUML\StarUML.exe" (
-    start "" "%ProgramFiles(x86)%\StarUML\StarUML.exe" "%UML%"
-    exit /b 0
-)
-
-if exist "%ProgramFiles(x86)%\StarUML 5.0\StarUML.exe" (
-    start "" "%ProgramFiles(x86)%\StarUML 5.0\StarUML.exe" "%UML%"
-    exit /b 0
-)
-
-echo.
-echo ERROR: Could not locate StarUML automatically.
-echo Open this file manually:
-echo %UML%
-pause
-exit /b 1
 
 :fail_root
 echo ERROR: Could not enter repository root:
@@ -123,21 +72,32 @@ echo ERROR: Coursework folder was not found:
 echo %COURSE%
 goto :failed
 
-:fail_build
-echo ERROR: UML build failed.
+:fail_no_mdj
+echo ERROR: No StarUML 7 .mdj project was found inside:
+echo %COURSE%
+echo.
+echo Save the imported project as an .mdj file inside urban-development-coursework
+echo and commit/push it to the repository.
 goto :failed
 
-:fail_validate
-echo ERROR: UML validation failed.
+:fail_many_mdj
+echo ERROR: More than one .mdj project was found inside:
+echo %COURSE%
+echo.
+echo Keep one canonical coursework .mdj file or edit run_coursework.bat
+echo to point to the desired file explicitly.
 goto :failed
 
-:fail_audit
-echo ERROR: Methodology audit script failed.
+:fail_staruml
+echo ERROR: StarUML 7 executable was not found:
+echo %STARUML7%
+echo.
+echo Update STARUML7 in run_coursework.bat if StarUML was moved.
 goto :failed
 
-:fail_missing
-echo ERROR: Built UML file was not found:
-echo %UML%
+:fail_open
+echo ERROR: StarUML 7 could not open:
+echo !MDJ!
 goto :failed
 
 :failed
