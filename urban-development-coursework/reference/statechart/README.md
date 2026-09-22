@@ -1,39 +1,34 @@
-# Statechart / State Machine Diagram
+# State Machine Diagram — эталон + методичка
 
-## Эталон
+## Быстрый маршрут
 
-XML: [authorization.fragment.xml](./authorization.fragment.xml)
+- Методика: `../../methodology/statecharts.md`.
+- Изображения методички: P0303, P0306, P0309 и последующие в `../../methodology/MEDIA_MAP.md`.
+- XML-эталон: `authorization.fragment.xml`.
+- JPG: `Authorization_StatechartDiagramm_TO_BE.jpg`, `ViewCatalogProduct_Statechart_TO_BE.jpg`.
+
+## XML-эталон
+
+[authorization.fragment.xml](./authorization.fragment.xml)
 
 ![Authorization Statechart](../../../Костыль/диаграммы/Authorization_StatechartDiagramm_TO_BE.jpg)
 
-Дополнительные изображения:
+## Назначение
 
-- `AuthorizationStatechartDiagramm.jpg`;
-- `ViewCatalogProduct_Statechart_TO_BE.jpg`.
+State Machine — состояние + переходы; стрелка может иметь Trigger, Guard Condition и Effect [METHOD: P0279–P0283].
 
-## Структура lending.uml
+Диаграмма автомата рассматривается как алгоритмическая реализация конкретного сценария/Use Case [METHOD: P0286–P0287].
 
-Statechart находится внутри `UMLStateMachine` в `Logical View`.
+## Декомпозиция
 
-Характерные типы:
+Методичка предлагает строить сценарий по Actor, затем детализировать реализуемые им Use Case и вспомогательные процессы [METHOD: P0288–P0298].
 
-- `UMLStateMachine`;
-- `UMLCompositeState`;
-- `UMLSimpleState`;
-- `UMLPseudostate`;
-- `UMLFinalState`;
-- `UMLTransition`;
-- `UMLStatechartDiagram` и `UMLStatechartDiagramView`.
+## StarUML-структура
 
-## Когда использовать
+В `lending.uml`:
 
-Statechart отвечает не на вопрос «какие шаги выполняются», а на вопрос «в каких устойчивых состояниях находится объект/процесс и какие события переводят его между состояниями».
+`UMLStateMachine → UMLCompositeState(TOP) / states / transitions → UMLStatechartDiagram`.
 
-Для нашей предметной области естественные кандидаты:
+## Urban Development
 
-- жизненный цикл Scenario/Run;
-- состояние фонового Job;
-- состояние загруженного набора данных;
-- состояние проекта, если оно действительно имеет содержательный жизненный цикл.
-
-Не создавать Statechart только ради количества диаграмм: должен существовать объект с осмысленными состояниями.
+Естественные кандидаты — lifecycle `GenerationRun`, `Job`, `DatasetVersion`, но State Machine следует вводить только как часть реализации реального сценария, а не для количества.
