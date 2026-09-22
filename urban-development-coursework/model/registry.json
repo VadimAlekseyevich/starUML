@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "source_uml": "../01_functionality/urban_development_functionality.uml",
+  "schema_version": 2,
+  "source_uml": "../dist/urban_development.uml",
   "views": [
     {
       "guid": "6lo7Q2fgqES9U60PoTjB7QAA",
@@ -61,12 +61,12 @@
     },
     {
       "guid": "Rv6Rc25qRU+wUTs7wuIgUAAA",
-      "name": "Рассчитать количество созданных сценариев",
+      "name": "Выбрать формат экспорта",
       "kind": "UMLUseCase"
     },
     {
       "guid": "CAXcifFWmkKkMdm6h4I5iAAA",
-      "name": "Рассчитать площадь освоенной территории",
+      "name": "Сформировать пакет результатов",
       "kind": "UMLUseCase"
     },
     {
@@ -241,7 +241,7 @@
     },
     {
       "guid": "rRsQXBN+7kmSPzBVeSkKtgAA",
-      "name": "Получить результаты сценария",
+      "name": "Экспортировать результаты",
       "kind": "UMLUseCase"
     },
     {
@@ -304,6 +304,16 @@
     {
       "guid": "fjgg3vKMzEasR+L8Ny2FnQAA",
       "name": "UrbanDevelopment",
+      "kind": "UMLUseCaseDiagram"
+    },
+    {
+      "guid": "KO7nev772QU+GTj40y+0nV1Z",
+      "name": "ScenarioComparison",
+      "kind": "UMLUseCaseDiagram"
+    },
+    {
+      "guid": "dnc1cZy7tyGszMb4V/E8irGh",
+      "name": "ResultExport",
       "kind": "UMLUseCaseDiagram"
     }
   ],
@@ -370,15 +380,15 @@
     },
     {
       "guid": "XTKlh8jMjkOJEvxiP9E6TwAA",
-      "kind": "extend",
+      "kind": "include",
       "base_guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
       "target_guid": "8wFw7xKE5UG0ZUuwAUGd0gAA"
     },
     {
       "guid": "XHxOv0cQiUuahLuEkqg+iQAA",
       "kind": "include",
-      "base_guid": "8wFw7xKE5UG0ZUuwAUGd0gAA",
-      "target_guid": "It1O0VEln0u9i9QaHJ0gYAAA"
+      "base_guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+      "target_guid": "8wFw7xKE5UG0ZUuwAUGd0gAA"
     },
     {
       "guid": "tv3kCAo3vE6pi21IJY9NDAAA",
@@ -388,7 +398,7 @@
     },
     {
       "guid": "uAw3H/sEeUSqyHEV47exYAAA",
-      "kind": "extend",
+      "kind": "include",
       "base_guid": "It1O0VEln0u9i9QaHJ0gYAAA",
       "target_guid": "J10lLynXkk2VyA+uoPePHAAA"
     },
@@ -521,8 +531,44 @@
     {
       "guid": "G0ongGz/uE6a2X1psP5slQAA",
       "kind": "extend",
-      "base_guid": "m9hevB3xEU6UeZhVLJRGogAA",
+      "base_guid": "1jOxeC6gjkO+wWcBsjd+rQAA",
       "target_guid": "fxn1HyxHqUGTDza6qEGDaAAA"
+    },
+    {
+      "guid": "b7rfutoRi23Lv4hrFpdmqIIR",
+      "kind": "extend",
+      "base_guid": "BPZgTNKz10CMHmxIyhnwHgAA",
+      "target_guid": "2qOYw7XP3Uaha327YnXrBQAA"
+    },
+    {
+      "guid": "OoNaPucEcRYaz3m/bCldkXwI",
+      "kind": "include",
+      "base_guid": "BPZgTNKz10CMHmxIyhnwHgAA",
+      "target_guid": "oQu1zkmSVUWYZRQHdGtUBgAA"
+    },
+    {
+      "guid": "BUzVwvT3V79q4GoTwrtUenb/",
+      "kind": "include",
+      "base_guid": "BPZgTNKz10CMHmxIyhnwHgAA",
+      "target_guid": "tQ9kAlzJy0CKW7krEl+ZmgAA"
+    },
+    {
+      "guid": "0BZQRgHqPWm68FtoGU1LY3H2",
+      "kind": "extend",
+      "base_guid": "BPZgTNKz10CMHmxIyhnwHgAA",
+      "target_guid": "fFF6+4wOuESHlwgdEBFV6wAA"
+    },
+    {
+      "guid": "g2gsM2cIoTtkCZh/09QXkbnp",
+      "kind": "include",
+      "base_guid": "rRsQXBN+7kmSPzBVeSkKtgAA",
+      "target_guid": "Rv6Rc25qRU+wUTs7wuIgUAAA"
+    },
+    {
+      "guid": "5MOdv47iUjdUOWt81Yr8TKjN",
+      "kind": "include",
+      "base_guid": "rRsQXBN+7kmSPzBVeSkKtgAA",
+      "target_guid": "CAXcifFWmkKkMdm6h4I5iAAA"
     }
   ]
 }
