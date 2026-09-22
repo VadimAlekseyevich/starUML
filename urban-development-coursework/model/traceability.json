@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "status": "functionality_complete_behavior_pending",
+  "status": "algorithms_complete_classes_pending",
   "methodology": {
     "main_use_case_rule": [
       "P0102",
@@ -35,48 +35,66 @@
         "guid": "GaAHx0wDc0Cf9d5OPJiGoQAA",
         "classification": "top_level",
         "decomposition_diagram": "ProjectCreation",
-        "behavior_diagram": null,
-        "status": "functionality_complete_behavior_pending"
+        "behavior_diagram": "ProjectCreation",
+        "status": "algorithms_complete",
+        "behavior_type": "UMLActivityDiagram",
+        "behavior_activity_id": "ALG2_ProjectCreation_Activity",
+        "behavior_diagram_id": "ALG2_ProjectCreation_ActivityDiagram"
       },
       {
         "name": "Управление исходными геоданными",
         "guid": "1jOxeC6gjkO+wWcBsjd+rQAA",
         "classification": "top_level",
         "decomposition_diagram": "DataManagement",
-        "behavior_diagram": null,
-        "status": "functionality_complete_behavior_pending"
+        "behavior_diagram": "DataManagement",
+        "status": "algorithms_complete",
+        "behavior_type": "UMLActivityDiagram",
+        "behavior_activity_id": "ALG2_DataManagement_Activity",
+        "behavior_diagram_id": "ALG2_DataManagement_ActivityDiagram"
       },
       {
         "name": "Настроить сценарий развития",
         "guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
         "classification": "top_level",
         "decomposition_diagram": "ScenarioConfiguration",
-        "behavior_diagram": null,
-        "status": "functionality_complete_behavior_pending"
+        "behavior_diagram": "ScenarioConfiguration",
+        "status": "algorithms_complete",
+        "behavior_type": "UMLActivityDiagram",
+        "behavior_activity_id": "ALG2_ScenarioConfiguration_Activity",
+        "behavior_diagram_id": "ALG2_ScenarioConfiguration_ActivityDiagram"
       },
       {
         "name": "Запустить сценарий развития",
         "guid": "It1O0VEln0u9i9QaHJ0gYAAA",
         "classification": "top_level",
         "decomposition_diagram": "ScenarioLaunch",
-        "behavior_diagram": null,
-        "status": "functionality_complete_behavior_pending"
+        "behavior_diagram": "ScenarioLaunch",
+        "status": "algorithms_complete",
+        "behavior_type": "UMLActivityDiagram",
+        "behavior_activity_id": "ALG2_ScenarioLaunch_Activity",
+        "behavior_diagram_id": "ALG2_ScenarioLaunch_ActivityDiagram"
       },
       {
         "name": "Просмотр и сравнение сценариев",
         "guid": "BPZgTNKz10CMHmxIyhnwHgAA",
         "classification": "top_level",
         "decomposition_diagram": "ScenarioComparison",
-        "behavior_diagram": null,
-        "status": "functionality_complete_behavior_pending"
+        "behavior_diagram": "ScenarioComparison",
+        "status": "algorithms_complete",
+        "behavior_type": "UMLActivityDiagram",
+        "behavior_activity_id": "ALG2_ScenarioComparison_Activity",
+        "behavior_diagram_id": "ALG2_ScenarioComparison_ActivityDiagram"
       },
       {
         "name": "Экспортировать результаты",
         "guid": "rRsQXBN+7kmSPzBVeSkKtgAA",
         "classification": "top_level",
         "decomposition_diagram": "ResultExport",
-        "behavior_diagram": null,
-        "status": "functionality_complete_behavior_pending"
+        "behavior_diagram": "ResultExport",
+        "status": "algorithms_complete",
+        "behavior_type": "UMLActivityDiagram",
+        "behavior_activity_id": "ALG2_ResultExport_Activity",
+        "behavior_diagram_id": "ALG2_ResultExport_ActivityDiagram"
       }
     ]
   },
@@ -85,7 +103,11 @@
       "parent_use_case": "Запустить сценарий развития",
       "use_case": "Выполнить генерацию сценария",
       "guid": "J10lLynXkk2VyA+uoPePHAAA",
-      "diagram": "GenerationExecution"
+      "diagram": "GenerationExecution",
+      "behavior_diagram": "GenerationExecution",
+      "behavior_type": "UMLActivityDiagram",
+      "behavior_activity_id": "ALG2_GenerationExecution_Activity",
+      "behavior_diagram_id": "ALG2_GenerationExecution_ActivityDiagram"
     }
   ],
   "cross_model_rules": [
@@ -94,5 +116,26 @@
     "Every Sequence message operation must exist on the receiver class.",
     "Every class shown in package view must occur in detail class views.",
     "Component and Deployment names must use canonical architecture vocabulary."
-  ]
+  ],
+  "algorithm_model": {
+    "status": "complete",
+    "logical_view": "Logical View",
+    "activities": [
+      "ProjectCreation",
+      "DataManagement",
+      "ScenarioConfiguration",
+      "ScenarioLaunch",
+      "ScenarioComparison",
+      "ResultExport",
+      "GenerationExecution"
+    ],
+    "state_machines": [
+      {
+        "name": "GenerationRunLifecycle",
+        "state_machine_id": "ALG2_GenerationRunLifecycle_StateMachine",
+        "diagram_id": "ALG2_GenerationRunLifecycle_StatechartDiagram",
+        "related_use_case": "Запустить сценарий развития"
+      }
+    ]
+  }
 }
