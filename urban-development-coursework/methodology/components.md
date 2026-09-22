@@ -1,43 +1,39 @@
 # 4. Модель компонентов
 
+## Статус источников
+
+В текущем `методичка.docx` отдельной главы по Component Diagram нет.
+
+Поэтому этот раздел основан на:
+
+- `lending.uml` [LENDING];
+- материалах `Костыль/диаграммы` [COURSEWORK];
+- реальной архитектуре `urban-development-generator` [PROJECT].
+
+Нельзя ссылаться на этот файл как на прямое требование METHOD.
+
 ## Наблюдение по lending
 
-**[LENDING]** В эталоне 8 Component Diagram. Содержательные схемы лежат в `Logical View / Component`: `ClientClient`, `ClientServer`, `ManagerClient`, `ManagerServer`, `Service`, `Executable`, `artifact`. Верхний `Component View / Main` почти пуст.
+Содержательные Component Diagram находятся в `Logical View / Component`: `ClientClient`, `ClientServer`, `ManagerClient`, `ManagerServer`, `Service`, `Executable`, `artifact` [LENDING].
 
-Это означает, что при воспроизведении проекта надо ориентироваться не только на стандартный StarUML View, но и на реальную организацию эталона.
-
-## Цель
-
-Component Model показывает программные части системы и зависимости/интерфейсы между ними.
+Стандартный верхний `Component View / Main` при этом практически пуст [LENDING].
 
 ## Urban Development
 
-**[PROJECT]** Реальная архитектура репозитория задаёт сильную основу:
+Канонические компоненты из реального проекта:
 
-- `frontend` — React/TypeScript/MapLibre;
-- `backend` — FastAPI/REST/application layer;
-- `core` — независимое алгоритмическое ядро;
-- `worker` — фоновые GIS-задачи;
+- Frontend;
+- Backend API;
+- Algorithmic Core;
+- Worker;
 - PostgreSQL/PostGIS;
 - Redis;
-- storage/artifact subsystem.
+- subsystem хранения Artifact/файлов.
 
-## Несколько уровней
-
-По примеру lending полезно разделить:
-
-- клиентскую часть;
-- серверную часть;
-- сервисы;
-- исполняемые компоненты;
-- артефакты.
-
-Точная декомпозиция будет определена после модели классов, чтобы компоненты не противоречили уже установленным обязанностям классов.
+Точный набор Component Diagram будет выбран после Class Model, чтобы связи компонентов не противоречили обязанностям boundary/control/entity классов.
 
 ## Граница с Deployment
 
-Component = логическая/программная единица.
+Component Model описывает программные части и зависимости.
 
-Deployment Node = среда/узел, на котором программные артефакты выполняются.
-
-Не заменять одно другим.
+Deployment Model описывает узлы/среды исполнения и размещённые на них artifacts/components.
