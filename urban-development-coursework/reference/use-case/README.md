@@ -1,47 +1,65 @@
-# Use Case Diagram
+# Use Case Diagram — эталон + методичка
 
-## Эталон
+## Быстрый маршрут
 
-Основной фрагмент: [applying_for_loan.fragment.xml](./applying_for_loan.fragment.xml)
+1. Методические правила: `../../methodology/functionality.md`.
+2. Рисунки методички: `../../methodology/MEDIA_MAP.md`, прежде всего P0093/P0095/P0110/P0114.
+3. Эталонный XML: `applying_for_loan.fragment.xml`.
+4. Эталонные изображения: `Костыль/диаграммы/*_UseCase_*.jpg`.
+5. Текущая Urban Development модель: `../../dist/urban_development.uml`.
 
-Изображение:
+## Основной XML-эталон
+
+[applying_for_loan.fragment.xml](./applying_for_loan.fragment.xml)
 
 ![ApplyingForLoan Use Case](../../../Костыль/диаграммы/ApplyingForLoan_UseCase_TO_BE.jpg)
 
-Дополнительные изображения эталона:
+## Что подтверждает методичка
 
-- `Lending_UseCase_TO_BE.jpg` — общая TO BE диаграмма;
-- `UseCase_AS_IS.jpg` — исходная AS IS модель;
-- `CreditProductManagement_UseCase_TO_BE.jpg`;
-- `CreditRegistration_UseCase_TO_BE.jpg`;
-- `LoanRepayment_UseCase_TO_BE.jpg`;
-- `Login_UseCase_TO_BE.jpg`;
-- `ViewingLoan_UseCase_TO_BE.jpg`.
+Use Case — функция/процесс [METHOD: P0063–P0066].
 
-## Структура в lending.uml
+Основная модель должна быть не одной диаграммой, а системой «основная + декомпозиционные» [METHOD: P0102–P0103].
 
-Use Case View делится пакетами `AS IS` и `TO BE`.
+На основной диаграмме обычно 3–9 относительно независимых Use Case, без частичной декомпозиции [METHOD: P0104–P0107].
 
-В TO BE присутствуют отдельные диаграммы для крупных функциональных областей плюс общая диаграмма. Это ключевой шаблон для нашей курсовой: **функциональность моделируется набором взаимосвязанных диаграмм, а не одной огромной схемой**.
+Декомпозиционная диаграмма обязана содержать декомпозируемый Use Case как логический центр [METHOD: P0112].
 
-Характерные XML-типы:
+## Очень важный момент: worker
 
-- `UMLUseCase` — прецедент;
-- `UMLActor` или стереотипизированный класс — участник;
-- `UMLAssociation` — связь актора и прецедента;
-- `UMLInclude` — обязательное включаемое поведение;
-- `UMLExtend` — условное/дополнительное поведение;
-- `UMLUseCaseDiagram` + `UMLUseCaseDiagramView` — сама диаграмма и её визуальное представление;
-- `UMLUseCaseView`, `UMLActorView` и edge views — визуальные элементы.
+Методичка отличает внешнего Actor от человека, который является частью системы. Внутренний сотрудник создаётся как Class со стереотипом `worker` [METHOD: P0121–P0135].
 
-## Что переносим в urban-development
+Это объясняет реальный `lending.uml`:
 
-Рабочий шаблон:
+- `Клиент` — `UMLActor`;
+- `Менеджер` — `UMLClass` со стереотипом worker/caseWorker.
 
-1. одна обзорная диаграмма системы;
-2. отдельные диаграммы по крупным функциям;
-3. одни и те же Use Case должны иметь одни и те же GUID на всех диаграммах;
-4. детализация через include/extend должна иметь осмысленную семантику;
-5. название прецедента — действие/цель, а не название экрана или таблицы.
+Поэтому наша структура `Пользователь` + `ГИС-аналитик` не является случайным наследием шаблона; она соответствует методике, если ГИС-аналитик действительно является внутренним работником системы.
 
-Текущая реализация уже следует этому шаблону: `UrbanDevelopment`, `ProjectCreation`, `DataManagement`, `ScenarioConfiguration`, `ScenarioLaunch`, `GenerationExecution`.
+## StarUML-типы
+
+- `UMLUseCase`;
+- `UMLActor`;
+- `UMLClass` + worker stereotype;
+- `UMLAssociation`;
+- `UMLInclude`;
+- `UMLExtend`;
+- `UMLUseCaseDiagram`;
+- соответствующие `*View`.
+
+## include / extend
+
+`include` — обязательная часть реализации base Use Case [METHOD: P0083–P0085].
+
+`extend` — условная дополнительная часть [METHOD: P0084–P0085].
+
+У `extend` должно быть конкретное свойство `Condition` [METHOD: P0161–P0163].
+
+## Documentation
+
+Все узлы и стрелки должны иметь Documentation, а стрелки — обоснование выбранного отношения [METHOD: P0149–P0163].
+
+## Urban Development
+
+Сейчас есть `UrbanDevelopment`, `ProjectCreation`, `DataManagement`, `ScenarioConfiguration`, `ScenarioLaunch`, `GenerationExecution`.
+
+Методический аудит текущего состояния: `../../methodology/audits/current-functionality-audit.md`.
