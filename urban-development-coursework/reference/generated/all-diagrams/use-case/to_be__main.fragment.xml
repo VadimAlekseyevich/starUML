@@ -1,0 +1,7 @@
+<XPD:OBJ name="OwnedDiagrams[6]" type="UMLUseCaseDiagram" guid="+P5V+QYHXUC5wLI0cV2loQAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLUseCaseDiagramView" guid="vhluod9+pU+MnhXCx0noFQAA">
+<XPD:REF name="Diagram">+P5V+QYHXUC5wLI0cV2loQAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>

@@ -1,0 +1,844 @@
+{
+  "source": "lending.uml",
+  "counts": {
+    "use-case": 8,
+    "activity": 5,
+    "statechart": 4,
+    "class": 13,
+    "deployment": 2,
+    "component": 8,
+    "sequence": 1
+  },
+  "diagrams": [
+    {
+      "category": "use-case",
+      "type": "UMLUseCaseDiagram",
+      "name": "Lending",
+      "guid": "N6lwPhX2SUGsbB1UUCtbHQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Use Case View",
+          "guid": "6lo7Q2fgqES9U60PoTjB7QAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "AS IS",
+          "guid": "KA74ddIBqU6kAea3IBjPFAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/use-case/as_is__lending.fragment.xml",
+      "chars": 52474
+    },
+    {
+      "category": "use-case",
+      "type": "UMLUseCaseDiagram",
+      "name": "CreditProductManagement",
+      "guid": "3qmbEX3An0GTnpuD64Bh6QAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Use Case View",
+          "guid": "6lo7Q2fgqES9U60PoTjB7QAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "TO BE",
+          "guid": "sT475ytsEEimqdQiO++/UQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/use-case/to_be__creditproductmanagement.fragment.xml",
+      "chars": 19004
+    },
+    {
+      "category": "use-case",
+      "type": "UMLUseCaseDiagram",
+      "name": "LoanRepayment",
+      "guid": "NyGkKdYDKUqZt4hw2UJOqwAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Use Case View",
+          "guid": "6lo7Q2fgqES9U60PoTjB7QAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "TO BE",
+          "guid": "sT475ytsEEimqdQiO++/UQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/use-case/to_be__loanrepayment.fragment.xml",
+      "chars": 18928
+    },
+    {
+      "category": "use-case",
+      "type": "UMLUseCaseDiagram",
+      "name": "CreditRegistration",
+      "guid": "qlLdWAG4T0GKoaLKKEvUrwAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Use Case View",
+          "guid": "6lo7Q2fgqES9U60PoTjB7QAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "TO BE",
+          "guid": "sT475ytsEEimqdQiO++/UQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/use-case/to_be__creditregistration.fragment.xml",
+      "chars": 12383
+    },
+    {
+      "category": "use-case",
+      "type": "UMLUseCaseDiagram",
+      "name": "ApplyingForLoan",
+      "guid": "KlF7MhujPkiEiDMBShlSAQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Use Case View",
+          "guid": "6lo7Q2fgqES9U60PoTjB7QAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "TO BE",
+          "guid": "sT475ytsEEimqdQiO++/UQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/use-case/to_be__applyingforloan.fragment.xml",
+      "chars": 25340
+    },
+    {
+      "category": "use-case",
+      "type": "UMLUseCaseDiagram",
+      "name": "Login",
+      "guid": "hHr8110G1UmKIhw/XxGDPAAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Use Case View",
+          "guid": "6lo7Q2fgqES9U60PoTjB7QAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "TO BE",
+          "guid": "sT475ytsEEimqdQiO++/UQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/use-case/to_be__login.fragment.xml",
+      "chars": 8856
+    },
+    {
+      "category": "use-case",
+      "type": "UMLUseCaseDiagram",
+      "name": "Lending",
+      "guid": "fjgg3vKMzEasR+L8Ny2FnQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Use Case View",
+          "guid": "6lo7Q2fgqES9U60PoTjB7QAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "TO BE",
+          "guid": "sT475ytsEEimqdQiO++/UQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/use-case/to_be__lending.fragment.xml",
+      "chars": 59066
+    },
+    {
+      "category": "use-case",
+      "type": "UMLUseCaseDiagram",
+      "name": "Main",
+      "guid": "+P5V+QYHXUC5wLI0cV2loQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Use Case View",
+          "guid": "6lo7Q2fgqES9U60PoTjB7QAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "TO BE",
+          "guid": "sT475ytsEEimqdQiO++/UQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/use-case/to_be__main.fragment.xml",
+      "chars": 384
+    },
+    {
+      "category": "activity",
+      "type": "UMLActivityDiagram",
+      "name": "ApplyingForLoan",
+      "guid": "EZ7mE6Q8ZkSByidD8h8EdwAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLActivityGraph",
+          "name": "ApplyingForLoan",
+          "guid": "xmhuCmVOjUm4/Bf3skKiDQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/activity/applyingforloan__applyingforloan.fragment.xml",
+      "chars": 76592
+    },
+    {
+      "category": "activity",
+      "type": "UMLActivityDiagram",
+      "name": "ApplicationApproval",
+      "guid": "1BtccH+PcU2y2rscLjehrwAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLActivityGraph",
+          "name": "ApplicationApproval",
+          "guid": "itsgA17gJkidTRLmLvlLGQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/activity/applicationapproval__applicationapproval.fragment.xml",
+      "chars": 37841
+    },
+    {
+      "category": "activity",
+      "type": "UMLActivityDiagram",
+      "name": "CreditRegistration",
+      "guid": "iYYIW8VGEUSwzBWJ2EXv4QAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLActivityGraph",
+          "name": "CreditRegistration",
+          "guid": "dnFxQtF1XUmPA7LUuBOz3AAA"
+        }
+      ],
+      "path": "generated/all-diagrams/activity/creditregistration__creditregistration.fragment.xml",
+      "chars": 39650
+    },
+    {
+      "category": "activity",
+      "type": "UMLActivityDiagram",
+      "name": "LoanRepayment",
+      "guid": "gJSzNqK850WWfVobk1i42QAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLActivityGraph",
+          "name": "LoanRepayment",
+          "guid": "9lb4Nm75aEKY4qJsZbjBtQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/activity/loanrepayment__loanrepayment.fragment.xml",
+      "chars": 48374
+    },
+    {
+      "category": "statechart",
+      "type": "UMLStatechartDiagram",
+      "name": "ClientStatechartDiagram",
+      "guid": "tHlut8fReUWHuDrAnCvI0AAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLStateMachine",
+          "name": "ClientStatechartDiagram",
+          "guid": "e+kpp6I1AESc7Bg+s4FlugAA"
+        }
+      ],
+      "path": "generated/all-diagrams/statechart/clientstatechartdiagram__clientstatechartdiagram.fragment.xml",
+      "chars": 26364
+    },
+    {
+      "category": "statechart",
+      "type": "UMLStatechartDiagram",
+      "name": "AuthorizationStatechartDiagramm",
+      "guid": "VaIZbvaeYE2Y0K3Sw5UB5gAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLStateMachine",
+          "name": "AuthorizationStatechartDiagramm",
+          "guid": "UGZhIG39nkekg9A44XsN+gAA"
+        }
+      ],
+      "path": "generated/all-diagrams/statechart/authorizationstatechartdiagramm__authorizationstatechartdiagramm.fragment.xml",
+      "chars": 26254
+    },
+    {
+      "category": "statechart",
+      "type": "UMLStatechartDiagram",
+      "name": "ViewCatalogProductStatechart",
+      "guid": "/N9GDlkmPUqoFKz2ndH66QAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLStateMachine",
+          "name": "ViewCatalogProductStatechart",
+          "guid": "q+LKY1sTm02Dca48yNnFQQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/statechart/viewcatalogproductstatechart__viewcatalogproductstatechart.fragment.xml",
+      "chars": 32330
+    },
+    {
+      "category": "statechart",
+      "type": "UMLStatechartDiagram",
+      "name": "CreditRegistrationStatechart",
+      "guid": "0GznlMlxsESAga21MhQC5AAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLStateMachine",
+          "name": "CreditRegistrationStatechart",
+          "guid": "Vp9JS4FRiUOk9JFGpyYjKQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/statechart/creditregistrationstatechart__creditregistrationstatechart.fragment.xml",
+      "chars": 54420
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "AuthPackages",
+      "guid": "4YmjspdXQUGOnotyDW6zeQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__authpackages.fragment.xml",
+      "chars": 10224
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "AuthDetailClass",
+      "guid": "9FhQrRJ0O0iikuw0/fTr3gAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__authdetailclass.fragment.xml",
+      "chars": 7390
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "AuthDetailClassWithRelation",
+      "guid": "cgjRlX48vkOe2/ooOS8WRgAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__authdetailclasswithrelation.fragment.xml",
+      "chars": 11879
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "ProductsCatalogPackages",
+      "guid": "qD2Hhi93d0GuRgm7c4nWdgAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__productscatalogpackages.fragment.xml",
+      "chars": 11084
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "ProductsCatalogDetailClass",
+      "guid": "BFIi59RalkKPfvSwW5LriwAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__productscatalogdetailclass.fragment.xml",
+      "chars": 7344
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "ProductsCatalogDetailClassWithRelation",
+      "guid": "KsuMKQPHBECItJT/hQBxyQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__productscatalogdetailclasswithrelation.fragment.xml",
+      "chars": 13312
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "ClassEntityPackeges",
+      "guid": "6dOTEQ4SckqGFb7EYBwOswAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__classentitypackeges.fragment.xml",
+      "chars": 14396
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "ClassEntityDetail",
+      "guid": "BOndBiCvUEuBe1ge3X4uVwAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__classentitydetail.fragment.xml",
+      "chars": 12519
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "ClassEntityDetailWithRelation",
+      "guid": "eLAXJtA5EkifooirIOAwegAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__classentitydetailwithrelation.fragment.xml",
+      "chars": 42225
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "ClassEntityPackeges_",
+      "guid": "C+RI+ux5xEO8EG7yYOeUpwAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__classentitypackeges__CRIux5xE.fragment.xml",
+      "chars": 59248
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "ControlClass",
+      "guid": "S4x/xnz6xU6O7oNnz6vfQgAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__controlclass.fragment.xml",
+      "chars": 25840
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "BoundaryClass",
+      "guid": "QlPOehsWRUGjMPmxJOFkXwAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Class",
+          "guid": "MpxuSdS2fkm2CuL7dYxiEgAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/class__boundaryclass.fragment.xml",
+      "chars": 25941
+    },
+    {
+      "category": "activity",
+      "type": "UMLActivityDiagram",
+      "name": "ConsultationOnCreditProducts",
+      "guid": "VgPH7GfIyUu62o5RxvhA3gAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "AS IS",
+          "guid": "5lNJnxIR00+UHBGBuGh8aAAA"
+        },
+        {
+          "type": "UMLActivityGraph",
+          "name": "ConsultationOnCreditProducts",
+          "guid": "LlOP3NEB9kC5hv5KNJ9AHQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/activity/consultationoncreditproducts__consultationoncreditproducts.fragment.xml",
+      "chars": 45147
+    },
+    {
+      "category": "class",
+      "type": "UMLClassDiagram",
+      "name": "Main",
+      "guid": "2ejymZ3kgEKhhz7tNr0nkAAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "AS IS",
+          "guid": "5lNJnxIR00+UHBGBuGh8aAAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Architecture",
+          "guid": "Tot1k32mLUyXZK7hq7GSzQAA"
+        }
+      ],
+      "path": "generated/all-diagrams/class/architecture__main.fragment.xml",
+      "chars": 67190
+    },
+    {
+      "category": "deployment",
+      "type": "UMLDeploymentDiagram",
+      "name": "Lending",
+      "guid": "Qwf50Tgg80G18RrWjxuvTQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Arch",
+          "guid": "XzMg1bnti0GzpzV76SxxogAA"
+        }
+      ],
+      "path": "generated/all-diagrams/deployment/arch__lending.fragment.xml",
+      "chars": 34875
+    },
+    {
+      "category": "component",
+      "type": "UMLComponentDiagram",
+      "name": "ClientClient",
+      "guid": "PH/KMHAzekeUR9K8eeWsXQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Component",
+          "guid": "lXkx1y08h028aUvlM7EbKAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/component/component__clientclient.fragment.xml",
+      "chars": 40911
+    },
+    {
+      "category": "component",
+      "type": "UMLComponentDiagram",
+      "name": "ClientServer",
+      "guid": "vu1UVoBccEuzbXI57sPlewAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Component",
+          "guid": "lXkx1y08h028aUvlM7EbKAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/component/component__clientserver.fragment.xml",
+      "chars": 25311
+    },
+    {
+      "category": "component",
+      "type": "UMLComponentDiagram",
+      "name": "ManagerClient",
+      "guid": "CZ17q8FKeEi6xoKny2lr9AAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Component",
+          "guid": "lXkx1y08h028aUvlM7EbKAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/component/component__managerclient.fragment.xml",
+      "chars": 30528
+    },
+    {
+      "category": "component",
+      "type": "UMLComponentDiagram",
+      "name": "ManagerServer",
+      "guid": "pixa+MrfWUWfRKxRWK5TTAAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Component",
+          "guid": "lXkx1y08h028aUvlM7EbKAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/component/component__managerserver.fragment.xml",
+      "chars": 25672
+    },
+    {
+      "category": "component",
+      "type": "UMLComponentDiagram",
+      "name": "Service",
+      "guid": "J32zSa72I0aehsFYZLGEoQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Component",
+          "guid": "lXkx1y08h028aUvlM7EbKAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/component/component__service.fragment.xml",
+      "chars": 6577
+    },
+    {
+      "category": "component",
+      "type": "UMLComponentDiagram",
+      "name": "Executable",
+      "guid": "1d5naEx2f0Wi2b4duHLuawAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Component",
+          "guid": "lXkx1y08h028aUvlM7EbKAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/component/component__executable.fragment.xml",
+      "chars": 37639
+    },
+    {
+      "category": "component",
+      "type": "UMLComponentDiagram",
+      "name": "artifact",
+      "guid": "IKg8vF1pBku7Yt1O5qWUxAAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Component",
+          "guid": "lXkx1y08h028aUvlM7EbKAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/component/component__artifact.fragment.xml",
+      "chars": 19010
+    },
+    {
+      "category": "sequence",
+      "type": "UMLSequenceDiagram",
+      "name": "SequenceDiagram1",
+      "guid": "7I6JAkRe9EO2lKKVzQMfIQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Logical View",
+          "guid": "Hoqr3g8miEazkyw1ankPKwAA"
+        },
+        {
+          "type": "UMLPackage",
+          "name": "Interface",
+          "guid": "LI1yByCejk6wi+wI+XLNQwAA"
+        },
+        {
+          "type": "UMLCollaborationInstanceSet",
+          "name": "CollaborationInstanceSet1",
+          "guid": "1JH5jSTOU0eCifFe21aO4gAA"
+        },
+        {
+          "type": "UMLInteractionInstanceSet",
+          "name": "InteractionInstanceSet1",
+          "guid": "2ARiwgIHxU+W575ShJ5/EAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/sequence/interactioninstanceset1__sequencediagram1.fragment.xml",
+      "chars": 33283
+    },
+    {
+      "category": "component",
+      "type": "UMLComponentDiagram",
+      "name": "Main",
+      "guid": "Rs+lMQMNGUOD/YEOrhbkdQAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Component View",
+          "guid": "W5c9nJK/gUSt4vakV5unfAAA"
+        }
+      ],
+      "path": "generated/all-diagrams/component/component_view__main.fragment.xml",
+      "chars": 388
+    },
+    {
+      "category": "deployment",
+      "type": "UMLDeploymentDiagram",
+      "name": "Main",
+      "guid": "aq+60CwkbU67mdh9VkirtwAA",
+      "owners": [
+        {
+          "type": "UMLModel",
+          "name": "Deployment View",
+          "guid": "AZQpziQwj064UJBj93I1gwAA"
+        }
+      ],
+      "path": "generated/all-diagrams/deployment/deployment_view__main.fragment.xml",
+      "chars": 390
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLComponentDiagram" guid="Rs+lMQMNGUOD/YEOrhbkdQAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">W5c9nJK/gUSt4vakV5unfAAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLComponentDiagramView" guid="GFX+gCEpi0GZPhMqbqTPogAA">
+<XPD:REF name="Diagram">Rs+lMQMNGUOD/YEOrhbkdQAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
