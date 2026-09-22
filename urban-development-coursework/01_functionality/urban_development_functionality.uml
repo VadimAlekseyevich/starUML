@@ -18,31 +18,6 @@
 <XPD:OBJ name="OwnedElements[0]" type="UMLActor" guid="fR+RwbS+R0qtablG0i8AaAAA">
 <XPD:ATTR name="Name" type="string">Пользователь</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
-<XPD:ATTR name="#ClientDependencies" type="integer">5</XPD:ATTR>
-<XPD:REF name="ClientDependencies[0]">FPkc8CleGE2DldqQC2YhkAAA</XPD:REF>
-<XPD:REF name="ClientDependencies[1]">VMV+YqSm0EuyuJjax0iQ9QAA</XPD:REF>
-<XPD:REF name="ClientDependencies[2]">K7sXVcnOxEClPOZzfVi7CgAA</XPD:REF>
-<XPD:REF name="ClientDependencies[3]">0QSQsrjshke9x69qndVoewAA</XPD:REF>
-<XPD:REF name="ClientDependencies[4]">1Sssp8Hnx0W9oydne/yWIQAA</XPD:REF>
-<XPD:ATTR name="#Associations" type="integer">18</XPD:ATTR>
-<XPD:REF name="Associations[0]">F+CAf/VsjUKDWaWdgygdYgAA</XPD:REF>
-<XPD:REF name="Associations[1]">SaoyDWN19UifN3YvFBp4oAAA</XPD:REF>
-<XPD:REF name="Associations[2]">FkyufpGShU6rgebkGF7paQAA</XPD:REF>
-<XPD:REF name="Associations[3]">s14pOESmkkuP9u3D+JIRQwAA</XPD:REF>
-<XPD:REF name="Associations[4]">3UOPs/bdpkmyEQJn3cbqxwAA</XPD:REF>
-<XPD:REF name="Associations[5]">yqlaeNS9yk2d93s6WXnP8gAA</XPD:REF>
-<XPD:REF name="Associations[6]">eJf8kzKJOUif2tbtHopspAAA</XPD:REF>
-<XPD:REF name="Associations[7]">GhztYaFQNkSIpUla1wwoTwAA</XPD:REF>
-<XPD:REF name="Associations[8]">iyJaPvS9bEO6OIyI2Tif/gAA</XPD:REF>
-<XPD:REF name="Associations[9]">WTo3asJrzU245BqH51BtFQAA</XPD:REF>
-<XPD:REF name="Associations[10]">u2lk4MKwVUCN/oUG4I2ecQAA</XPD:REF>
-<XPD:REF name="Associations[11]">OqJ/XhzY+k6/cJowBfCVXAAA</XPD:REF>
-<XPD:REF name="Associations[12]">4vT8zYmee0m3kNkDuTDyegAA</XPD:REF>
-<XPD:REF name="Associations[13]">+HygjpQVg0q8k4Hc8DCs0wAA</XPD:REF>
-<XPD:REF name="Associations[14]">871hUj9Se0aVUoU8yDY7ywAA</XPD:REF>
-<XPD:REF name="Associations[15]">dm5r9ORAc0SWfIEDP9Iv+wAA</XPD:REF>
-<XPD:REF name="Associations[16]">2LWe38BYhEeEkJVkKCaymgAA</XPD:REF>
-<XPD:REF name="Associations[17]">4kjyz0tId0C0WN4PK9KhaAAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="uLJFNuDPBUuxdnQuWfUp9wAA">
 <XPD:ATTR name="Name" type="string">Персональные данные</XPD:ATTR>
@@ -67,30 +42,6 @@
 <XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
 <XPD:ATTR name="StereotypeName" type="string">caseWorker</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
-<XPD:ATTR name="#ClientDependencies" type="integer">4</XPD:ATTR>
-<XPD:REF name="ClientDependencies[0]">m/+mID9fsUuKlsfpsOVP8wAA</XPD:REF>
-<XPD:REF name="ClientDependencies[1]">A+ZkRd46oE2+LWsVQAhs1QAA</XPD:REF>
-<XPD:REF name="ClientDependencies[2]">qBW73RNkbEmVykjVEFEOtgAA</XPD:REF>
-<XPD:REF name="ClientDependencies[3]">9m3mUYV820C/5uIgUkmwjQAA</XPD:REF>
-<XPD:ATTR name="#SupplierDependencies" type="integer">2</XPD:ATTR>
-<XPD:REF name="SupplierDependencies[0]">ms3vne/bd0qv57DCkuixXwAA</XPD:REF>
-<XPD:REF name="SupplierDependencies[1]">vNhtkQeEIUmEdggapJOwGwAA</XPD:REF>
-<XPD:ATTR name="#Associations" type="integer">15</XPD:ATTR>
-<XPD:REF name="Associations[0]">VzwTyPzjNUCOnwExG/mCsQAA</XPD:REF>
-<XPD:REF name="Associations[1]">i8y3u2YATUmAIGqrhUqPMAAA</XPD:REF>
-<XPD:REF name="Associations[2]">CHhu71lUGE2I+sTirssIrAAA</XPD:REF>
-<XPD:REF name="Associations[3]">IBfvDZ78CU+yNkdgO4LrvgAA</XPD:REF>
-<XPD:REF name="Associations[4]">4uHS0wTUGkS2Lplu6q/XcQAA</XPD:REF>
-<XPD:REF name="Associations[5]">t/bOk/udA0iSjlpGbgw5XAAA</XPD:REF>
-<XPD:REF name="Associations[6]">eSRc11ym5EqlI1qUu7F0EQAA</XPD:REF>
-<XPD:REF name="Associations[7]">roXyIAgwL0K0omTO1H4tYwAA</XPD:REF>
-<XPD:REF name="Associations[8]">wC5dKwCo2kO9xKrNhC3GqAAA</XPD:REF>
-<XPD:REF name="Associations[9]">F1y1L3GmIkazQbBGmkgf2AAA</XPD:REF>
-<XPD:REF name="Associations[10]">VOcWA8wlFkSdpH6NC0MhUAAA</XPD:REF>
-<XPD:REF name="Associations[11]">XDGyxSdrrkGlWfy18W6LvAAA</XPD:REF>
-<XPD:REF name="Associations[12]">HPYE4SzqyUC0JiaQWvSmwgAA</XPD:REF>
-<XPD:REF name="Associations[13]">Dl/GDDxvZUKDUfIQg1rb5wAA</XPD:REF>
-<XPD:REF name="Associations[14]">UcDf6ULbyECNhsa8q1J/PQAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="HmVqHNL69kWtWO1JHTbU6gAA">
 <XPD:ATTR name="Name" type="string">Персональные данные</XPD:ATTR>
@@ -113,7 +64,7 @@
 <XPD:REF name="Extension">vicOfTW31EeEm6E4UYlJ9QAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[6]" type="UMLExtend" guid="u82NYeX7IUKfH53DRP0PoAAA">
-<XPD:ATTR name="Condition" type="string">заявка оформляется из личного кабинета менеджера</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">o9LHFaGwc0O2bWHQfzFLaQAA</XPD:REF>
 <XPD:REF name="Extension">J1aU+Zp2HE+2dumBAxEmPgAA</XPD:REF>
@@ -149,7 +100,7 @@
 <XPD:REF name="Extension">It1O0VEln0u9i9QaHJ0gYAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[13]" type="UMLExtend" guid="XTKlh8jMjkOJEvxiP9E6TwAA">
-<XPD:ATTR name="Condition" type="string">Изменение статуса заявки на «Одобрено»</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">o9LHFaGwc0O2bWHQfzFLaQAA</XPD:REF>
 <XPD:REF name="Extension">8wFw7xKE5UG0ZUuwAUGd0gAA</XPD:REF>
@@ -170,13 +121,13 @@
 <XPD:REF name="Supplier">It1O0VEln0u9i9QaHJ0gYAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[17]" type="UMLExtend" guid="uAw3H/sEeUSqyHEV47exYAAA">
-<XPD:ATTR name="Condition" type="string">Желание клиента внести взнос по кредиту</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">It1O0VEln0u9i9QaHJ0gYAAA</XPD:REF>
 <XPD:REF name="Extension">J10lLynXkk2VyA+uoPePHAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[18]" type="UMLExtend" guid="wgTj+yW7mkGOOiRQoX/OCgAA">
-<XPD:ATTR name="Condition" type="string">Долг по кредиту полностью выплачен</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">It1O0VEln0u9i9QaHJ0gYAAA</XPD:REF>
 <XPD:REF name="Extension">H8i8CzedUUyNNr46hzqRlwAA</XPD:REF>
@@ -202,31 +153,31 @@
 <XPD:REF name="Extension">Ni5ZZnI080GRvquT87TjAgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[23]" type="UMLExtend" guid="3E60YyzNhkaMP1JUQRjciQAA">
-<XPD:ATTR name="Condition" type="string">Желание клиента досрочно погасить кредит</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">J10lLynXkk2VyA+uoPePHAAA</XPD:REF>
 <XPD:REF name="Extension">cC0wBB0M+UqRKL3zlfDdDAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[24]" type="UMLExtend" guid="M9iEJh3uS0esWr6jKs+kSQAA">
-<XPD:ATTR name="Condition" type="string">Нажатие кнопки &quot;Добавить нового клиента&quot;</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">DySXeXnPkk2QwHIvveZsbwAA</XPD:REF>
 <XPD:REF name="Extension">4cIIgq99o0e3bAKD6v7d1QAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[25]" type="UMLExtend" guid="cucM+7yWrUio3sHigpxcuAAA">
-<XPD:ATTR name="Condition" type="string">Выбор клиента из списка</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">zAS89z3xvUKCmom+g5UYpgAA</XPD:REF>
 <XPD:REF name="Extension">PYmIImjWD0CFwK6kEQP/YAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[26]" type="UMLExtend" guid="r/PyNHEW+kSbKC/7QXKFzQAA">
-<XPD:ATTR name="Condition" type="string">Нажатие кнопки &quot;Редактировать&quot;</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">PYmIImjWD0CFwK6kEQP/YAAA</XPD:REF>
 <XPD:REF name="Extension">VJYourhqq0isZyFx+YhqngAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[27]" type="UMLExtend" guid="4ptB7yZO7EiRzdeDZ3VkNgAA">
-<XPD:ATTR name="Condition" type="string">Нажатие кнопки &quot;Посмотреть график платежей&quot;</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">J10lLynXkk2VyA+uoPePHAAA</XPD:REF>
 <XPD:REF name="Extension">hJNhOxNvOUq5hcg48MvWpQAA</XPD:REF>
@@ -247,31 +198,31 @@
 <XPD:REF name="Base">J10lLynXkk2VyA+uoPePHAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[31]" type="UMLExtend" guid="nZCE5c9rmEGs+Fzt6Kfo1AAA">
-<XPD:ATTR name="Condition" type="string">Ввод символов в строку поиска</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">DySXeXnPkk2QwHIvveZsbwAA</XPD:REF>
 <XPD:REF name="Extension">zAS89z3xvUKCmom+g5UYpgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[32]" type="UMLExtend" guid="2xKq4yxVEEmn9n64sPL5EQAA">
-<XPD:ATTR name="Condition" type="string">Нажатие кнопки &quot;Добавить кредитный продукт&quot;</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">1jOxeC6gjkO+wWcBsjd+rQAA</XPD:REF>
 <XPD:REF name="Extension">a6hJj0S/qkmCUp668DCVdQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[33]" type="UMLExtend" guid="UzCJPXvXJUaHBzwlFoUgfgAA">
-<XPD:ATTR name="Condition" type="string">ввод символов в строку поиска.</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">1jOxeC6gjkO+wWcBsjd+rQAA</XPD:REF>
 <XPD:REF name="Extension">zxSFuxrDIkWwlIfNG4PzjQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[34]" type="UMLExtend" guid="Cfr5PREkPkiAXOU1AtXX/AAA">
-<XPD:ATTR name="Condition" type="string">Выбор кредитного продукта из списка</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">zxSFuxrDIkWwlIfNG4PzjQAA</XPD:REF>
 <XPD:REF name="Extension">m9hevB3xEU6UeZhVLJRGogAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[35]" type="UMLExtend" guid="cennEinQXkqnWKaCz0V5SwAA">
-<XPD:ATTR name="Condition" type="string">Нажати кнопки &quot;Редактировать&quot;</XPD:ATTR>
+<XPD:ATTR name="Condition" type="string">Выполнение дополнительного условия сценария</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
 <XPD:REF name="Base">m9hevB3xEU6UeZhVLJRGogAA</XPD:REF>
 <XPD:REF name="Extension">u6xN0VxqbU6ML9cwL+v+CgAA</XPD:REF>
@@ -2150,8 +2101,7 @@
 <XPD:ATTR name="Top" type="integer">632</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">252</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">60</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Работа с таблицами &quot;Кредиты&quot;, &quot;Транзакции&quot;
-</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Работа с проектами, геоданными, сценариями, результатами и метриками</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedViews[9]" type="UMLNoteLinkView" guid="LBCZ7baioUW9evRB9EpkCgAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
@@ -2167,8 +2117,7 @@
 <XPD:ATTR name="Top" type="integer">252</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">238</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">60</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Работа с таблицей &quot;Кредитные продукты&quot;
-</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Работа с проектами, геоданными, сценариями, результатами и метриками</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedViews[11]" type="UMLNoteView" guid="XGZf8N1lu0WIoZKWKESDDAAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
@@ -2177,9 +2126,7 @@
 <XPD:ATTR name="Top" type="integer">440</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">293</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">64</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Работа с таблицами &quot;Заявки&quot;, &quot;Кредиты&quot;, &quot;Клиенты&quot;,
-&quot;Менеджеры&quot;, &quot;Кредитные продукты&quot;
-</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Работа с проектами, геоданными, сценариями, результатами и метриками</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedViews[12]" type="UMLNoteLinkView" guid="aO3YU+GgkESyS8OAfsiubwAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
@@ -2918,15 +2865,7 @@
 <XPD:ATTR name="#OwnedElements" type="integer">52</XPD:ATTR>
 <XPD:OBJ name="OwnedElements[0]" type="UMLUseCase" guid="o9LHFaGwc0O2bWHQfzFLaQAA">
 <XPD:ATTR name="Name" type="string">Настроить сценарий развития</XPD:ATTR>
-<XPD:ATTR name="Attachments" type="string">C:\Users\lizaa\Desktop\radick\3 kurs\6 semac\PIS\UML Lending\UseCase\Сценарии использования\Сценарий использования Оформление заявки.docx
-</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Associations" type="integer">5</XPD:ATTR>
-<XPD:REF name="Associations[0]">Kdrysn8qYkunPtZbnmTnxQAA</XPD:REF>
-<XPD:REF name="Associations[1]">cWhMer6IBkeZsS3dGYp/dgAA</XPD:REF>
-<XPD:REF name="Associations[2]">YVTnHAerO0Sje1EKr1FdnwAA</XPD:REF>
-<XPD:REF name="Associations[3]">dSALTGs21Eidr1S7wTShGAAA</XPD:REF>
-<XPD:REF name="Associations[4]">qXSJFg6lKUiDjBw4feznJAAA</XPD:REF>
 <XPD:ATTR name="#Extenders" type="integer">3</XPD:ATTR>
 <XPD:REF name="Extenders[0]">u82NYeX7IUKfH53DRP0PoAAA</XPD:REF>
 <XPD:REF name="Extenders[1]">ibVolaYwGU+mpm9LpFoIvAAA</XPD:REF>
@@ -2951,9 +2890,6 @@
 <XPD:OBJ name="OwnedElements[1]" type="UMLUseCase" guid="1jOxeC6gjkO+wWcBsjd+rQAA">
 <XPD:ATTR name="Name" type="string">Управление исходными геоданными</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Associations" type="integer">2</XPD:ATTR>
-<XPD:REF name="Associations[0]">agY9hN9R6km3oD4QnLFDCQAA</XPD:REF>
-<XPD:REF name="Associations[1]">ZG3v88LHyUWPDUuPwGtXbwAA</XPD:REF>
 <XPD:ATTR name="#Extenders" type="integer">2</XPD:ATTR>
 <XPD:REF name="Extenders[0]">2xKq4yxVEEmn9n64sPL5EQAA</XPD:REF>
 <XPD:REF name="Extenders[1]">UzCJPXvXJUaHBzwlFoUgfgAA</XPD:REF>
@@ -2971,12 +2907,7 @@
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[2]" type="UMLUseCase" guid="GaAHx0wDc0Cf9d5OPJiGoQAA">
 <XPD:ATTR name="Name" type="string">Создать проект</XPD:ATTR>
-<XPD:ATTR name="Attachments" type="string">C:\Users\lizaa\Desktop\radick\3 kurs\6 semac\PIS\UML Lending\UseCase\Сценарии использования\Сценарий использования Войти в систему.docx
-</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Associations" type="integer">2</XPD:ATTR>
-<XPD:REF name="Associations[0]">G9tEbhd84UeM2uRHkLWqLwAA</XPD:REF>
-<XPD:REF name="Associations[1]">gFmfnEVP8kS1Koo/wQ0s1wAA</XPD:REF>
 <XPD:ATTR name="#Extenders" type="integer">1</XPD:ATTR>
 <XPD:REF name="Extenders[0]">IFfvZ2+1a0qg+nIUlqfU1gAA</XPD:REF>
 <XPD:ATTR name="#Includes" type="integer">2</XPD:ATTR>
@@ -2986,9 +2917,6 @@
 <XPD:OBJ name="OwnedElements[3]" type="UMLUseCase" guid="DySXeXnPkk2QwHIvveZsbwAA">
 <XPD:ATTR name="Name" type="string">Управление проектами</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Associations" type="integer">2</XPD:ATTR>
-<XPD:REF name="Associations[0]">3QT8qTtEfU+RmsR6fLR6XQAA</XPD:REF>
-<XPD:REF name="Associations[1]">ui92D2mvvEWoL/HhlbfnPwAA</XPD:REF>
 <XPD:ATTR name="#Extenders" type="integer">2</XPD:ATTR>
 <XPD:REF name="Extenders[0]">M9iEJh3uS0esWr6jKs+kSQAA</XPD:REF>
 <XPD:REF name="Extenders[1]">nZCE5c9rmEGs+Fzt6Kfo1AAA</XPD:REF>
@@ -3007,11 +2935,6 @@
 <XPD:OBJ name="OwnedElements[4]" type="UMLUseCase" guid="BPZgTNKz10CMHmxIyhnwHgAA">
 <XPD:ATTR name="Name" type="string">Просмотр и сравнение сценариев</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Associations" type="integer">4</XPD:ATTR>
-<XPD:REF name="Associations[0]">utetYoKm90qDgcrh9CkPzwAA</XPD:REF>
-<XPD:REF name="Associations[1]">zFPoQqEvnkCs9gN0H4u8UAAA</XPD:REF>
-<XPD:REF name="Associations[2]">O/3fXFZ7oEOCoiBILgpArgAA</XPD:REF>
-<XPD:REF name="Associations[3]">OxBepapyrUqiII6e3eC7WwAA</XPD:REF>
 <XPD:ATTR name="#Extenders" type="integer">1</XPD:ATTR>
 <XPD:REF name="Extenders[0]">LWqfx3fECkSnJ+w7MCWS1AAA</XPD:REF>
 <XPD:ATTR name="#ExtensionPoints" type="integer">1</XPD:ATTR>
@@ -3098,8 +3021,6 @@
 <XPD:OBJ name="OwnedElements[19]" type="UMLUseCase" guid="It1O0VEln0u9i9QaHJ0gYAAA">
 <XPD:ATTR name="Name" type="string">Запустить сценарий развития</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#SupplierDependencies" type="integer">1</XPD:ATTR>
-<XPD:REF name="SupplierDependencies[0]">N0Ty71gFE06+mfbka+jEeAAA</XPD:REF>
 <XPD:ATTR name="#Extenders" type="integer">5</XPD:ATTR>
 <XPD:REF name="Extenders[0]">tv3kCAo3vE6pi21IJY9NDAAA</XPD:REF>
 <XPD:REF name="Extenders[1]">yXurllFh+Eu7iCaQVi99FwAA</XPD:REF>
@@ -3127,8 +3048,6 @@
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[20]" type="UMLUseCase" guid="8wFw7xKE5UG0ZUuwAUGd0gAA">
 <XPD:ATTR name="Name" type="string">Проверить конфигурацию сценария</XPD:ATTR>
-<XPD:ATTR name="Attachments" type="string">C:\Users\lizaa\Desktop\radick\3 kurs\6 semac\PIS\UML Lending\UseCase\Сценарии использования\Сценарий использования Одобрение заявки.docx
-</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
 <XPD:ATTR name="#Extenders" type="integer">1</XPD:ATTR>
 <XPD:REF name="Extenders[0]">mCqN0DEuQkirF3SNlhCaNQAA</XPD:REF>
@@ -3148,8 +3067,6 @@
 <XPD:OBJ name="OwnedElements[22]" type="UMLUseCase" guid="b5n0U6eAN0aM2dvhdkUxSAAA">
 <XPD:ATTR name="Name" type="string">Выполнить этапы генерационного конвейера</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#ClientDependencies" type="integer">1</XPD:ATTR>
-<XPD:REF name="ClientDependencies[0]">N0Ty71gFE06+mfbka+jEeAAA</XPD:REF>
 <XPD:ATTR name="#Extends" type="integer">1</XPD:ATTR>
 <XPD:REF name="Extends[0]">N+sleZfj6Uiu7XsFW+664wAA</XPD:REF>
 <XPD:ATTR name="#Includers" type="integer">1</XPD:ATTR>
@@ -3189,7 +3106,7 @@
 <XPD:REF name="Includes[1]">DIjpWUEmeU2QJZi2mzkSMwAA</XPD:REF>
 <XPD:ATTR name="#ExtensionPoints" type="integer">3</XPD:ATTR>
 <XPD:OBJ name="ExtensionPoints[0]" type="UMLExtensionPoint" guid="I4+i5gkUbEujjFQXmtBr4QAA">
-<XPD:ATTR name="Name" type="string">Посмотреть график платежей</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Отслеживать прогресс выполнения</XPD:ATTR>
 <XPD:ATTR name="Location" type="string">Условие выполнения дополнительного сценария</XPD:ATTR>
 <XPD:REF name="UseCase">J10lLynXkk2VyA+uoPePHAAA</XPD:REF>
 </XPD:OBJ>
@@ -3337,11 +3254,7 @@
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[44]" type="UMLUseCase" guid="AAHpY9yDMUCV63F1dSpZnQAA">
 <XPD:ATTR name="Name" type="string">Просмотреть слои и исходные данные</XPD:ATTR>
-<XPD:ATTR name="Attachments" type="string">C:\Users\lizaa\Desktop\radick\3 kurs\6 semac\PIS\UML Lending\UseCase\Сценарии использования\Сценарий использования Просмотр каталога кредитных продуктов.docx
-</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
-<XPD:REF name="Associations[0]">AaItUOBq9kiKNO560qm3RQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[45]" type="UMLExtend" guid="LWqfx3fECkSnJ+w7MCWS1AAA">
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
