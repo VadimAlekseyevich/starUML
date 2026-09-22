@@ -1,0 +1,12 @@
+<XPD:OBJ name="OwnedElements[3]" type="UMLModel" guid="AZQpziQwj064UJBj93I1gwAA">
+<XPD:ATTR name="Name" type="string">Deployment View</XPD:ATTR>
+<XPD:REF name="Namespace">4iplebRFzUuAhGJyifbGxwAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLDeploymentDiagram" guid="aq+60CwkbU67mdh9VkirtwAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">AZQpziQwj064UJBj93I1gwAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLDeploymentDiagramView" guid="7bS5LrpBkUiu1SzX6GOAPgAA">
+<XPD:REF name="Diagram">aq+60CwkbU67mdh9VkirtwAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
