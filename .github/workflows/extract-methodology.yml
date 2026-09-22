@@ -1,0 +1,37 @@
+name: Extract methodology DOCX
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "методичка.docx"
+      - ".github/workflows/extract-methodology.yml"
+      - "urban-development-coursework/scripts/extract_methodology_docx.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract DOCX
+        run: |
+          python urban-development-coursework/scripts/extract_methodology_docx.py \
+            "методичка.docx" \
+            "urban-development-coursework/methodology/source"
+
+      - name: Commit extracted documentation
+        run: |
+          git config user.name "uml-docs-bot"
+          git config user.email "uml-docs-bot@users.noreply.github.com"
+          git add urban-development-coursework/methodology/source
+          if git diff --cached --quiet; then
+            echo "No extraction changes"
+            exit 0
+          fi
+          git commit -m "Extract methodology DOCX for UML documentation"
+          git push
