@@ -6,6 +6,11 @@ on:
     paths:
       - "urban-development-coursework/**"
       - ".github/workflows/validate-uml.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "urban-development-coursework/**"
+      - ".github/workflows/validate-uml.yml"
   workflow_dispatch:
 
 permissions:
@@ -20,7 +25,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rebuild UML
+      - name: Validate canonical StarUML 7 model
+        run: |
+          python scripts/audit_staruml7.py 01_functionality/urban_development_functionality.mdj \
+            --traceability model/traceability.json
+
+      - name: Rebuild legacy UML
         run: python scripts/build_uml.py
 
       - name: Ensure dist is reproducible

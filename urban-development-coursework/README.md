@@ -79,6 +79,8 @@
 
 **Работа 1 — модель функциональности — завершена и импортирована в StarUML 7.**
 
-Следующий этап: **Работа 2 — модель алгоритмов**.
+**Работа 2 — модель алгоритмов — завершена в каноническом `.mdj`.**
 
-План: Activity Diagram для каждого Use Case первого уровня плюс дополнительные State Machine только там, где поведение естественно выражается состояниями.
+В `Logical View` добавлены Activity Diagram `ProjectCreation`, `DataManagement`, `ScenarioConfiguration`, `ScenarioLaunch`, `ScenarioComparison`, `ResultExport`, детальная `GenerationExecution`, а также State Machine `GenerationRunLifecycle` для жизненного цикла запуска.
+
+Следующий этап: **Работа 3 — модель классов системы**.

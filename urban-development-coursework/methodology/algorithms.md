@@ -88,3 +88,21 @@ Action — элементарное/понятное действие [METHOD: P
 `prepare_snapshot → evaluate_constraints → suitability → zoning → roads → blocks_and_parcels → buildings → demography → infrastructure → final_validation → metrics → persist_manifest`.
 
 Именно от этой предметной логики, а не от формы lending, строится новая алгоритмическая модель.
+
+
+## Статус выполнения
+
+Работа 2 реализована в каноническом `.mdj` в `Logical View`.
+
+Созданы:
+
+- `ProjectCreation` — Activity Diagram для «Создать проект»;
+- `DataManagement` — Activity Diagram для «Управление исходными геоданными»;
+- `ScenarioConfiguration` — Activity Diagram для «Настроить сценарий развития»;
+- `ScenarioLaunch` — Activity Diagram для «Запустить сценарий развития»;
+- `ScenarioComparison` — Activity Diagram для «Просмотр и сравнение сценариев»;
+- `ResultExport` — Activity Diagram для «Экспортировать результаты»;
+- `GenerationExecution` — детальная Activity Diagram генерационного pipeline;
+- `GenerationRunLifecycle` — State Machine состояний запуска.
+
+Все шесть Use Case первого уровня связаны с behavior diagram в `model/traceability.json`.

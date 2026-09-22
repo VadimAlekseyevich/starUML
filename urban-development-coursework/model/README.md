@@ -22,7 +22,7 @@
 
 `Use Case → Activity/State Machine → Class → Sequence → Component → Deployment`
 
-Следующий этап должен обновлять traceability, связывая каждый Use Case первого уровня с behavior diagram.
+Работа 2 обновила traceability: каждый Use Case первого уровня связан с Activity Diagram. Следующий этап — Class Model; он должен трассировать системные действия Activity в обязанности и операции классов.
 
 ## Переименование
 
