@@ -57,6 +57,48 @@ def validate_refs(root: ET.Element, guids: set[str]) -> list[str]:
     return sorted(missing)
 
 
+def validate_typed_backlinks(root: ET.Element, by_guid: dict[str, ET.Element]) -> list[str]:
+    """Validate legacy StarUML reverse collections by concrete relation class.
+
+    StarUML 5 casts these references while loading. A UMLInclude stored in an
+    Extends/Extenders collection (or vice versa) can trigger
+    "Invalid class typecast" even when the XML and GUID references are valid.
+    """
+    errors: list[str] = []
+    expected = {
+        "Includes": "UMLInclude",
+        "Includers": "UMLInclude",
+        "Extends": "UMLExtend",
+        "Extenders": "UMLExtend",
+        "Associations": "UMLAssociation",
+    }
+    for obj in root.iter():
+        if local(obj.tag) != "OBJ":
+            continue
+        obj_type = obj.get("type")
+        if obj_type not in {"UMLUseCase", "UMLActor", "UMLClass"}:
+            continue
+        for child in obj:
+            if local(child.tag) != "REF":
+                continue
+            field = child.get("name") or ""
+            collection = next(
+                (name for name in expected if field.startswith(name + "[")),
+                None,
+            )
+            if not collection:
+                continue
+            guid = (child.text or "").strip()
+            target = by_guid.get(guid)
+            actual_type = target.get("type") if target is not None else None
+            if actual_type != expected[collection]:
+                errors.append(
+                    f"{obj.get('guid')}: {field} -> {guid} has type "
+                    f"{actual_type!r}, expected {expected[collection]!r}"
+                )
+    return errors
+
+
 def validate_collection_counts(root: ET.Element) -> list[str]:
     """Validate #Collection counters against direct Collection[i] children.
 
@@ -175,6 +217,8 @@ def main() -> int:
     missing = validate_refs(root, set(by_guid))
     if missing:
         errors.append("unresolved XPD:REF GUIDs: " + ", ".join(missing))
+
+    errors.extend(validate_typed_backlinks(root, by_guid))
 
     counter_issues = validate_collection_counts(root)
     if args.strict_counts:
