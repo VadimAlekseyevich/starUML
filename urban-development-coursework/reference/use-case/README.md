@@ -1,65 +1,44 @@
-# Use Case Diagram — эталон + методичка
+# Use Case Diagram — методичка + старый эталон
 
-## Быстрый маршрут
+> XML ниже — legacy StarUML 5 reference. Новая модель живёт в `../../01_functionality/urban_development_functionality.mdj`.
 
-1. Методические правила: `../../methodology/functionality.md`.
-2. Рисунки методички: `../../methodology/MEDIA_MAP.md`, прежде всего P0093/P0095/P0110/P0114.
-3. Эталонный XML: `applying_for_loan.fragment.xml`.
-4. Эталонные изображения: `Костыль/диаграммы/*_UseCase_*.jpg`.
-5. Текущая Urban Development модель: `../../dist/urban_development.uml`.
+## Маршрут
 
-## Основной XML-эталон
-
-[applying_for_loan.fragment.xml](./applying_for_loan.fragment.xml)
-
-![ApplyingForLoan Use Case](../../../Костыль/диаграммы/ApplyingForLoan_UseCase_TO_BE.jpg)
+1. `../../methodology/functionality.md`;
+2. изображения методички;
+3. JPG из `Костыль`;
+4. `applying_for_loan.fragment.xml` — только если нужно глубже понять lending;
+5. реализация в StarUML 7.
 
 ## Что подтверждает методичка
 
 Use Case — функция/процесс [METHOD: P0063–P0066].
 
-Основная модель должна быть не одной диаграммой, а системой «основная + декомпозиционные» [METHOD: P0102–P0103].
+Модель: основная + декомпозиционные [METHOD: P0102–P0103].
 
-На основной диаграмме обычно 3–9 относительно независимых Use Case, без частичной декомпозиции [METHOD: P0104–P0107].
+На основном уровне обычно 3–9 независимых Use Case без частичной декомпозиции [METHOD: P0104–P0107].
 
-Декомпозиционная диаграмма обязана содержать декомпозируемый Use Case как логический центр [METHOD: P0112].
+Декомпозиция содержит базовый Use Case как логический центр [METHOD: P0112].
 
-## Очень важный момент: worker
+## Worker
 
-Методичка отличает внешнего Actor от человека, который является частью системы. Внутренний сотрудник создаётся как Class со стереотипом `worker` [METHOD: P0121–P0135].
+Внутренний человек моделируется как Class со stereotype worker/caseWorker [METHOD: P0121–P0135].
 
-Это объясняет реальный `lending.uml`:
-
-- `Клиент` — `UMLActor`;
-- `Менеджер` — `UMLClass` со стереотипом worker/caseWorker.
-
-Поэтому наша структура `Пользователь` + `ГИС-аналитик` не является случайным наследием шаблона; она соответствует методике, если ГИС-аналитик действительно является внутренним работником системы.
-
-## StarUML-типы
-
-- `UMLUseCase`;
-- `UMLActor`;
-- `UMLClass` + worker stereotype;
-- `UMLAssociation`;
-- `UMLInclude`;
-- `UMLExtend`;
-- `UMLUseCaseDiagram`;
-- соответствующие `*View`.
+Именно поэтому `ГИС-аналитик` не Actor.
 
 ## include / extend
 
-`include` — обязательная часть реализации base Use Case [METHOD: P0083–P0085].
-
-`extend` — условная дополнительная часть [METHOD: P0084–P0085].
-
-У `extend` должно быть конкретное свойство `Condition` [METHOD: P0161–P0163].
+- include — обязательная функция;
+- extend — условная;
+- extend имеет содержательный condition [METHOD: P0083–P0085; P0161–P0163].
 
 ## Documentation
 
-Все узлы и стрелки должны иметь Documentation, а стрелки — обоснование выбранного отношения [METHOD: P0149–P0163].
+Все элементы и связи документируются [METHOD: P0149–P0163].
 
-## Urban Development
+## Старый образец
 
-Сейчас есть `UrbanDevelopment`, `ProjectCreation`, `DataManagement`, `ScenarioConfiguration`, `ScenarioLaunch`, `GenerationExecution`.
+- XML: `applying_for_loan.fragment.xml`;
+- JPG: `Костыль/диаграммы/ApplyingForLoan_UseCase_TO_BE.jpg`.
 
-Методический аудит текущего состояния: `../../methodology/audits/current-functionality-audit.md`.
+Используем композицию и уровень детализации, но не XPD-механику.

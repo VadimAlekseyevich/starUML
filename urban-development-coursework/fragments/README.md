@@ -1,15 +1,8 @@
-# Build fragments
+# Build fragments — legacy StarUML 5 layer
 
-Это **сборочные** фрагменты Urban Development StarUML project.
+Каталог содержит XPD/XML-сборку, использованную до перехода на StarUML 7.
 
-Они отличаются от `reference/*.fragment.xml`:
-
-- reference-фрагмент может иметь внешние GUID-ссылки и нужен только для изучения;
-- build-fragment является частью единого проекта и собирается строго по `manifest.json`.
-
-## Текущая гранулярность
-
-Проект разделён на:
+Состав:
 
 1. `project_prefix.xml`;
 2. `views/00_use_case_view.xml`;
@@ -18,14 +11,12 @@
 5. `views/30_deployment_view.xml`;
 6. `project_suffix.xml`.
 
-Это повторяет четыре корневых View из `lending.uml` и уже позволяет не работать с одним монолитом.
+## Статус
 
-## Следующая ступень
+**Замороженный legacy. Не использовать для новых работ.**
 
-После стабилизации registry и dependency resolver можно делить `Use Case View` на:
+Фрагменты нужны только для истории миграции и технического анализа старого `lending.uml`.
 
-- общие semantic objects;
-- relations;
-- diagram/view fragments.
+После импорта источником истины является `.mdj`.
 
-При этом сборщик должен автоматически контролировать GUID и collection counters. До этого ручное мелкое дробление запрещено рабочим соглашением.
+Dependency-aware XPD builder, дальнейшее дробление XML и ручное управление GUID/counters больше не являются задачами курсача.

@@ -1,54 +1,56 @@
 # Scripts
 
-Все скрипты используют только стандартную библиотеку Python.
+После перехода на StarUML 7 скрипты делятся на активные document/reference utilities и legacy StarUML 5 tooling.
 
-## Сборка
+## Активно
 
-```bash
-python scripts/build_uml.py
-```
+### Методичка
 
-По умолчанию читается `fragments/manifest.json`, фрагменты объединяются **как байты** в заданном порядке, затем выполняется базовая XML/GUID-проверка и создаётся `dist/urban_development.uml`.
+`extract_methodology_docx.py` извлекает из `методичка.docx` текст, таблицы и изображения.
 
-Текущая сборка намеренно крупнозернистая: один фрагмент = один корневой StarUML View. Это безопаснее, пока не реализована автоматическая зависимость каждой диаграммы от общих model elements.
-
-## Валидация
-
-```bash
-python scripts/validate_uml.py dist/urban_development.uml \
-  --registry model/registry.json \
-  --forbid кредит --forbid заявк --forbid платеж
-```
-
-Проверяется:
-
-- XML читается;
-- GUID уникальны;
-- каждый `XPD:REF` разрешается;
-- имена и связи совпадают с machine registry;
-- запрещённые остатки исходной банковской предметной области отсутствуют;
-- счётчики коллекций проверяются как warnings (или errors с `--strict-counts`).
-
-## Извлечение lending reference
+### Lending reference
 
 ```bash
 python scripts/extract_lending_examples.py ../lending.uml reference
 ```
 
-Скрипт извлекает точные текстовые объекты диаграмм без пересериализации XML.
+Извлекает точные XML-фрагменты старого эталона. Они используются только для изучения.
 
-## Почему пока не режем Use Case View на десятки файлов
+## Legacy StarUML 5
 
-Модель StarUML не является набором независимых картинок. DiagramView ссылается на UseCase/Actor/Association через GUID, а один и тот же объект может быть показан на нескольких схемах.
+### build_uml.py
 
-До появления dependency-aware builder мелкое физическое дробление сборочных файлов создаёт больше риска, чем пользы. В `reference/` мелкие фрагменты разрешены, потому что они используются только как документация.
+Собирает старые fragments в `dist/urban_development.uml`.
 
+### validate_uml.py
 
-## Методический аудит функциональности
+Проверяет XPD/XML, GUID, XPD:REF и legacy reverse relations.
 
-```bash
-python scripts/audit_functionality.py dist/urban_development.uml \
-  --traceability model/traceability.json
-```
+### audit_functionality.py
 
-Проверка ориентирована именно на правила новой `методичка.docx`: размер основной Use Case Diagram, наличие зависимостей на первом уровне, Documentation/Attachments, реальные Condition и трассировку top-level Use Case к декомпозиционным/поведенческим диаграммам.
+Проверяет первую XPD-версию функциональной модели.
+
+Эти инструменты сохраняются для воспроизводимости, но **не входят в обычный workflow StarUML 7**.
+
+## Текущий запуск
+
+Использовать корневой:
+
+`run_coursework.bat`
+
+Он выполняет pull и открывает канонический `.mdj` в StarUML 7.
+
+## Будущий validator
+
+Если автоматическая проверка понадобится дальше, она должна читать JSON `.mdj`.
+
+Приоритет:
+
+- уникальные `_id`;
+- разрешимые `$ref`;
+- Use Case → behavior;
+- Activity action → Class operation;
+- Sequence message → receiver operation;
+- Class → Component → Deployment coverage.
+
+Новый XPD-компилятор больше не строим.

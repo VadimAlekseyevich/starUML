@@ -1,50 +1,42 @@
-# Activity Diagram — эталон + методичка
+# Activity Diagram — методичка + старый эталон
 
-## Быстрый маршрут
+> XML/ActivityGraph ниже относятся к StarUML 5. Новые Activity строятся непосредственно в StarUML 7 MDJ.
 
-1. Правила: `../../methodology/algorithms.md`.
-2. Рисунки DOCX: P0197, P0209, P0230, P0237, P0267 в `../../methodology/MEDIA_MAP.md`.
-3. XML: `applying_for_loan.fragment.xml`.
-4. Эталонные JPG: `ApplyingForLoan_Activity_TO_BE.jpg`, `ApplicationApproval_Activity_TO_BE.jpg`, `CreditRegistration_Activity_TO_BE.jpg`, `LoanRepayment_Activity_TO_BE.jpg`.
+## Маршрут
 
-## XML-эталон
+1. `../../methodology/algorithms.md`;
+2. methodology media;
+3. Activity JPG из `Костыль`;
+4. legacy XML `applying_for_loan.fragment.xml` при необходимости;
+5. реализация в StarUML 7.
 
-[applying_for_loan.fragment.xml](./applying_for_loan.fragment.xml)
+## Методические правила
 
-![ApplyingForLoan Activity](../../../Костыль/диаграммы/ApplyingForLoan_Activity_TO_BE.jpg)
+Activity Diagram реализует Use Case [METHOD: P0219].
 
-## Размещение
+Для каждого Use Case первого уровня требуется поведенческая реализация [METHOD: P0220; P0225].
 
-Методичка прямо требует помещать Activity Diagram в `Logical View` [METHOD: P0201].
+Activity помещается в Logical View [METHOD: P0201].
 
-Для StarUML 5 модель устроена как:
+Decision использует реальные guards и `else`, а не «Да/Нет» [METHOD: P0227–P0229].
 
-`UMLActivityGraph → TOP/UMLCompositeState → vertices/transitions → UMLActivityDiagram` [METHOD: P0202–P0206].
+Swimlanes показывают логические действия ролей [METHOD: P0234–P0239].
 
-Именно так организован `lending.uml`.
+Узлы/переходы документируются [METHOD: P0251–P0256].
 
-## ActionState и SubactivityState
+## Legacy StarUML 5
 
-`ActionState` — действие/деятельность с понятной реализацией [METHOD: P0191–P0194].
+В lending storage был:
 
-`SubactivityState` — ссылка на деятельность, требующую отдельной реализации; нетривиальная ссылка должна иметь отдельную диаграмму [METHOD: P0193–P0196; P0255].
+`UMLActivityGraph → TOP → states/transitions → UMLActivityDiagram`.
 
-## Связь с Use Case
+Это пример внутреннего формата старого редактора, а не требование к StarUML 7.
 
-Activity Diagram является алгоритмической реализацией Use Case [METHOD: P0219].
+## Старые изображения
 
-Для каждого Use Case основной диаграммы требуется поведенческая диаграмма [METHOD: P0220], а Activity Diagram прямо предписана для каждого варианта первого уровня [METHOD: P0225; P0241–P0245].
+- ApplyingForLoan;
+- ApplicationApproval;
+- CreditRegistration;
+- LoanRepayment.
 
-## Decision
-
-Не использовать подписи «Да/Нет». На исходящих стрелках задаются реальные guards и при необходимости `else` [METHOD: P0227–P0229].
-
-## Swimlanes
-
-Показывать логическое действие человека, а не мышь/клавиатуру [METHOD: P0234–P0236].
-
-Допускается интегрированная дорожка «Система», если разделение client/server избыточно для текущего уровня [METHOD: P0239].
-
-## Documentation
-
-Узлы и переходы должны быть документированы; переход обосновывает Trigger/Guard/Effect [METHOD: P0251–P0256].
+Используем их как визуальный ориентир композиции.

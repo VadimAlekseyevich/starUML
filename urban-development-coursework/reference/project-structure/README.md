@@ -1,32 +1,29 @@
-# Структура StarUML-проекта
+# Структура проекта: legacy и StarUML 7
 
-## Эталон lending.uml
+## Старый lending.uml
 
-На верхнем уровне `lending.uml` содержит четыре `UMLModel`:
+Legacy-проект имеет четыре верхних UMLModel:
 
-1. `Use Case View`
-2. `Logical View`
-3. `Component View`
-4. `Deployment View`
+1. Use Case View;
+2. Logical View;
+3. Component View;
+4. Deployment View.
 
-Точный сокращённый каркас: [lending_project_skeleton.fragment.xml](./lending_project_skeleton.fragment.xml).
+При этом содержательные Component/Deployment Diagram местами лежат в Logical View. Это историческая особенность проекта, а не универсальное правило.
 
-## Важное наблюдение
+## Что сохраняем
 
-Не все «реальные» диаграммы лежат в одноимённом верхнем View.
+Activity размещаем в Logical View, потому что это прямо требует METHOD [P0201].
 
-В эталоне:
+Остальные диаграммы организуем логично в одном StarUML 7 проекте, не копируя странности старого дерева только ради сходства.
 
-- Use Case Diagram действительно находятся в `Use Case View`;
-- Activity, Statechart, Class, большая часть Component и рабочая Deployment Diagram находятся внутри `Logical View` и его пакетов/behavior;
-- верхние `Component View/Main` и `Deployment View/Main` фактически выступают как стандартные заготовки StarUML.
+## Текущий проект
 
-Поэтому при переносе структуры нельзя механически считать, что каждый тип диаграммы обязан жить только в одноимённом View. Для курсовой важнее повторять проверенную структуру эталона и сохранять связность модели.
+Импорт StarUML 7 сохранил существующие Views и `_id`, поэтому первую работу не перестраиваем без причины.
 
-## Наша структура
+Новые этапы добавляем в этот же `.mdj`.
 
-В Urban Development Generator уже созданы те же четыре верхнеуровневых View. Пока содержательной является Use Case View. Остальные View служат основой для следующих этапов.
+Сравнение форматов:
 
-## GUID
-
-GUID верхних View нашего проекта намеренно совпадают с GUID исходного каркаса, на котором была построена первая версия модели. Не менять их без необходимости: большое количество ссылок может зависеть от них.
+- [../technical/xpd-format.md](../technical/xpd-format.md);
+- [../technical/mdj-format.md](../technical/mdj-format.md).

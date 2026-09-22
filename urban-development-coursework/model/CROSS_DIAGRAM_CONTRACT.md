@@ -1,117 +1,84 @@
 # Cross-diagram contract
 
-Этот документ задаёт правила согласованности между разными UML-представлениями Urban Development Generator.
-
 ## 1. Semantic identity
 
-Один предметный элемент = один semantic object = один GUID.
+Один предметный элемент = один model element = один стабильный `_id`.
 
-Если один Use Case показан на трёх диаграммах, создаются три View одного `UMLUseCase`, а не три разных `UMLUseCase` с одинаковым названием.
+Несколько диаграмм показывают несколько View одной сущности, а не дубликаты.
 
-Источник идентичностей: `registry.json / registry.yaml`.
+Источник истины: канонический `.mdj`.
 
 ## 2. Use Case → Behavior
 
-Каждый финализированный Use Case основной диаграммы должен иметь алгоритмическую реализацию [METHOD: P0220; P0225].
+Каждый финализированный Use Case основной диаграммы имеет алгоритмическую реализацию [METHOD: P0220; P0225].
 
-В `traceability.json` для него фиксируется:
-
-- decomposition diagram;
-- behavior diagram;
-- статус покрытия.
-
-Имя алгоритма должно явно трассироваться к реализуемому Use Case.
+В `traceability.json` фиксируются decomposition и behavior diagram.
 
 ## 3. include / extend ↔ текстовый поток
 
-Безусловный подпоток `S...` должен быть согласован с `include`.
+Безусловный подпоток согласуется с include.
 
-Условный подпоток `S... [condition]` должен быть согласован с `extend`, а текст условия — с `UMLExtend.Condition` [METHOD: P0161–P0172].
-
-Нельзя, чтобы диаграмма говорила `include`, а текстовый алгоритм описывал условный вызов.
+Условный подпоток согласуется с extend и его condition [METHOD: P0161–P0172].
 
 ## 4. Activity → Class
 
-Действия системы не исчезают при переходе к Class Model: они превращаются в операции классов [METHOD: P0355–P0357; P0378].
+Действия системы превращаются в обязанности/операции классов [METHOD: P0355–P0357; P0378].
 
-Если Action/Activity реализуется конкретным control/boundary/entity классом, это должно быть отражено в Class Model.
+Не применять механическое «один Action = один Class» [METHOD: P0379–P0380].
 
-Ориентир ActionState → Class не является механическим правилом 1:1 [METHOD: P0379–P0380].
+## 5. Class package → detail
 
-## 5. Class package → Class detail
-
-Каждый класс, показанный в package view, должен существовать в detail view [METHOD: P0450–P0452].
-
-Validator должен считать отсутствие детального класса ошибкой логической целостности после финализации Class Model.
+Каждый класс package view существует в detail view [METHOD: P0450–P0452].
 
 ## 6. Class → Sequence
 
-Каждый объект Sequence Diagram имеет тип-класс.
+Каждый lifeline типизирован классом.
 
-Каждое сообщение, входящее в lifeline объекта, должно соответствовать операции класса-получателя [METHOD: P0496–P0501].
-
-Создание объекта согласуется с constructor/create dependency, уничтожение — destroy semantics.
+Каждое входящее сообщение соответствует операции класса-получателя [METHOD: P0496–P0501].
 
 ## 7. Class → Component
 
-Component Model группирует реализацию классов/пакетов на более крупном программном уровне.
+Component Model группирует классы/пакеты на архитектурном уровне.
 
-Компонент не вводит новую прикладную терминологию, если уже существует соответствующий пакет/подсистема Class Model.
-
-Boundary/control/entity — аналитическая классификация классов; Frontend/API/Core/Worker — архитектурные компоненты. Это разные уровни и они должны быть связаны, а не смешаны.
+Boundary/control/entity и Frontend/API/Core/Worker — разные уровни модели.
 
 ## 8. Component → Deployment
 
-Каждый исполняемый software component должен иметь понятное соответствие deployment artifact/service/node.
+Исполняемый компонент имеет понятное deployment mapping.
 
 Канонический словарь: `architecture.yaml`.
 
-Например:
-
-- Backend API → compose service `api`;
-- Worker → `worker`;
-- PostgreSQL/PostGIS → `db`;
-- Redis → `redis`;
-- Frontend → `frontend`.
-
-## 9. Actor / worker consistency
+## 9. Actor / worker
 
 Внешний пользователь — Actor.
 
-Внутренний человек, выполняющий часть системной функциональности, — worker/Class [METHOD: P0121–P0135].
-
-Одна и та же роль не должна в разных диаграммах произвольно становиться то Actor, то внутренним worker.
+Внутренний человек — worker/Class [METHOD: P0121–P0135].
 
 ## 10. Documentation
 
-Документация является частью модели, а не пояснительной запиской «после UML».
-
-Use Case relation Documentation должна объяснять тип связи [METHOD: P0149–P0163].
-
-Activity Documentation уточняет действия и переходы [METHOD: P0251–P0256].
-
-Class detail документирует members и relations [METHOD: P0408–P0410].
+Documentation — часть модели [METHOD: P0149–P0163; P0251–P0256; P0408–P0410].
 
 ## 11. Rename protocol
 
-Переименование semantic element требует одновременно:
+При переименовании:
 
-1. изменения canonical registry;
-2. изменения semantic object Name;
-3. обновления Documentation;
-4. обновления traceability;
-5. проверки текстовых потоков;
-6. проверки diagram captions/report references.
-
-GUID при обычном переименовании **не меняется**, потому что идентичность элемента остаётся прежней.
+1. изменить model element в `.mdj`;
+2. не менять `_id`;
+3. обновить Documentation;
+4. обновить traceability;
+5. проверить flows и подписи.
 
 ## 12. Delete protocol
 
-Перед удалением semantic object validator должен доказать отсутствие:
+Перед удалением проверить отсутствие:
 
-- View на диаграммах;
-- XPD:REF;
+- View;
+- `$ref` на `_id`;
 - traceability links;
 - cross-model references.
 
-Удаление подписи/View не равно удалению semantic object.
+Удаление View не означает удаление semantic element.
+
+### Legacy
+
+В XPD аналогом `_id/$ref` были GUID/XPD:REF. Эти правила нужны только для чтения старого `lending.uml`.

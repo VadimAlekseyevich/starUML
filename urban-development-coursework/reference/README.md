@@ -1,61 +1,51 @@
 # Reference library
 
-Эта папка — компактная, навигационная версия эталона `lending.uml` и связанных материалов.
+Эта папка — **библиотека образцов**, а не рабочий формат проекта.
 
-## Центральный принцип
+## Что оставляем из старой курсовой
 
-Перед созданием новой диаграммы не надо перечитывать весь `lending.uml`.
+`lending.uml` и `Костыль/` остаются важными, потому что показывают реальный принятый пример:
 
-Маршрут:
+- виды диаграмм;
+- уровень детализации;
+- декомпозицию;
+- boundary/control/entity;
+- package/detail/relations;
+- component/deployment/sequence;
+- визуальное оформление.
 
-`тип диаграммы → reference/<type>/README → methodology/<topic>.md → пример XML → изображение → generated/all-diagrams при необходимости`.
+## Что стало legacy
 
-## Покрытие
+XML fragments и `generated/all-diagrams/` отражают внутренний формат StarUML 5.
 
-| Тип | Методичка | Curated XML | Все XML-примеры lending | Картинки |
-|---|---|---|---:|---|
-| Use Case | да | да | 8 | `Костыль/диаграммы/*UseCase*` + methodology media |
-| Activity | да | да | 5 | `*Activity*` + methodology media |
-| State Machine | да | да | 4 | `*Statechart*` + methodology media |
-| Class | да | да | 13 | Class/Boundary/Control images + methodology media |
-| Sequence | да | да | 1 | methodology media / Interface reference |
-| Component | нет отдельной главы | да | 8 | component images from `Костыль` |
-| Deployment | нет отдельной главы | да | 2 | architecture/deployment images |
+Их можно читать для анализа старого примера, но новые диаграммы не строятся путём копирования XPD.
 
-Полный машинный каталог: `generated/all-diagrams/catalog.json`.
+Технические документы:
 
-## Curated vs generated
+- [technical/xpd-format.md](./technical/xpd-format.md) — legacy;
+- [technical/mdj-format.md](./technical/mdj-format.md) — текущий формат;
+- [LEGACY_STARUML5_REFERENCE.md](./LEGACY_STARUML5_REFERENCE.md) — как правильно пользоваться старым примером.
 
-`reference/<type>/*.fragment.xml` — вручную выбранные учебные фрагменты, которые удобно читать и комментировать.
+## Правильный маршрут
 
-`reference/generated/all-diagrams/` — автоматически извлечены **все 41 диаграмма** из `lending.uml`:
+`methodology → reference README → Костыль/JPG → legacy XML при необходимости → построение в StarUML 7`
 
-- 8 Use Case;
-- 5 Activity;
-- 4 Statechart;
-- 13 Class;
-- 8 Component;
-- 2 Deployment;
-- 1 Sequence.
+Сначала понимаем **смысл**, затем смотрим пример, и только потом рисуем.
 
-Generated-файлы не редактируются вручную; при изменении `lending.uml` их пересоздаёт GitHub Action.
+## Покрытие lending
 
-## Структура проекта
+- Use Case: 8;
+- Activity: 5;
+- State Machine: 4;
+- Class: 13;
+- Component: 8;
+- Deployment: 2;
+- Sequence: 1.
 
-`project-structure/` и `technical/` описывают XPD-формат, дерево `lending.uml`, GUID, semantic model vs View и collection counters.
+Generated-файлы не редактируются вручную.
 
-## Методичка
+## Каноническая модель
 
-Исходный DOCX хранится как `/методичка.docx`.
+Текущий проект:
 
-Автоматическая распаковка: `../methodology/source/`.
-
-Карта правил: `../methodology/METHOD_INDEX.md`.
-
-Карта изображений DOCX: `../methodology/MEDIA_MAP.md`.
-
-## Важно
-
-Reference fragment не обязательно является самодостаточным StarUML-файлом: он может ссылаться на semantic objects из других частей исходного проекта.
-
-Для сборки Urban Development используются только `../fragments/` и registry/model-слой.
+`../01_functionality/urban_development_functionality.mdj`
