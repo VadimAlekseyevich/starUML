@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "source_uml": "../01_functionality/urban_development_functionality.uml",
+  "views": [
+    {
+      "guid": "6lo7Q2fgqES9U60PoTjB7QAA",
+      "name": "Use Case View",
+      "kind": "UMLModel"
+    },
+    {
+      "guid": "Hoqr3g8miEazkyw1ankPKwAA",
+      "name": "Logical View",
+      "kind": "UMLModel"
+    },
+    {
+      "guid": "W5c9nJK/gUSt4vakV5unfAAA",
+      "name": "Component View",
+      "kind": "UMLModel"
+    },
+    {
+      "guid": "AZQpziQwj064UJBj93I1gwAA",
+      "name": "Deployment View",
+      "kind": "UMLModel"
+    }
+  ],
+  "entities": [
+    {
+      "guid": "fR+RwbS+R0qtablG0i8AaAAA",
+      "name": "Пользователь",
+      "kind": "UMLActor"
+    },
+    {
+      "guid": "FEBb/FYLJUO1SutyUK63kgAA",
+      "name": "ГИС-аналитик",
+      "kind": "UMLClass"
+    },
+    {
+      "guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
+      "name": "Настроить сценарий развития",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "1jOxeC6gjkO+wWcBsjd+rQAA",
+      "name": "Управление исходными геоданными",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "GaAHx0wDc0Cf9d5OPJiGoQAA",
+      "name": "Создать проект",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "DySXeXnPkk2QwHIvveZsbwAA",
+      "name": "Управление проектами",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "BPZgTNKz10CMHmxIyhnwHgAA",
+      "name": "Просмотр и сравнение сценариев",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "Rv6Rc25qRU+wUTs7wuIgUAAA",
+      "name": "Рассчитать количество созданных сценариев",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "CAXcifFWmkKkMdm6h4I5iAAA",
+      "name": "Рассчитать площадь освоенной территории",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "7zbZN/XhdEGbrnggGA2ZNQAA",
+      "name": "Рассчитать количество кварталов и зданий",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "+zxurjKgbEewT7nbxaxgIgAA",
+      "name": "Рассчитать долю допустимой застройки",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "2qOYw7XP3Uaha327YnXrBQAA",
+      "name": "Визуализировать метрики сценариев",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "ldQSgcex/0Ozsvojbv2P0AAA",
+      "name": "Задать название и границы проекта",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "8Kk/yDRkqEW1p+cLp4GkCAAA",
+      "name": "Выбрать рабочую систему координат",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "vicOfTW31EeEm6E4UYlJ9QAA",
+      "name": "Показать результат операции",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "yM64a1mb40uFQHkPQ9Kq0gAA",
+      "name": "Выбрать режим генерации",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "xu8HbLb1C0awoULW/mmceQAA",
+      "name": "Указать seed генерации",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "JOwdoLIVokCgUnV7AuU+3QAA",
+      "name": "Задать параметры застройки",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "+RSwekAtw0Gh6y7pQ8RM9AAA",
+      "name": "Задать параметры инфраструктуры",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "J1aU+Zp2HE+2dumBAxEmPgAA",
+      "name": "Выбрать исходную территорию",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "Adj9dT6tDE2BC9XYG1N0VAAA",
+      "name": "Показать предупреждение о некорректных данных",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+      "name": "Запустить сценарий развития",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "8wFw7xKE5UG0ZUuwAUGd0gAA",
+      "name": "Проверить конфигурацию сценария",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "K2rq37TTLUSIH+jN8AhH5QAA",
+      "name": "Подтвердить запуск сценария",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "b5n0U6eAN0aM2dvhdkUxSAAA",
+      "name": "Выполнить этапы генерационного конвейера",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "Ni5ZZnI080GRvquT87TjAgAA",
+      "name": "Получить уведомление об ошибке выполнения",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "cC0wBB0M+UqRKL3zlfDdDAAA",
+      "name": "Остановить выполнение сценария",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "H8i8CzedUUyNNr46hzqRlwAA",
+      "name": "Завершить сценарий развития",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "J10lLynXkk2VyA+uoPePHAAA",
+      "name": "Выполнить генерацию сценария",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "8gmY6UBcM0S1yylnbdKRgAAA",
+      "name": "Просмотреть параметры сценария",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "hJNhOxNvOUq5hcg48MvWpQAA",
+      "name": "Отслеживать прогресс выполнения",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "4cIIgq99o0e3bAKD6v7d1QAA",
+      "name": "Создать новый проект",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "VMYB6V+uYUiTQYfzX2PnggAA",
+      "name": "Просмотреть сценарии проекта",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "tQ9kAlzJy0CKW7krEl+ZmgAA",
+      "name": "Просмотреть результаты проекта",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "PYmIImjWD0CFwK6kEQP/YAAA",
+      "name": "Просмотреть сведения о проекте",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "VJYourhqq0isZyFx+YhqngAA",
+      "name": "Изменить параметры проекта",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "2Btw5XRVukWh5/1oldXcNwAA",
+      "name": "Найти проект",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "zAS89z3xvUKCmom+g5UYpgAA",
+      "name": "Выбрать конкретный проект",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "a6hJj0S/qkmCUp668DCVdQAA",
+      "name": "Импортировать набор геоданных",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "zxSFuxrDIkWwlIfNG4PzjQAA",
+      "name": "Просмотреть загруженные наборы данных",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "m9hevB3xEU6UeZhVLJRGogAA",
+      "name": "Проверить метаданные и качество данных",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "u6xN0VxqbU6ML9cwL+v+CgAA",
+      "name": "Настроить интерпретацию слоя",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "QEou1zHJCUi1TU7YEKu9LgAA",
+      "name": "Просмотреть выбранный сценарий",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "rRsQXBN+7kmSPzBVeSkKtgAA",
+      "name": "Получить результаты сценария",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "fFF6+4wOuESHlwgdEBFV6wAA",
+      "name": "Просмотреть журнал выполнения этапов",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "oQu1zkmSVUWYZRQHdGtUBgAA",
+      "name": "Выбрать набор метрик для сравнения",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "AAHpY9yDMUCV63F1dSpZnQAA",
+      "name": "Просмотреть слои и исходные данные",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "XcCZLxTrbEusVa6FmY23ZAAA",
+      "name": "Зафиксировать нарушения ограничений",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "ri894gw9IE6WLvOqm2YAqwAA",
+      "name": "Рассчитать итоговые метрики",
+      "kind": "UMLUseCase"
+    },
+    {
+      "guid": "fxn1HyxHqUGTDza6qEGDaAAA",
+      "name": "Удалить набор геоданных",
+      "kind": "UMLUseCase"
+    }
+  ],
+  "diagrams": [
+    {
+      "guid": "3qmbEX3An0GTnpuD64Bh6QAA",
+      "name": "DataManagement",
+      "kind": "UMLUseCaseDiagram"
+    },
+    {
+      "guid": "NyGkKdYDKUqZt4hw2UJOqwAA",
+      "name": "GenerationExecution",
+      "kind": "UMLUseCaseDiagram"
+    },
+    {
+      "guid": "qlLdWAG4T0GKoaLKKEvUrwAA",
+      "name": "ScenarioLaunch",
+      "kind": "UMLUseCaseDiagram"
+    },
+    {
+      "guid": "KlF7MhujPkiEiDMBShlSAQAA",
+      "name": "ScenarioConfiguration",
+      "kind": "UMLUseCaseDiagram"
+    },
+    {
+      "guid": "hHr8110G1UmKIhw/XxGDPAAA",
+      "name": "ProjectCreation",
+      "kind": "UMLUseCaseDiagram"
+    },
+    {
+      "guid": "fjgg3vKMzEasR+L8Ny2FnQAA",
+      "name": "UrbanDevelopment",
+      "kind": "UMLUseCaseDiagram"
+    }
+  ],
+  "relationships": [
+    {
+      "guid": "hWwwnQOSS06aByx4hF+UxAAA",
+      "kind": "include",
+      "base_guid": "GaAHx0wDc0Cf9d5OPJiGoQAA",
+      "target_guid": "ldQSgcex/0Ozsvojbv2P0AAA"
+    },
+    {
+      "guid": "6qPcPSYFTkilJD9VHqHb0AAA",
+      "kind": "include",
+      "base_guid": "GaAHx0wDc0Cf9d5OPJiGoQAA",
+      "target_guid": "8Kk/yDRkqEW1p+cLp4GkCAAA"
+    },
+    {
+      "guid": "IFfvZ2+1a0qg+nIUlqfU1gAA",
+      "kind": "extend",
+      "base_guid": "GaAHx0wDc0Cf9d5OPJiGoQAA",
+      "target_guid": "vicOfTW31EeEm6E4UYlJ9QAA"
+    },
+    {
+      "guid": "u82NYeX7IUKfH53DRP0PoAAA",
+      "kind": "extend",
+      "base_guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
+      "target_guid": "J1aU+Zp2HE+2dumBAxEmPgAA"
+    },
+    {
+      "guid": "uZcwcbQ3HUS2AUFqSts2IAAA",
+      "kind": "include",
+      "base_guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
+      "target_guid": "+RSwekAtw0Gh6y7pQ8RM9AAA"
+    },
+    {
+      "guid": "OrTC4QT8k0i4fJF3YqcVjAAA",
+      "kind": "include",
+      "base_guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
+      "target_guid": "JOwdoLIVokCgUnV7AuU+3QAA"
+    },
+    {
+      "guid": "nWD7fI8oxEOoXUWaHynqDgAA",
+      "kind": "include",
+      "base_guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
+      "target_guid": "xu8HbLb1C0awoULW/mmceQAA"
+    },
+    {
+      "guid": "A44rQ2bYNUSa4ulzXim8LQAA",
+      "kind": "include",
+      "base_guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
+      "target_guid": "yM64a1mb40uFQHkPQ9Kq0gAA"
+    },
+    {
+      "guid": "ibVolaYwGU+mpm9LpFoIvAAA",
+      "kind": "extend",
+      "base_guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
+      "target_guid": "Adj9dT6tDE2BC9XYG1N0VAAA"
+    },
+    {
+      "guid": "mCqN0DEuQkirF3SNlhCaNQAA",
+      "kind": "extend",
+      "base_guid": "8wFw7xKE5UG0ZUuwAUGd0gAA",
+      "target_guid": "It1O0VEln0u9i9QaHJ0gYAAA"
+    },
+    {
+      "guid": "XTKlh8jMjkOJEvxiP9E6TwAA",
+      "kind": "extend",
+      "base_guid": "o9LHFaGwc0O2bWHQfzFLaQAA",
+      "target_guid": "8wFw7xKE5UG0ZUuwAUGd0gAA"
+    },
+    {
+      "guid": "XHxOv0cQiUuahLuEkqg+iQAA",
+      "kind": "include",
+      "base_guid": "8wFw7xKE5UG0ZUuwAUGd0gAA",
+      "target_guid": "It1O0VEln0u9i9QaHJ0gYAAA"
+    },
+    {
+      "guid": "tv3kCAo3vE6pi21IJY9NDAAA",
+      "kind": "extend",
+      "base_guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+      "target_guid": "K2rq37TTLUSIH+jN8AhH5QAA"
+    },
+    {
+      "guid": "uAw3H/sEeUSqyHEV47exYAAA",
+      "kind": "extend",
+      "base_guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+      "target_guid": "J10lLynXkk2VyA+uoPePHAAA"
+    },
+    {
+      "guid": "wgTj+yW7mkGOOiRQoX/OCgAA",
+      "kind": "extend",
+      "base_guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+      "target_guid": "H8i8CzedUUyNNr46hzqRlwAA"
+    },
+    {
+      "guid": "yXurllFh+Eu7iCaQVi99FwAA",
+      "kind": "extend",
+      "base_guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+      "target_guid": "hJNhOxNvOUq5hcg48MvWpQAA"
+    },
+    {
+      "guid": "fdq8nMgM0US8H8sYiTFuAAAA",
+      "kind": "extend",
+      "base_guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+      "target_guid": "8gmY6UBcM0S1yylnbdKRgAAA"
+    },
+    {
+      "guid": "N+sleZfj6Uiu7XsFW+664wAA",
+      "kind": "extend",
+      "base_guid": "J10lLynXkk2VyA+uoPePHAAA",
+      "target_guid": "b5n0U6eAN0aM2dvhdkUxSAAA"
+    },
+    {
+      "guid": "m/QO+Jl7JkK/44P0yWAk3AAA",
+      "kind": "extend",
+      "base_guid": "J10lLynXkk2VyA+uoPePHAAA",
+      "target_guid": "Ni5ZZnI080GRvquT87TjAgAA"
+    },
+    {
+      "guid": "3E60YyzNhkaMP1JUQRjciQAA",
+      "kind": "extend",
+      "base_guid": "J10lLynXkk2VyA+uoPePHAAA",
+      "target_guid": "cC0wBB0M+UqRKL3zlfDdDAAA"
+    },
+    {
+      "guid": "M9iEJh3uS0esWr6jKs+kSQAA",
+      "kind": "extend",
+      "base_guid": "DySXeXnPkk2QwHIvveZsbwAA",
+      "target_guid": "4cIIgq99o0e3bAKD6v7d1QAA"
+    },
+    {
+      "guid": "cucM+7yWrUio3sHigpxcuAAA",
+      "kind": "extend",
+      "base_guid": "zAS89z3xvUKCmom+g5UYpgAA",
+      "target_guid": "PYmIImjWD0CFwK6kEQP/YAAA"
+    },
+    {
+      "guid": "r/PyNHEW+kSbKC/7QXKFzQAA",
+      "kind": "extend",
+      "base_guid": "PYmIImjWD0CFwK6kEQP/YAAA",
+      "target_guid": "VJYourhqq0isZyFx+YhqngAA"
+    },
+    {
+      "guid": "4ptB7yZO7EiRzdeDZ3VkNgAA",
+      "kind": "extend",
+      "base_guid": "J10lLynXkk2VyA+uoPePHAAA",
+      "target_guid": "hJNhOxNvOUq5hcg48MvWpQAA"
+    },
+    {
+      "guid": "MZMivBixDkm9HnJQKF6rVAAA",
+      "kind": "include",
+      "base_guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+      "target_guid": "8gmY6UBcM0S1yylnbdKRgAAA"
+    },
+    {
+      "guid": "fYNRg9Hi/UCOz2VoeCJjxwAA",
+      "kind": "include",
+      "base_guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+      "target_guid": "K2rq37TTLUSIH+jN8AhH5QAA"
+    },
+    {
+      "guid": "xl/EACtxi0ux2HZpSVljEwAA",
+      "kind": "include",
+      "base_guid": "J10lLynXkk2VyA+uoPePHAAA",
+      "target_guid": "b5n0U6eAN0aM2dvhdkUxSAAA"
+    },
+    {
+      "guid": "nZCE5c9rmEGs+Fzt6Kfo1AAA",
+      "kind": "extend",
+      "base_guid": "DySXeXnPkk2QwHIvveZsbwAA",
+      "target_guid": "zAS89z3xvUKCmom+g5UYpgAA"
+    },
+    {
+      "guid": "2xKq4yxVEEmn9n64sPL5EQAA",
+      "kind": "extend",
+      "base_guid": "1jOxeC6gjkO+wWcBsjd+rQAA",
+      "target_guid": "a6hJj0S/qkmCUp668DCVdQAA"
+    },
+    {
+      "guid": "UzCJPXvXJUaHBzwlFoUgfgAA",
+      "kind": "extend",
+      "base_guid": "1jOxeC6gjkO+wWcBsjd+rQAA",
+      "target_guid": "zxSFuxrDIkWwlIfNG4PzjQAA"
+    },
+    {
+      "guid": "Cfr5PREkPkiAXOU1AtXX/AAA",
+      "kind": "extend",
+      "base_guid": "zxSFuxrDIkWwlIfNG4PzjQAA",
+      "target_guid": "m9hevB3xEU6UeZhVLJRGogAA"
+    },
+    {
+      "guid": "cennEinQXkqnWKaCz0V5SwAA",
+      "kind": "extend",
+      "base_guid": "m9hevB3xEU6UeZhVLJRGogAA",
+      "target_guid": "u6xN0VxqbU6ML9cwL+v+CgAA"
+    },
+    {
+      "guid": "LWqfx3fECkSnJ+w7MCWS1AAA",
+      "kind": "extend",
+      "base_guid": "BPZgTNKz10CMHmxIyhnwHgAA",
+      "target_guid": "QEou1zHJCUi1TU7YEKu9LgAA"
+    },
+    {
+      "guid": "DIjpWUEmeU2QJZi2mzkSMwAA",
+      "kind": "include",
+      "base_guid": "J10lLynXkk2VyA+uoPePHAAA",
+      "target_guid": "ri894gw9IE6WLvOqm2YAqwAA"
+    },
+    {
+      "guid": "TtS4189xL0qMkP5WvrJ2wQAA",
+      "kind": "extend",
+      "base_guid": "J10lLynXkk2VyA+uoPePHAAA",
+      "target_guid": "XcCZLxTrbEusVa6FmY23ZAAA"
+    },
+    {
+      "guid": "G0ongGz/uE6a2X1psP5slQAA",
+      "kind": "extend",
+      "base_guid": "m9hevB3xEU6UeZhVLJRGogAA",
+      "target_guid": "fxn1HyxHqUGTDza6qEGDaAAA"
+    }
+  ]
+}
