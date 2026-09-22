@@ -1,39 +1,30 @@
-# Deployment Diagram
+# Deployment Diagram — старый пример + реальный deployment
 
-## Эталон
+> В методичке отдельной Deployment-главы нет. Lending/Костыль дают визуальный ориентир, но не диктуют дерево StarUML 7.
 
-XML: [lending.fragment.xml](./lending.fragment.xml)
+## Старые материалы
 
-![Lending Architecture](../../../Костыль/диаграммы/Lending_Arch.jpg)
-
-Дополнительные изображения:
-
+- `Lending_Arch.jpg`;
 - `Architecture.jpg`;
 - `deployment.jpg`;
-- `rasm_art.jpg`.
+- `rasm_art.jpg`;
+- legacy `lending.fragment.xml`.
 
-## Структура lending.uml
+Историческое размещение диаграммы lending в Logical View/Arch не является обязательным.
 
-Содержательная Deployment Diagram `Lending` размещена в `Logical View / Arch`. Верхний `Deployment View / Main` существует отдельно как стандартная заготовка.
+## Urban Development
 
-Характерные элементы:
+Deployment должен показать:
 
-- `UMLNode` / node instances;
-- component/artifact instances;
-- communication/dependency links;
-- `UMLDeploymentDiagram` и `UMLDeploymentDiagramView`.
-
-## Для urban-development
-
-Deployment Model должна быть согласована с реальной архитектурой Docker Compose:
-
-- браузер/клиент;
+- browser/client;
 - frontend;
-- backend API;
+- api;
 - worker;
 - PostgreSQL/PostGIS;
 - Redis;
-- файловое/объектное хранилище при наличии;
-- сетевые связи между ними.
+- storage;
+- сетевые связи.
 
-Важно не смешивать логический компонент и узел размещения. Один программный компонент может быть артефактом, размещённым на конкретном узле.
+Он должен трассироваться к Component Model.
+
+Важно различать logical component и node/execution environment.

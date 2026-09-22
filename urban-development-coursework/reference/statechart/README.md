@@ -1,34 +1,31 @@
-# State Machine Diagram — эталон + методичка
+# State Machine Diagram — методичка + старый эталон
 
-## Быстрый маршрут
+> Legacy XML относится к StarUML 5. Новые автоматы строятся в каноническом StarUML 7 MDJ.
 
-- Методика: `../../methodology/statecharts.md`.
-- Изображения методички: P0303, P0306, P0309 и последующие в `../../methodology/MEDIA_MAP.md`.
-- XML-эталон: `authorization.fragment.xml`.
-- JPG: `Authorization_StatechartDiagramm_TO_BE.jpg`, `ViewCatalogProduct_Statechart_TO_BE.jpg`.
+## Источники
 
-## XML-эталон
+- `../../methodology/statecharts.md`;
+- methodology media;
+- `Authorization_StatechartDiagramm_TO_BE.jpg`;
+- `ViewCatalogProduct_Statechart_TO_BE.jpg`;
+- legacy `authorization.fragment.xml`.
 
-[authorization.fragment.xml](./authorization.fragment.xml)
+## Что подтверждает методичка
 
-![Authorization Statechart](../../../Костыль/диаграммы/Authorization_StatechartDiagramm_TO_BE.jpg)
+State Machine = состояния + переходы [METHOD: P0279–P0283].
 
-## Назначение
+Это реализация сценария/Use Case [METHOD: P0286–P0287].
 
-State Machine — состояние + переходы; стрелка может иметь Trigger, Guard Condition и Effect [METHOD: P0279–P0283].
+Сценарии могут декомпозироваться [METHOD: P0288–P0298].
 
-Диаграмма автомата рассматривается как алгоритмическая реализация конкретного сценария/Use Case [METHOD: P0286–P0287].
+## Legacy lending
 
-## Декомпозиция
+Старый storage:
 
-Методичка предлагает строить сценарий по Actor, затем детализировать реализуемые им Use Case и вспомогательные процессы [METHOD: P0288–P0298].
+`UMLStateMachine → TOP/composite states → transitions → UMLStatechartDiagram`.
 
-## StarUML-структура
-
-В `lending.uml`:
-
-`UMLStateMachine → UMLCompositeState(TOP) / states / transitions → UMLStatechartDiagram`.
+Используем как техническую справку, но не повторяем XPD вручную.
 
 ## Urban Development
 
-Естественные кандидаты — lifecycle `GenerationRun`, `Job`, `DatasetVersion`, но State Machine следует вводить только как часть реализации реального сценария, а не для количества.
+Кандидат: lifecycle запуска сценария — Draft/Validated/Queued/Running/Completed/Failed/Cancelled.

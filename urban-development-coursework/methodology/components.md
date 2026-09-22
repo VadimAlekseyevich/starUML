@@ -2,25 +2,25 @@
 
 ## Статус источников
 
-В текущем `методичка.docx` отдельной главы по Component Diagram нет.
+В `методичка.docx` отдельной главы по Component Diagram нет.
 
-Поэтому этот раздел основан на:
+Поэтому используем:
 
-- `lending.uml` [LENDING];
-- материалах `Костыль/диаграммы` [COURSEWORK];
-- реальной архитектуре `urban-development-generator` [PROJECT].
+- lending как старый учебный пример [LENDING];
+- `Костыль` как визуальный reference [COURSEWORK];
+- реальную архитектуру Urban Development Generator [PROJECT].
 
-Нельзя ссылаться на этот файл как на прямое требование METHOD.
+Это не METHOD.
 
-## Наблюдение по lending
+## Что берём из lending
 
-Содержательные Component Diagram находятся в `Logical View / Component`: `ClientClient`, `ClientServer`, `ManagerClient`, `ManagerServer`, `Service`, `Executable`, `artifact` [LENDING].
+Старый lending показывает полезные виды Component Diagram и способы представления client/server/service/artifact.
 
-Стандартный верхний `Component View / Main` при этом практически пуст [LENDING].
+То, что его содержательные Component Diagram находятся в `Logical View / Component`, — **историческая структура файла**, а не обязательное правило для StarUML 7.
 
 ## Urban Development
 
-Канонические компоненты из реального проекта:
+Канонические компоненты:
 
 - Frontend;
 - Backend API;
@@ -28,12 +28,14 @@
 - Worker;
 - PostgreSQL/PostGIS;
 - Redis;
-- subsystem хранения Artifact/файлов.
+- artifact/file storage при необходимости.
 
-Точный набор Component Diagram будет выбран после Class Model, чтобы связи компонентов не противоречили обязанностям boundary/control/entity классов.
+Точный набор и dependencies выводим из Class Model и реальной архитектуры.
 
 ## Граница с Deployment
 
-Component Model описывает программные части и зависимости.
+Component Model отвечает: **из каких программных частей состоит система и как они зависят друг от друга**.
 
-Deployment Model описывает узлы/среды исполнения и размещённые на них artifacts/components.
+Deployment отвечает: **где эти части исполняются/размещаются**.
+
+Нельзя превращать Component Diagram в копию Docker Compose.

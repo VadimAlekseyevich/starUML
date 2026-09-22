@@ -1,45 +1,30 @@
-# Component Diagram
+# Component Diagram — старый пример + реальная архитектура
 
-## Эталон
+> В методичке отдельной Component-главы нет. Старый lending — reference, не технический шаблон для копирования.
 
-XML: [client_server.fragment.xml](./client_server.fragment.xml)
+## Старые материалы
 
-![ClientServer Component](../../../Костыль/диаграммы/ClientServer.jpg)
-
-Дополнительные изображения:
-
+- `ClientServer.jpg`;
 - `ClientClient.jpg`;
 - `ManagerClient.jpg`;
 - `ManagerServer.jpg`;
 - `Service.jpg`;
 - `Executable.jpg`;
-- `artifact.jpg`.
+- `artifact.jpg`;
+- legacy `client_server.fragment.xml`.
 
-## Структура lending.uml
+То, что старые Component Diagram лежат в Logical View/Component, не обязаны повторять.
 
-Содержательные Component Diagram находятся в `Logical View / Component`. При этом стандартный верхний `Component View` содержит только пустую/базовую `Main`.
+## Urban Development
 
-Это отличие важно сохранить в документации, потому что дерево StarUML может выглядеть не так, как ожидается по названию View.
-
-## Характерные элементы
-
-- `UMLComponent`;
-- component instances/views;
-- dependencies/associations;
-- interfaces;
-- artifacts;
-- `UMLComponentDiagram` и `UMLComponentDiagramView`.
-
-## Для urban-development
-
-Архитектура реального проекта уже даёт хорошие кандидаты:
+Кандидаты:
 
 - Frontend;
 - Backend API;
-- Core / algorithmic engine;
+- Algorithmic Core;
 - Worker;
 - PostgreSQL/PostGIS;
 - Redis;
-- storage/artifact subsystem.
+- storage/artifacts.
 
-Диаграмма компонентов не должна превращаться в Deployment Diagram: здесь основной вопрос — **из каких программных компонентов состоит система и как они зависят друг от друга**, а не на каких физических/виртуальных узлах они развернуты.
+Component Diagram отвечает на вопрос о программной структуре и dependencies, а не о физических узлах.

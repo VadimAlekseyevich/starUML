@@ -2,25 +2,36 @@
 
 ## Статус источников
 
-В текущем `методичка.docx` отдельной главы по Deployment Diagram нет.
+Отдельной главы Deployment в методичке нет.
 
-Этот раздел основан на `lending.uml` [LENDING] и реальном deployment Urban Development Generator [PROJECT].
+Основа:
 
-## Наблюдение по lending
+- lending [LENDING];
+- реальный deployment Urban Development Generator [PROJECT].
 
-Рабочая Deployment Diagram `Lending` находится в `Logical View / Arch`, тогда как верхний `Deployment View / Main` является базовой заготовкой [LENDING].
+## Старый lending
+
+Рабочая Deployment Diagram у lending лежит в `Logical View / Arch`, а верхний Deployment View/Main почти пуст.
+
+Это полезное наблюдение об эталонном файле, но **не требование повторить такую структуру в StarUML 7**.
 
 ## Urban Development
 
-Фактический `docker-compose.yml` задаёт основные deployment units:
+Фактические runtime units:
 
-- `frontend`;
-- `api`;
-- `worker`;
-- `db` PostgreSQL/PostGIS;
-- `redis`;
-- одноразовый `migrate` job.
+- browser/client;
+- frontend;
+- api;
+- worker;
+- PostgreSQL/PostGIS;
+- Redis;
+- migrate job;
+- storage при наличии.
 
-Также API/worker используют примонтированное storage.
+Deployment Diagram строится после Component Model и показывает размещение компонентов/artifacts на execution environments/nodes и связи между ними.
 
-Итоговая Deployment Diagram должна трассироваться к Component Model: логический компонент должен быть сопоставим с исполняемым artifact/service/node.
+## Cross-diagram правило
+
+Каждый значимый исполняемый компонент должен иметь понятное deployment mapping.
+
+Словарь — `model/architecture.yaml`.

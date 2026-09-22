@@ -1,58 +1,42 @@
-# Class Diagram — эталон + методичка
+# Class Diagram — методичка + старый эталон
 
-## Быстрый маршрут
+> XML fragments — legacy StarUML 5 reference. Новая Class Model будет создаваться непосредственно в StarUML 7.
 
-1. Правила: `../../methodology/classes.md`.
-2. XML: `entity_with_relation.fragment.xml`.
-3. Изображения lending: `ClassEntityPackeges.jpg`, `ClassEntityDetail.jpg`, `ClassEntityDetailWithRelation.jpg`, `ControlClass.jpg`, `BoundaryClass.jpg`.
-4. Рисунки методички: см. Class-раздел `../../methodology/MEDIA_MAP.md`.
+## Источники
 
-## XML-эталон
+- `../../methodology/classes.md`;
+- methodology media;
+- `ClassEntityPackeges.jpg`;
+- `ClassEntityDetail.jpg`;
+- `ClassEntityDetailWithRelation.jpg`;
+- `ControlClass.jpg`;
+- `BoundaryClass.jpg`;
+- legacy `entity_with_relation.fragment.xml`.
 
-[entity_with_relation.fragment.xml](./entity_with_relation.fragment.xml)
+## Почему в lending много Class Diagram
 
-![Class Entity With Relation](../../../Костыль/диаграммы/ClassEntityDetailWithRelation.jpg)
+Потому что METHOD требует три представления [P0406–P0410]:
 
-## Почему в lending так много Class Diagram
+1. package;
+2. detail;
+3. relations.
 
-Методичка требует три вида представления Class Model [METHOD: P0406–P0410]:
-
-1. package view;
-2. detail view;
-3. relations view.
-
-Именно поэтому в lending регулярно встречаются тройки:
-
-- `...Packages`;
-- `...DetailClass`;
-- `...DetailClassWithRelation`.
-
-Это не случайное дублирование диаграмм.
+Поэтому этот паттерн **сохраняем и в StarUML 7**.
 
 ## Boundary / Control / Entity
 
-Методичка предлагает делить классы на:
-
-- entity — носители информации;
-- boundary — интерфейс;
-- control — прикладная логика/управление [METHOD: P0359–P0374; P0405].
-
-Это объясняет `BoundaryClass`, `ControlClass` и Entity packages в lending.
+Это методическое правило, а не особенность XPD [METHOD: P0359–P0374; P0405].
 
 ## Происхождение классов
 
-Классы целесообразно выделять из поведенческих моделей [METHOD: P0355].
-
-ActionState трансформируется в операции и помогает выделять реализующий класс [METHOD: P0355–P0380].
+Классы/операции выводятся из поведенческой модели [METHOD: P0355–P0380].
 
 ## Логическая целостность
 
-Все классы package view должны присутствовать в detail view [METHOD: P0450–P0452].
-
-Эту проверку мы позже добавим в автоматический validator.
+Все классы package view присутствуют в detail view [METHOD: P0450–P0452].
 
 ## Отношения
 
-Aggregation/composition обосновываются жизненным циклом части [METHOD: P0415–P0419].
+Aggregation/composition — по lifecycle [METHOD: P0415–P0419].
 
-Dependency `call/use/instantiate/create` выбирается по реальному характеру использования [METHOD: P0426–P0438].
+Dependencies call/use/create — по реальному характеру взаимодействия [METHOD: P0426–P0438].
