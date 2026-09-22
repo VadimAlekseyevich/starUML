@@ -6,7 +6,7 @@
 
 ### StarUML 7 audit
 
-`audit_staruml7.py` проверяет канонический `.mdj`: уникальность `_id`, разрешимость `$ref`, наличие Activity Diagram второй работы, guards, Documentation, State Machine и Use Case → behavior traceability.
+`audit_staruml7.py` проверяет канонический `.mdj`: уникальность `_id`, разрешимость `$ref`, покрытие Activity, вызовы декомпозиционных Activity через `UMLCallBehaviorAction`, правило одного входа в Action, guards/`else`, содержательность Documentation, State Machine, Use Case → behavior traceability и базовую геометрию подписей/узлов без наложений.
 
 ```bash
 python scripts/audit_staruml7.py 01_functionality/urban_development_functionality.mdj --traceability model/traceability.json
