@@ -18639,7 +18639,7 @@
 												"$ref": "ALG2_ProjectCreation_Flow_e7"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 966,
 											"width": 230,
 											"height": 38,
@@ -18687,7 +18687,7 @@
 												"$ref": "ALG2_ProjectCreation_Flow_e8"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 966,
 											"width": 230,
 											"height": 38,
@@ -18855,7 +18855,7 @@
 												"$ref": "ALG2_ProjectCreation_Flow_e15"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 1776,
 											"width": 230,
 											"height": 38,
@@ -18903,7 +18903,7 @@
 												"$ref": "ALG2_ProjectCreation_Flow_e16"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 1776,
 											"width": 230,
 											"height": 38,
@@ -20285,7 +20285,7 @@
 												"$ref": "ALG2_DataManagement_Flow_e6"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 831,
 											"width": 230,
 											"height": 38,
@@ -20333,7 +20333,7 @@
 												"$ref": "ALG2_DataManagement_Flow_e7"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 831,
 											"width": 230,
 											"height": 38,
@@ -20381,8 +20381,8 @@
 												"$ref": "ALG2_DataManagement_Flow_e8"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
-											"top": 853,
+											"left": 1000,
+											"top": 883,
 											"width": 230,
 											"height": 38,
 											"alpha": 1.5707963267948966,
@@ -20429,8 +20429,8 @@
 												"$ref": "ALG2_DataManagement_Flow_e9"
 											},
 											"font": "Arial;13;0",
-											"left": 462,
-											"top": 879,
+											"left": 230,
+											"top": 883,
 											"width": 230,
 											"height": 38,
 											"alpha": 1.5707963267948966,
@@ -20477,8 +20477,8 @@
 												"$ref": "ALG2_DataManagement_Flow_e10"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
-											"top": 875,
+											"left": 1000,
+											"top": 935,
 											"width": 230,
 											"height": 38,
 											"alpha": 1.5707963267948966,
@@ -22012,7 +22012,7 @@
 												"$ref": "ALG2_ScenarioConfiguration_Flow_e7"
 											},
 											"font": "Arial;13;0",
-											"left": 462,
+											"left": 1000,
 											"top": 966,
 											"width": 230,
 											"height": 38,
@@ -22060,7 +22060,7 @@
 												"$ref": "ALG2_ScenarioConfiguration_Flow_e8"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 966,
 											"width": 230,
 											"height": 38,
@@ -22168,7 +22168,7 @@
 												"$ref": "ALG2_ScenarioConfiguration_Flow_e12"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 1506,
 											"width": 230,
 											"height": 38,
@@ -22216,7 +22216,7 @@
 												"$ref": "ALG2_ScenarioConfiguration_Flow_e13"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 1506,
 											"width": 230,
 											"height": 38,
@@ -23736,7 +23736,7 @@
 												"$ref": "ALG2_ScenarioLaunch_Flow_e4"
 											},
 											"font": "Arial;13;0",
-											"left": 462,
+											"left": 1000,
 											"top": 561,
 											"width": 230,
 											"height": 38,
@@ -23784,7 +23784,7 @@
 												"$ref": "ALG2_ScenarioLaunch_Flow_e5"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 561,
 											"width": 230,
 											"height": 38,
@@ -23892,7 +23892,7 @@
 												"$ref": "ALG2_ScenarioLaunch_Flow_e9"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 966,
 											"width": 230,
 											"height": 38,
@@ -23940,7 +23940,7 @@
 												"$ref": "ALG2_ScenarioLaunch_Flow_e10"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 966,
 											"width": 230,
 											"height": 38,
@@ -24048,7 +24048,7 @@
 												"$ref": "ALG2_ScenarioLaunch_Flow_e14"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 1506,
 											"width": 230,
 											"height": 38,
@@ -24096,7 +24096,7 @@
 												"$ref": "ALG2_ScenarioLaunch_Flow_e15"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 1506,
 											"width": 230,
 											"height": 38,
@@ -24144,8 +24144,8 @@
 												"$ref": "ALG2_ScenarioLaunch_Flow_e16"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
-											"top": 1528,
+											"left": 1000,
+											"top": 1558,
 											"width": 230,
 											"height": 38,
 											"alpha": 1.5707963267948966,
@@ -25606,7 +25606,7 @@
 												"$ref": "ALG2_ScenarioComparison_Flow_e4"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 561,
 											"width": 230,
 											"height": 38,
@@ -25654,7 +25654,7 @@
 												"$ref": "ALG2_ScenarioComparison_Flow_e5"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 561,
 											"width": 230,
 											"height": 38,
@@ -25802,7 +25802,7 @@
 												"$ref": "ALG2_ScenarioComparison_Flow_e11"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 1371,
 											"width": 230,
 											"height": 38,
@@ -25850,7 +25850,7 @@
 												"$ref": "ALG2_ScenarioComparison_Flow_e12"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 1371,
 											"width": 230,
 											"height": 38,
@@ -25898,8 +25898,8 @@
 												"$ref": "ALG2_ScenarioComparison_Flow_e13"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
-											"top": 1393,
+											"left": 1000,
+											"top": 1423,
 											"width": 230,
 											"height": 38,
 											"alpha": 1.5707963267948966,
@@ -25946,8 +25946,8 @@
 												"$ref": "ALG2_ScenarioComparison_Flow_e14"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
-											"top": 1393,
+											"left": 230,
+											"top": 1423,
 											"width": 230,
 											"height": 38,
 											"alpha": 1.5707963267948966,
@@ -27524,7 +27524,7 @@
 												"$ref": "ALG2_ResultExport_Flow_e7"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 966,
 											"width": 230,
 											"height": 38,
@@ -27572,7 +27572,7 @@
 												"$ref": "ALG2_ResultExport_Flow_e8"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 966,
 											"width": 230,
 											"height": 38,
@@ -27700,7 +27700,7 @@
 												"$ref": "ALG2_ResultExport_Flow_e13"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 1641,
 											"width": 230,
 											"height": 38,
@@ -27748,7 +27748,7 @@
 												"$ref": "ALG2_ResultExport_Flow_e14"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 1641,
 											"width": 230,
 											"height": 38,
@@ -29718,7 +29718,7 @@
 												"$ref": "ALG2_GenerationExecution_Flow_e4"
 											},
 											"font": "Arial;13;0",
-											"left": 305,
+											"left": 540,
 											"top": 561,
 											"width": 230,
 											"height": 38,
@@ -29766,7 +29766,7 @@
 												"$ref": "ALG2_GenerationExecution_Flow_e5"
 											},
 											"font": "Arial;13;0",
-											"left": 5,
+											"left": -230,
 											"top": 561,
 											"width": 230,
 											"height": 38,
@@ -30014,7 +30014,7 @@
 												"$ref": "ALG2_GenerationExecution_Flow_e16"
 											},
 											"font": "Arial;13;0",
-											"left": 305,
+											"left": 540,
 											"top": 2046,
 											"width": 230,
 											"height": 38,
@@ -30062,7 +30062,7 @@
 												"$ref": "ALG2_GenerationExecution_Flow_e17"
 											},
 											"font": "Arial;13;0",
-											"left": 5,
+											"left": -230,
 											"top": 2046,
 											"width": 230,
 											"height": 38,
@@ -30130,7 +30130,7 @@
 												"$ref": "ALG2_GenerationExecution_Flow_e19"
 											},
 											"font": "Arial;13;0",
-											"left": 305,
+											"left": 540,
 											"top": 2316,
 											"width": 230,
 											"height": 38,
@@ -30178,8 +30178,8 @@
 												"$ref": "ALG2_GenerationExecution_Flow_e20"
 											},
 											"font": "Arial;13;0",
-											"left": 308,
-											"top": 2332,
+											"left": -230,
+											"top": 2316,
 											"width": 230,
 											"height": 38,
 											"alpha": 1.5707963267948966,
@@ -32390,7 +32390,7 @@
 												"$ref": "ALG2_DatasetImport_Flow_e4"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 561,
 											"width": 230,
 											"height": 38,
@@ -32438,7 +32438,7 @@
 												"$ref": "ALG2_DatasetImport_Flow_e5"
 											},
 											"font": "Arial;13;0",
-											"left": 465,
+											"left": 230,
 											"top": 561,
 											"width": 230,
 											"height": 38,
@@ -33698,7 +33698,7 @@
 												"$ref": "ALG2_DataQualityValidation_Flow_e7"
 											},
 											"font": "Arial;13;0",
-											"left": 765,
+											"left": 1000,
 											"top": 966,
 											"width": 230,
 											"height": 38,
@@ -33746,8 +33746,8 @@
 												"$ref": "ALG2_DataQualityValidation_Flow_e8"
 											},
 											"font": "Arial;13;0",
-											"left": 462,
-											"top": 982,
+											"left": 230,
+											"top": 966,
 											"width": 230,
 											"height": 38,
 											"alpha": 1.5707963267948966,
