@@ -4,6 +4,14 @@
 
 ## Активно
 
+### StarUML 7 audit
+
+`audit_staruml7.py` проверяет канонический `.mdj`: уникальность `_id`, разрешимость `$ref`, наличие Activity Diagram второй работы, guards, Documentation, State Machine и Use Case → behavior traceability.
+
+```bash
+python scripts/audit_staruml7.py 01_functionality/urban_development_functionality.mdj --traceability model/traceability.json
+```
+
 ### Методичка
 
 `extract_methodology_docx.py` извлекает из `методичка.docx` текст, таблицы и изображения.
@@ -40,15 +48,10 @@ python scripts/extract_lending_examples.py ../lending.uml reference
 
 Он выполняет pull и открывает канонический `.mdj` в StarUML 7.
 
-## Будущий validator
+## Развитие validator
 
-Если автоматическая проверка понадобится дальше, она должна читать JSON `.mdj`.
+`audit_staruml7.py` уже покрывает структуру `.mdj` и вторую работу. На следующих этапах его следует расширить проверками:
 
-Приоритет:
-
-- уникальные `_id`;
-- разрешимые `$ref`;
-- Use Case → behavior;
 - Activity action → Class operation;
 - Sequence message → receiver operation;
 - Class → Component → Deployment coverage.
