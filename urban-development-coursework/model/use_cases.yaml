@@ -1,5 +1,5 @@
-# Use-case decomposition as currently rendered in StarUML.
-schema_version: 1
+# Functionality decomposition after methodology review.
+schema_version: 2
 areas:
   - diagram_guid: "3qmbEX3An0GTnpuD64Bh6QAA"
     diagram_name: "DataManagement"
@@ -45,6 +45,8 @@ areas:
         name: "Завершить сценарий развития"
       - guid: "J10lLynXkk2VyA+uoPePHAAA"
         name: "Выполнить генерацию сценария"
+      - guid: "8wFw7xKE5UG0ZUuwAUGd0gAA"
+        name: "Проверить конфигурацию сценария"
   - diagram_guid: "KlF7MhujPkiEiDMBShlSAQAA"
     diagram_name: "ScenarioConfiguration"
     actors:
@@ -61,8 +63,6 @@ areas:
         name: "Задать параметры инфраструктуры"
       - guid: "J1aU+Zp2HE+2dumBAxEmPgAA"
         name: "Выбрать исходную территорию"
-      - guid: "It1O0VEln0u9i9QaHJ0gYAAA"
-        name: "Запустить сценарий развития"
       - guid: "8wFw7xKE5UG0ZUuwAUGd0gAA"
         name: "Проверить конфигурацию сценария"
   - diagram_guid: "hHr8110G1UmKIhw/XxGDPAAA"
@@ -91,7 +91,33 @@ areas:
         name: "Управление исходными геоданными"
       - guid: "BPZgTNKz10CMHmxIyhnwHgAA"
         name: "Просмотр и сравнение сценариев"
-      - guid: "AAHpY9yDMUCV63F1dSpZnQAA"
-        name: "Просмотреть слои и исходные данные"
+      - guid: "It1O0VEln0u9i9QaHJ0gYAAA"
+        name: "Запустить сценарий развития"
+      - guid: "rRsQXBN+7kmSPzBVeSkKtgAA"
+        name: "Экспортировать результаты"
+  - diagram_guid: "KO7nev772QU+GTj40y+0nV1Z"
+    diagram_name: "ScenarioComparison"
+    actors:
+    use_cases:
+      - guid: "BPZgTNKz10CMHmxIyhnwHgAA"
+        name: "Просмотр и сравнение сценариев"
       - guid: "QEou1zHJCUi1TU7YEKu9LgAA"
         name: "Просмотреть выбранный сценарий"
+      - guid: "oQu1zkmSVUWYZRQHdGtUBgAA"
+        name: "Выбрать набор метрик для сравнения"
+      - guid: "2qOYw7XP3Uaha327YnXrBQAA"
+        name: "Визуализировать метрики сценариев"
+      - guid: "fFF6+4wOuESHlwgdEBFV6wAA"
+        name: "Просмотреть журнал выполнения этапов"
+      - guid: "tQ9kAlzJy0CKW7krEl+ZmgAA"
+        name: "Просмотреть результаты проекта"
+  - diagram_guid: "dnc1cZy7tyGszMb4V/E8irGh"
+    diagram_name: "ResultExport"
+    actors:
+    use_cases:
+      - guid: "rRsQXBN+7kmSPzBVeSkKtgAA"
+        name: "Экспортировать результаты"
+      - guid: "Rv6Rc25qRU+wUTs7wuIgUAAA"
+        name: "Выбрать формат экспорта"
+      - guid: "CAXcifFWmkKkMdm6h4I5iAAA"
+        name: "Сформировать пакет результатов"
