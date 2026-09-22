@@ -1,0 +1,75 @@
+{
+  "source": "/lending.uml",
+  "fragments": [
+    {
+      "dir": "use-case",
+      "type": "UMLUseCaseDiagram",
+      "name": "ApplyingForLoan",
+      "file": "applying_for_loan.fragment.xml",
+      "image": "ApplyingForLoan_UseCase_TO_BE.jpg",
+      "guid": "KlF7MhujPkiEiDMBShlSAQAA",
+      "chars": 25341,
+      "path": "urban-development-coursework/reference/use-case/applying_for_loan.fragment.xml"
+    },
+    {
+      "dir": "activity",
+      "type": "UMLActivityDiagram",
+      "name": "ApplyingForLoan",
+      "file": "applying_for_loan.fragment.xml",
+      "image": "ApplyingForLoan_Activity_TO_BE.jpg",
+      "guid": "EZ7mE6Q8ZkSByidD8h8EdwAA",
+      "chars": 76593,
+      "path": "urban-development-coursework/reference/activity/applying_for_loan.fragment.xml"
+    },
+    {
+      "dir": "statechart",
+      "type": "UMLStatechartDiagram",
+      "name": "AuthorizationStatechartDiagramm",
+      "file": "authorization.fragment.xml",
+      "image": "Authorization_StatechartDiagramm_TO_BE.jpg",
+      "guid": "VaIZbvaeYE2Y0K3Sw5UB5gAA",
+      "chars": 26255,
+      "path": "urban-development-coursework/reference/statechart/authorization.fragment.xml"
+    },
+    {
+      "dir": "class",
+      "type": "UMLClassDiagram",
+      "name": "ClassEntityDetailWithRelation",
+      "file": "entity_with_relation.fragment.xml",
+      "image": "ClassEntityDetailWithRelation.jpg",
+      "guid": "eLAXJtA5EkifooirIOAwegAA",
+      "chars": 42226,
+      "path": "urban-development-coursework/reference/class/entity_with_relation.fragment.xml"
+    },
+    {
+      "dir": "component",
+      "type": "UMLComponentDiagram",
+      "name": "ClientServer",
+      "file": "client_server.fragment.xml",
+      "image": "ClientServer.jpg",
+      "guid": "vu1UVoBccEuzbXI57sPlewAA",
+      "chars": 25312,
+      "path": "urban-development-coursework/reference/component/client_server.fragment.xml"
+    },
+    {
+      "dir": "deployment",
+      "type": "UMLDeploymentDiagram",
+      "name": "Lending",
+      "file": "lending.fragment.xml",
+      "image": "Lending_Arch.jpg",
+      "guid": "Qwf50Tgg80G18RrWjxuvTQAA",
+      "chars": 34876,
+      "path": "urban-development-coursework/reference/deployment/lending.fragment.xml"
+    },
+    {
+      "dir": "sequence",
+      "type": "UMLSequenceDiagram",
+      "name": "SequenceDiagram1",
+      "file": "sequence.fragment.xml",
+      "image": "Interface.jpg",
+      "guid": "7I6JAkRe9EO2lKKVzQMfIQAA",
+      "chars": 33284,
+      "path": "urban-development-coursework/reference/sequence/sequence.fragment.xml"
+    }
+  ]
+}
