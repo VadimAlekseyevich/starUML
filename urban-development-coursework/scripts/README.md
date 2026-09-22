@@ -42,3 +42,13 @@ python scripts/extract_lending_examples.py ../lending.uml reference
 Модель StarUML не является набором независимых картинок. DiagramView ссылается на UseCase/Actor/Association через GUID, а один и тот же объект может быть показан на нескольких схемах.
 
 До появления dependency-aware builder мелкое физическое дробление сборочных файлов создаёт больше риска, чем пользы. В `reference/` мелкие фрагменты разрешены, потому что они используются только как документация.
+
+
+## Методический аудит функциональности
+
+```bash
+python scripts/audit_functionality.py dist/urban_development.uml \
+  --traceability model/traceability.json
+```
+
+Проверка ориентирована именно на правила новой `методичка.docx`: размер основной Use Case Diagram, наличие зависимостей на первом уровне, Documentation/Attachments, реальные Condition и трассировку top-level Use Case к декомпозиционным/поведенческим диаграммам.
