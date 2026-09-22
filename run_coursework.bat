@@ -68,13 +68,15 @@ exit /b 0
 where py >nul 2>nul
 if not errorlevel 1 (
     py -3 %*
-    exit /b %errorlevel%
+    if errorlevel 1 exit /b 1
+    exit /b 0
 )
 
 where python >nul 2>nul
 if not errorlevel 1 (
     python %*
-    exit /b %errorlevel%
+    if errorlevel 1 exit /b 1
+    exit /b 0
 )
 
 echo ERROR: Python was not found in PATH.
