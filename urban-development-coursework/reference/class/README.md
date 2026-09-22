@@ -1,51 +1,58 @@
-# Class Diagram
+# Class Diagram — эталон + методичка
 
-## Эталон
+## Быстрый маршрут
 
-XML: [entity_with_relation.fragment.xml](./entity_with_relation.fragment.xml)
+1. Правила: `../../methodology/classes.md`.
+2. XML: `entity_with_relation.fragment.xml`.
+3. Изображения lending: `ClassEntityPackeges.jpg`, `ClassEntityDetail.jpg`, `ClassEntityDetailWithRelation.jpg`, `ControlClass.jpg`, `BoundaryClass.jpg`.
+4. Рисунки методички: см. Class-раздел `../../methodology/MEDIA_MAP.md`.
+
+## XML-эталон
+
+[entity_with_relation.fragment.xml](./entity_with_relation.fragment.xml)
 
 ![Class Entity With Relation](../../../Костыль/диаграммы/ClassEntityDetailWithRelation.jpg)
 
-Дополнительные изображения:
+## Почему в lending так много Class Diagram
 
-- `ClassEntityPackeges.jpg`;
-- `ClassEntityDetail.jpg`;
-- `ControlClass.jpg`;
-- `BoundaryClass.jpg`;
-- `Data_Full_ClassEntityPackeges_.jpg`.
+Методичка требует три вида представления Class Model [METHOD: P0406–P0410]:
 
-## Очень важный паттерн lending.uml
+1. package view;
+2. detail view;
+3. relations view.
 
-Классы показаны не одной схемой. В пакете `Class` присутствуют серии:
+Именно поэтому в lending регулярно встречаются тройки:
 
 - `...Packages`;
 - `...DetailClass`;
 - `...DetailClassWithRelation`.
 
-Кроме этого отдельно существуют `ControlClass` и `BoundaryClass`.
+Это не случайное дублирование диаграмм.
 
-Это означает, что модель классов у преподавателя рассматривается на нескольких уровнях:
+## Boundary / Control / Entity
 
-1. пакетная/укрупнённая структура;
-2. детальное содержание классов;
-3. связи между детализированными классами;
-4. классы анализа с ролями boundary/control/entity.
+Методичка предлагает делить классы на:
 
-## Характерные типы StarUML
+- entity — носители информации;
+- boundary — интерфейс;
+- control — прикладная логика/управление [METHOD: P0359–P0374; P0405].
 
-- `UMLClass`;
-- `UMLPackage`;
-- `UMLAssociation`;
-- `UMLGeneralization`;
-- `UMLDependency`;
-- `UMLAttribute`;
-- `UMLOperation`;
-- `UMLClassDiagram` и `UMLClassDiagramView`.
+Это объясняет `BoundaryClass`, `ControlClass` и Entity packages в lending.
 
-## Для urban-development
+## Происхождение классов
 
-Не следует просто копировать Python-классы из исходного кода. Курсовая модель должна выражать предметную и проектную структуру системы.
+Классы целесообразно выделять из поведенческих моделей [METHOD: P0355].
 
-Кандидаты доменной модели: Project, DataSource/DataLayer, Scenario, Run, TerritorySnapshot, RoadNetwork, Block, Parcel, Building, InfrastructureFacility, Metric/ValidationReport, Artifact.
+ActionState трансформируется в операции и помогает выделять реализующий класс [METHOD: P0355–P0380].
 
-Имена должны быть синхронизированы с Use Case и последующими Component/Sequence моделями.
+## Логическая целостность
+
+Все классы package view должны присутствовать в detail view [METHOD: P0450–P0452].
+
+Эту проверку мы позже добавим в автоматический validator.
+
+## Отношения
+
+Aggregation/composition обосновываются жизненным циклом части [METHOD: P0415–P0419].
+
+Dependency `call/use/instantiate/create` выбирается по реальному характеру использования [METHOD: P0426–P0438].
