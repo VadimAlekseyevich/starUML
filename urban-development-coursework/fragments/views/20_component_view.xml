@@ -1,0 +1,12 @@
+<XPD:OBJ name="OwnedElements[2]" type="UMLModel" guid="W5c9nJK/gUSt4vakV5unfAAA">
+<XPD:ATTR name="Name" type="string">Component View</XPD:ATTR>
+<XPD:REF name="Namespace">4iplebRFzUuAhGJyifbGxwAA</XPD:REF>
+<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedDiagrams[0]" type="UMLComponentDiagram" guid="Rs+lMQMNGUOD/YEOrhbkdQAA">
+<XPD:ATTR name="Name" type="string">Main</XPD:ATTR>
+<XPD:REF name="DiagramOwner">W5c9nJK/gUSt4vakV5unfAAA</XPD:REF>
+<XPD:OBJ name="DiagramView" type="UMLComponentDiagramView" guid="GFX+gCEpi0GZPhMqbqTPogAA">
+<XPD:REF name="Diagram">Rs+lMQMNGUOD/YEOrhbkdQAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
