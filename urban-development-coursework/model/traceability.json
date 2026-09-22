@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "status": "draft_until_main_use_case_review",
+  "schema_version": 2,
+  "status": "functionality_complete_behavior_pending",
   "methodology": {
     "main_use_case_rule": [
       "P0102",
@@ -36,7 +36,7 @@
         "classification": "top_level",
         "decomposition_diagram": "ProjectCreation",
         "behavior_diagram": null,
-        "status": "decomposition_exists_behavior_missing"
+        "status": "functionality_complete_behavior_pending"
       },
       {
         "name": "Управление исходными геоданными",
@@ -44,7 +44,7 @@
         "classification": "top_level",
         "decomposition_diagram": "DataManagement",
         "behavior_diagram": null,
-        "status": "decomposition_exists_behavior_missing"
+        "status": "functionality_complete_behavior_pending"
       },
       {
         "name": "Настроить сценарий развития",
@@ -52,41 +52,35 @@
         "classification": "top_level",
         "decomposition_diagram": "ScenarioConfiguration",
         "behavior_diagram": null,
-        "status": "decomposition_exists_behavior_missing"
+        "status": "functionality_complete_behavior_pending"
+      },
+      {
+        "name": "Запустить сценарий развития",
+        "guid": "It1O0VEln0u9i9QaHJ0gYAAA",
+        "classification": "top_level",
+        "decomposition_diagram": "ScenarioLaunch",
+        "behavior_diagram": null,
+        "status": "functionality_complete_behavior_pending"
       },
       {
         "name": "Просмотр и сравнение сценариев",
         "guid": "BPZgTNKz10CMHmxIyhnwHgAA",
         "classification": "top_level",
-        "decomposition_diagram": null,
+        "decomposition_diagram": "ScenarioComparison",
         "behavior_diagram": null,
-        "status": "missing_decomposition_and_behavior"
+        "status": "functionality_complete_behavior_pending"
       },
       {
-        "name": "Просмотреть слои и исходные данные",
-        "guid": "AAHpY9yDMUCV63F1dSpZnQAA",
-        "classification": "review_as_auxiliary",
-        "decomposition_diagram": null,
+        "name": "Экспортировать результаты",
+        "guid": "rRsQXBN+7kmSPzBVeSkKtgAA",
+        "classification": "top_level",
+        "decomposition_diagram": "ResultExport",
         "behavior_diagram": null,
-        "status": "review_move_off_main"
-      },
-      {
-        "name": "Просмотреть выбранный сценарий",
-        "guid": "QEou1zHJCUi1TU7YEKu9LgAA",
-        "classification": "review_as_auxiliary",
-        "decomposition_diagram": null,
-        "behavior_diagram": null,
-        "status": "review_move_off_main"
+        "status": "functionality_complete_behavior_pending"
       }
     ]
   },
   "deeper_decomposition": [
-    {
-      "parent_use_case": "Настроить сценарий развития",
-      "use_case": "Запустить сценарий развития",
-      "guid": "It1O0VEln0u9i9QaHJ0gYAAA",
-      "diagram": "ScenarioLaunch"
-    },
     {
       "parent_use_case": "Запустить сценарий развития",
       "use_case": "Выполнить генерацию сценария",
@@ -95,8 +89,8 @@
     }
   ],
   "cross_model_rules": [
-    "Every finalized top-level Use Case must have a decomposition or explicit documented reason why decomposition is trivial.",
-    "Every finalized top-level Use Case must have a behavior diagram.",
+    "Every finalized top-level Use Case has a decomposition diagram.",
+    "Every finalized top-level Use Case must receive a behavior diagram in phase 2.",
     "Every Sequence message operation must exist on the receiver class.",
     "Every class shown in package view must occur in detail class views.",
     "Component and Deployment names must use canonical architecture vocabulary."
