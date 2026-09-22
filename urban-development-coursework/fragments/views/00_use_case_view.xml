@@ -7,6 +7,12 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\Actor_User.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Внешний пользователь системы, который создаёт проект, настраивает и запускает сценарии развития, анализирует варианты и экспортирует результаты.</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
+<XPD:ATTR name="#Associations" type="integer">5</XPD:ATTR>
+<XPD:REF name="Associations[0]">zgHm7r0w40iQkyyOLfLZ2AAA</XPD:REF>
+<XPD:REF name="Associations[1]">D/TvfOE2X0Sjy8Nbn91vNgAA</XPD:REF>
+<XPD:REF name="Associations[2]">SY8eSsHtp0WQ4/vdLOmIYwAA</XPD:REF>
+<XPD:REF name="Associations[3]">RN/XAXx9QEK6ihLjsT9TrAAA</XPD:REF>
+<XPD:REF name="Associations[4]">9X3jo8RWm2yUndjV5CJRPhRa</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="uLJFNuDPBUuxdnQuWfUp9wAA">
 <XPD:ATTR name="Name" type="string">Персональные данные</XPD:ATTR>
@@ -35,6 +41,11 @@
 <XPD:ATTR name="StereotypeProfile" type="string">UMLStandard</XPD:ATTR>
 <XPD:ATTR name="StereotypeName" type="string">caseWorker</XPD:ATTR>
 <XPD:REF name="Namespace">6lo7Q2fgqES9U60PoTjB7QAA</XPD:REF>
+<XPD:ATTR name="#Associations" type="integer">4</XPD:ATTR>
+<XPD:REF name="Associations[0]">gzDKvnw0f0GQ0jKllP8uAQAA</XPD:REF>
+<XPD:REF name="Associations[1]">7eSJpzsiIUiN2rWSN+hWPQAA</XPD:REF>
+<XPD:REF name="Associations[2]">+YJ1fQEcU0uee5YyMAR/IQAA</XPD:REF>
+<XPD:REF name="Associations[3]">qTmXx+2YRUSMhCoyXgxa/QAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="HmVqHNL69kWtWO1JHTbU6gAA">
 <XPD:ATTR name="Name" type="string">Персональные данные</XPD:ATTR>
@@ -3455,15 +3466,18 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ScenarioConfiguration.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Формирование воспроизводимой конфигурации сценария развития: режим, seed, параметры застройки, инфраструктуры и территория.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Extenders" type="integer">3</XPD:ATTR>
+<XPD:ATTR name="#Extenders" type="integer">2</XPD:ATTR>
 <XPD:REF name="Extenders[0]">u82NYeX7IUKfH53DRP0PoAAA</XPD:REF>
 <XPD:REF name="Extenders[1]">ibVolaYwGU+mpm9LpFoIvAAA</XPD:REF>
-<XPD:REF name="Extenders[2]">XTKlh8jMjkOJEvxiP9E6TwAA</XPD:REF>
-<XPD:ATTR name="#Includes" type="integer">4</XPD:ATTR>
+<XPD:ATTR name="#Includes" type="integer">5</XPD:ATTR>
 <XPD:REF name="Includes[0]">uZcwcbQ3HUS2AUFqSts2IAAA</XPD:REF>
 <XPD:REF name="Includes[1]">OrTC4QT8k0i4fJF3YqcVjAAA</XPD:REF>
 <XPD:REF name="Includes[2]">nWD7fI8oxEOoXUWaHynqDgAA</XPD:REF>
 <XPD:REF name="Includes[3]">A44rQ2bYNUSa4ulzXim8LQAA</XPD:REF>
+<XPD:REF name="Includes[4]">XTKlh8jMjkOJEvxiP9E6TwAA</XPD:REF>
+<XPD:ATTR name="#Associations" type="integer">2</XPD:ATTR>
+<XPD:REF name="Associations[0]">D/TvfOE2X0Sjy8Nbn91vNgAA</XPD:REF>
+<XPD:REF name="Associations[1]">7eSJpzsiIUiN2rWSN+hWPQAA</XPD:REF>
 <XPD:ATTR name="#ExtensionPoints" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="ExtensionPoints[0]" type="UMLExtensionPoint" guid="SmHRbjnnFUuc3dAWrwjgTAAA">
 <XPD:ATTR name="Name" type="string">Проверить конфигурацию сценария</XPD:ATTR>
@@ -3481,9 +3495,12 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_DataManagement.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Управление исходными геоданными проекта: импорт, просмотр, проверка качества, интерпретация и удаление.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Extenders" type="integer">2</XPD:ATTR>
+<XPD:ATTR name="#Extenders" type="integer">3</XPD:ATTR>
 <XPD:REF name="Extenders[0]">2xKq4yxVEEmn9n64sPL5EQAA</XPD:REF>
 <XPD:REF name="Extenders[1]">UzCJPXvXJUaHBzwlFoUgfgAA</XPD:REF>
+<XPD:REF name="Extenders[2]">G0ongGz/uE6a2X1psP5slQAA</XPD:REF>
+<XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
+<XPD:REF name="Associations[0]">+YJ1fQEcU0uee5YyMAR/IQAA</XPD:REF>
 <XPD:ATTR name="#ExtensionPoints" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="ExtensionPoints[0]" type="UMLExtensionPoint" guid="taSAwPsa5ECXExkZLldZ8gAA">
 <XPD:ATTR name="Name" type="string">Импортировать набор геоданных</XPD:ATTR>
@@ -3506,6 +3523,9 @@
 <XPD:ATTR name="#Includes" type="integer">2</XPD:ATTR>
 <XPD:REF name="Includes[0]">hWwwnQOSS06aByx4hF+UxAAA</XPD:REF>
 <XPD:REF name="Includes[1]">6qPcPSYFTkilJD9VHqHb0AAA</XPD:REF>
+<XPD:ATTR name="#Associations" type="integer">2</XPD:ATTR>
+<XPD:REF name="Associations[0]">zgHm7r0w40iQkyyOLfLZ2AAA</XPD:REF>
+<XPD:REF name="Associations[1]">gzDKvnw0f0GQ0jKllP8uAQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[3]" type="UMLUseCase" guid="DySXeXnPkk2QwHIvveZsbwAA">
 <XPD:ATTR name="Name" type="string">Управление проектами</XPD:ATTR>
@@ -3530,8 +3550,16 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ScenarioComparison.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Просмотр результатов нескольких сценариев и их сравнение по выбранным метрикам на интерактивной карте.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Extenders" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="#Extenders" type="integer">3</XPD:ATTR>
 <XPD:REF name="Extenders[0]">LWqfx3fECkSnJ+w7MCWS1AAA</XPD:REF>
+<XPD:REF name="Extenders[1]">b7rfutoRi23Lv4hrFpdmqIIR</XPD:REF>
+<XPD:REF name="Extenders[2]">0BZQRgHqPWm68FtoGU1LY3H2</XPD:REF>
+<XPD:ATTR name="#Includes" type="integer">2</XPD:ATTR>
+<XPD:REF name="Includes[0]">OoNaPucEcRYaz3m/bCldkXwI</XPD:REF>
+<XPD:REF name="Includes[1]">BUzVwvT3V79q4GoTwrtUenb/</XPD:REF>
+<XPD:ATTR name="#Associations" type="integer">2</XPD:ATTR>
+<XPD:REF name="Associations[0]">qTmXx+2YRUSMhCoyXgxa/QAA</XPD:REF>
+<XPD:REF name="Associations[1]">SY8eSsHtp0WQ4/vdLOmIYwAA</XPD:REF>
 <XPD:ATTR name="#ExtensionPoints" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="ExtensionPoints[0]" type="UMLExtensionPoint" guid="g2xoKduEX0mQPdj2/VimkAAA">
 <XPD:ATTR name="Name" type="string">Просмотреть выбранный сценарий</XPD:ATTR>
@@ -3544,12 +3572,16 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ResultExport.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Выбор поддерживаемого формата экспорта результатов.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
+<XPD:ATTR name="#Includers" type="integer">1</XPD:ATTR>
+<XPD:REF name="Includers[0]">g2gsM2cIoTtkCZh/09QXkbnp</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[6]" type="UMLUseCase" guid="CAXcifFWmkKkMdm6h4I5iAAA">
 <XPD:ATTR name="Name" type="string">Сформировать пакет результатов</XPD:ATTR>
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ResultExport.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Формирование согласованного пакета пространственных результатов и метрик.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
+<XPD:ATTR name="#Includers" type="integer">1</XPD:ATTR>
+<XPD:REF name="Includers[0]">5MOdv47iUjdUOWt81Yr8TKjN</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[7]" type="UMLUseCase" guid="7zbZN/XhdEGbrnggGA2ZNQAA">
 <XPD:ATTR name="Name" type="string">Рассчитать количество кварталов и зданий</XPD:ATTR>
@@ -3564,6 +3596,8 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ScenarioComparison.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Графическое представление метрик.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
+<XPD:ATTR name="#Extends" type="integer">1</XPD:ATTR>
+<XPD:REF name="Extends[0]">b7rfutoRi23Lv4hrFpdmqIIR</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[10]" type="UMLUseCase" guid="ldQSgcex/0Ozsvojbv2P0AAA">
 <XPD:ATTR name="Name" type="string">Задать название и границы проекта</XPD:ATTR>
@@ -3638,19 +3672,20 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ScenarioLaunch.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Запуск подготовленного сценария после проверки конфигурации и подтверждения пользователя.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Extenders" type="integer">5</XPD:ATTR>
+<XPD:ATTR name="#Extenders" type="integer">4</XPD:ATTR>
 <XPD:REF name="Extenders[0]">tv3kCAo3vE6pi21IJY9NDAAA</XPD:REF>
-<XPD:REF name="Extenders[1]">yXurllFh+Eu7iCaQVi99FwAA</XPD:REF>
-<XPD:REF name="Extenders[2]">fdq8nMgM0US8H8sYiTFuAAAA</XPD:REF>
-<XPD:REF name="Extenders[3]">wgTj+yW7mkGOOiRQoX/OCgAA</XPD:REF>
-<XPD:REF name="Extenders[4]">uAw3H/sEeUSqyHEV47exYAAA</XPD:REF>
+<XPD:REF name="Extenders[1]">wgTj+yW7mkGOOiRQoX/OCgAA</XPD:REF>
+<XPD:REF name="Extenders[2]">yXurllFh+Eu7iCaQVi99FwAA</XPD:REF>
+<XPD:REF name="Extenders[3]">fdq8nMgM0US8H8sYiTFuAAAA</XPD:REF>
 <XPD:ATTR name="#Extends" type="integer">1</XPD:ATTR>
 <XPD:REF name="Extends[0]">mCqN0DEuQkirF3SNlhCaNQAA</XPD:REF>
-<XPD:ATTR name="#Includers" type="integer">1</XPD:ATTR>
-<XPD:REF name="Includers[0]">XHxOv0cQiUuahLuEkqg+iQAA</XPD:REF>
-<XPD:ATTR name="#Includes" type="integer">2</XPD:ATTR>
-<XPD:REF name="Includes[0]">MZMivBixDkm9HnJQKF6rVAAA</XPD:REF>
-<XPD:REF name="Includes[1]">fYNRg9Hi/UCOz2VoeCJjxwAA</XPD:REF>
+<XPD:ATTR name="#Includes" type="integer">4</XPD:ATTR>
+<XPD:REF name="Includes[0]">XHxOv0cQiUuahLuEkqg+iQAA</XPD:REF>
+<XPD:REF name="Includes[1]">uAw3H/sEeUSqyHEV47exYAAA</XPD:REF>
+<XPD:REF name="Includes[2]">MZMivBixDkm9HnJQKF6rVAAA</XPD:REF>
+<XPD:REF name="Includes[3]">fYNRg9Hi/UCOz2VoeCJjxwAA</XPD:REF>
+<XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
+<XPD:REF name="Associations[0]">RN/XAXx9QEK6ihLjsT9TrAAA</XPD:REF>
 <XPD:ATTR name="#ExtensionPoints" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="ExtensionPoints[0]" type="UMLExtensionPoint" guid="/YuQck9RxUSLvftvqRa6eAAA">
 <XPD:ATTR name="Name" type="string">Выполнить генерацию сценария</XPD:ATTR>
@@ -3670,10 +3705,9 @@
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
 <XPD:ATTR name="#Extenders" type="integer">1</XPD:ATTR>
 <XPD:REF name="Extenders[0]">mCqN0DEuQkirF3SNlhCaNQAA</XPD:REF>
-<XPD:ATTR name="#Extends" type="integer">1</XPD:ATTR>
-<XPD:REF name="Extends[0]">XTKlh8jMjkOJEvxiP9E6TwAA</XPD:REF>
-<XPD:ATTR name="#Includes" type="integer">1</XPD:ATTR>
-<XPD:REF name="Includes[0]">XHxOv0cQiUuahLuEkqg+iQAA</XPD:REF>
+<XPD:ATTR name="#Includers" type="integer">2</XPD:ATTR>
+<XPD:REF name="Includers[0]">XTKlh8jMjkOJEvxiP9E6TwAA</XPD:REF>
+<XPD:REF name="Includers[1]">XHxOv0cQiUuahLuEkqg+iQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[21]" type="UMLUseCase" guid="K2rq37TTLUSIH+jN8AhH5QAA">
 <XPD:ATTR name="Name" type="string">Подтвердить запуск сценария</XPD:ATTR>
@@ -3728,8 +3762,8 @@
 <XPD:REF name="Extenders[2]">3E60YyzNhkaMP1JUQRjciQAA</XPD:REF>
 <XPD:REF name="Extenders[3]">4ptB7yZO7EiRzdeDZ3VkNgAA</XPD:REF>
 <XPD:REF name="Extenders[4]">TtS4189xL0qMkP5WvrJ2wQAA</XPD:REF>
-<XPD:ATTR name="#Extends" type="integer">1</XPD:ATTR>
-<XPD:REF name="Extends[0]">uAw3H/sEeUSqyHEV47exYAAA</XPD:REF>
+<XPD:ATTR name="#Includers" type="integer">1</XPD:ATTR>
+<XPD:REF name="Includers[0]">uAw3H/sEeUSqyHEV47exYAAA</XPD:REF>
 <XPD:ATTR name="#Includes" type="integer">2</XPD:ATTR>
 <XPD:REF name="Includes[0]">xl/EACtxi0ux2HZpSVljEwAA</XPD:REF>
 <XPD:REF name="Includes[1]">DIjpWUEmeU2QJZi2mzkSMwAA</XPD:REF>
@@ -3782,6 +3816,8 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ScenarioComparison.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Просмотр сохранённых результатов проекта.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
+<XPD:ATTR name="#Includers" type="integer">1</XPD:ATTR>
+<XPD:REF name="Includers[0]">BUzVwvT3V79q4GoTwrtUenb/</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[32]" type="UMLUseCase" guid="PYmIImjWD0CFwK6kEQP/YAAA">
 <XPD:ATTR name="Name" type="string">Просмотреть сведения о проекте</XPD:ATTR>
@@ -3850,9 +3886,8 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_DataManagement.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Проверка метаданных, CRS и качества геометрий.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
-<XPD:ATTR name="#Extenders" type="integer">2</XPD:ATTR>
+<XPD:ATTR name="#Extenders" type="integer">1</XPD:ATTR>
 <XPD:REF name="Extenders[0]">cennEinQXkqnWKaCz0V5SwAA</XPD:REF>
-<XPD:REF name="Extenders[1]">G0ongGz/uE6a2X1psP5slQAA</XPD:REF>
 <XPD:ATTR name="#Extends" type="integer">1</XPD:ATTR>
 <XPD:REF name="Extends[0]">Cfr5PREkPkiAXOU1AtXX/AAA</XPD:REF>
 <XPD:ATTR name="#ExtensionPoints" type="integer">2</XPD:ATTR>
@@ -3888,18 +3923,27 @@
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ResultExport.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Экспорт пространственных результатов и метрик выбранного сценария.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
+<XPD:ATTR name="#Includes" type="integer">2</XPD:ATTR>
+<XPD:REF name="Includes[0]">g2gsM2cIoTtkCZh/09QXkbnp</XPD:REF>
+<XPD:REF name="Includes[1]">5MOdv47iUjdUOWt81Yr8TKjN</XPD:REF>
+<XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
+<XPD:REF name="Associations[0]">9X3jo8RWm2yUndjV5CJRPhRa</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[42]" type="UMLUseCase" guid="fFF6+4wOuESHlwgdEBFV6wAA">
 <XPD:ATTR name="Name" type="string">Просмотреть журнал выполнения этапов</XPD:ATTR>
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ScenarioComparison.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Просмотр журнала этапов выбранного сценария.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
+<XPD:ATTR name="#Extends" type="integer">1</XPD:ATTR>
+<XPD:REF name="Extends[0]">0BZQRgHqPWm68FtoGU1LY3H2</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[43]" type="UMLUseCase" guid="oQu1zkmSVUWYZRQHdGtUBgAA">
 <XPD:ATTR name="Name" type="string">Выбрать набор метрик для сравнения</XPD:ATTR>
 <XPD:ATTR name="Attachments" type="string">..\flows\UC_ScenarioComparison.txt</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">Выбор метрик сравнения.</XPD:ATTR>
 <XPD:REF name="Namespace">sT475ytsEEimqdQiO++/UQAA</XPD:REF>
+<XPD:ATTR name="#Includers" type="integer">1</XPD:ATTR>
+<XPD:REF name="Includers[0]">OoNaPucEcRYaz3m/bCldkXwI</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[44]" type="UMLUseCase" guid="AAHpY9yDMUCV63F1dSpZnQAA">
 <XPD:ATTR name="Name" type="string">Просмотреть слои и исходные данные</XPD:ATTR>
