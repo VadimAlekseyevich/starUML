@@ -107,10 +107,65 @@ def visible_edge_labels(diagram, edge_type):
     return labels
 
 
+
+def edge_crosses_unrelated_node(edge, node):
+    """Detect a routed flow passing through another visible Action/control node.
+
+    Source and target are excluded by the caller; margins avoid false positives
+    from paths that merely touch the node border.
+    """
+    raw = edge.get("points") or ""
+    try:
+        points = [tuple(map(float, item.split(":"))) for item in raw.split(";")]
+    except (TypeError, ValueError):
+        return False
+    if len(points) < 2 or any(len(point) != 2 for point in points):
+        return False
+
+    left, top, right, bottom = rect(node)
+    left += 4
+    top += 4
+    right -= 4
+    bottom -= 4
+    for a, b in zip(points, points[1:]):
+        if a[0] == b[0]:
+            if left < a[0] < right and min(a[1], b[1]) < bottom and max(a[1], b[1]) > top:
+                return True
+        elif a[1] == b[1]:
+            if top < a[1] < bottom and min(a[0], b[0]) < right and max(a[0], b[0]) > left:
+                return True
+        else:
+            # Only a fallback for old manually placed diagonal edges.
+            for index in range(11):
+                t = index / 10
+                x = a[0] + (b[0] - a[0]) * t
+                y = a[1] + (b[1] - a[1]) * t
+                if left < x < right and top < y < bottom:
+                    return True
+    return False
+
+
 def check_diagram_spacing(errors, name, diagram, node_types, edge_type):
     views = diagram.get("ownedViews", [])
     nodes = [v for v in views if v.get("_type") in node_types]
     labels = visible_edge_labels(diagram, edge_type)
+
+    # Check the real routed polyline, not only bounding-box spacing.
+    for edge in views:
+        if edge.get("_type") != edge_type:
+            continue
+        endpoint_ids = {
+            edge.get("head", {}).get("$ref"),
+            edge.get("tail", {}).get("$ref"),
+        }
+        for node in nodes:
+            if node.get("_id") in endpoint_ids:
+                continue
+            if edge_crosses_unrelated_node(edge, node):
+                errors.append(
+                    f"{name}: {edge.get('_id')} is routed through "
+                    f"unrelated node {node.get('_id')}"
+                )
 
     # Deliberately conservative: label rectangles must not touch model nodes.
     for label in labels:
