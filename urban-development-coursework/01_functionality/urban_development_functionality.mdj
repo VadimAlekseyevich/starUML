@@ -23255,7 +23255,7 @@
 										"$ref": "ALG2_ScenarioLaunch_Partition_system"
 									},
 									"name": "Выполнить генерацию сценария",
-									"documentation": "Абстрактный вызов поведения GenerationExecution для отдельного фонового исполнения Worker по идентификатору созданного Run; НЕ означает блокирующий синхронный HTTP-запрос. Система ставит задачу в очередь, а дальнейшие исходы Completed / Failed / Cancelled поступают асинхронно. Синхронный вызов детальной деятельности GenerationExecution. Вызов передаёт зафиксированный snapshot конфигурации/данных и возвращает итоговое состояние completed, failed либо cancelled.",
+									"documentation": "Абстрактный вызов поведения GenerationExecution для отдельного фонового исполнения Worker по идентификатору созданного Run; НЕ означает блокирующий синхронный HTTP-запрос. Система ставит задачу в очередь, а дальнейшие исходы Completed / Failed / Cancelled поступают асинхронно. Вызов передаёт зафиксированный snapshot конфигурации/данных и возвращает итоговое состояние completed, failed либо cancelled.",
 									"behavior": {
 										"$ref": "ALG2_GenerationExecution_Activity"
 									},
@@ -24339,7 +24339,7 @@
 												"$ref": "ALG2_ScenarioLaunch_Flow_e4"
 											},
 											"font": "Arial;11;0",
-											"left": 734,
+											"left": 701,
 											"top": 482,
 											"width": 251,
 											"height": 42,
@@ -24509,7 +24509,7 @@
 												"$ref": "ALG2_ScenarioLaunch_Flow_e9"
 											},
 											"font": "Arial;11;0",
-											"left": 734,
+											"left": 701,
 											"top": 831,
 											"width": 251,
 											"height": 42,
@@ -32631,7 +32631,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_Region"
 									},
 									"name": "Draft",
-									"documentation": "Запуск подготовлен, конфигурация ещё не подтверждена."
+									"documentation": "Подготовка конфигурации сценария до создания сущности Run: пользователь выбирает входные данные и параметры; результаты ещё не поставлены в очередь."
 								},
 								{
 									"_type": "UMLState",
@@ -32640,7 +32640,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_Region"
 									},
 									"name": "Validated",
-									"documentation": "Конфигурация и исходные данные прошли проверку."
+									"documentation": "Конфигурация и версии исходных данных прошли проверку; изменение параметров возвращает процесс в Draft. Фоновый Run появится после подтверждения запуска и постановки в очередь."
 								},
 								{
 									"_type": "UMLState",
@@ -32649,7 +32649,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_Region"
 									},
 									"name": "Queued",
-									"documentation": "Фоновая задача создана и ожидает Worker."
+									"documentation": "После подтверждения создан отдельный Run с неизменяемым snapshot; его идентификатор и задача переданы в очередь Redis/ARQ. Ожидается workerStarted."
 								},
 								{
 									"_type": "UMLState",
