@@ -31732,7 +31732,7 @@
 														"$ref": "ALG2_GenerationRunLifecycle_Vertex_draft"
 													},
 													"font": "Arial;11;1",
-													"left": 151,
+													"left": 157,
 													"top": 285,
 													"width": 166,
 													"height": 24,
@@ -31743,7 +31743,7 @@
 												}
 											],
 											"font": "Arial;11;0",
-											"left": 146,
+											"left": 152,
 											"top": 275,
 											"width": 182,
 											"height": 38,
@@ -31756,7 +31756,7 @@
 									],
 									"font": "Arial;11;0",
 									"containerChangeable": true,
-									"left": 146,
+									"left": 152,
 									"top": 275,
 									"width": 198,
 									"height": 64,
@@ -31796,7 +31796,7 @@
 														"$ref": "ALG2_GenerationRunLifecycle_Vertex_validated"
 													},
 													"font": "Arial;11;1",
-													"left": 386,
+													"left": 409,
 													"top": 285,
 													"width": 166,
 													"height": 24,
@@ -31807,7 +31807,7 @@
 												}
 											],
 											"font": "Arial;11;0",
-											"left": 381,
+											"left": 404,
 											"top": 275,
 											"width": 182,
 											"height": 38,
@@ -31820,7 +31820,7 @@
 									],
 									"font": "Arial;11;0",
 									"containerChangeable": true,
-									"left": 381,
+									"left": 404,
 									"top": 275,
 									"width": 198,
 									"height": 64,
@@ -31860,7 +31860,7 @@
 														"$ref": "ALG2_GenerationRunLifecycle_Vertex_queued"
 													},
 													"font": "Arial;11;1",
-													"left": 621,
+													"left": 661,
 													"top": 285,
 													"width": 166,
 													"height": 24,
@@ -31871,7 +31871,7 @@
 												}
 											],
 											"font": "Arial;11;0",
-											"left": 615,
+											"left": 654,
 											"top": 275,
 											"width": 182,
 											"height": 38,
@@ -31884,7 +31884,7 @@
 									],
 									"font": "Arial;11;0",
 									"containerChangeable": true,
-									"left": 615,
+									"left": 654,
 									"top": 275,
 									"width": 198,
 									"height": 64,
@@ -31924,7 +31924,7 @@
 														"$ref": "ALG2_GenerationRunLifecycle_Vertex_running"
 													},
 													"font": "Arial;11;1",
-													"left": 855,
+													"left": 912,
 													"top": 285,
 													"width": 166,
 													"height": 24,
@@ -31935,7 +31935,7 @@
 												}
 											],
 											"font": "Arial;11;0",
-											"left": 850,
+											"left": 907,
 											"top": 275,
 											"width": 182,
 											"height": 38,
@@ -31948,7 +31948,7 @@
 									],
 									"font": "Arial;11;0",
 									"containerChangeable": true,
-									"left": 850,
+									"left": 907,
 									"top": 275,
 									"width": 198,
 									"height": 64,
@@ -31988,7 +31988,7 @@
 														"$ref": "ALG2_GenerationRunLifecycle_Vertex_completed"
 													},
 													"font": "Arial;11;1",
-													"left": 1117,
+													"left": 1193,
 													"top": 80,
 													"width": 166,
 													"height": 24,
@@ -31999,7 +31999,7 @@
 												}
 											],
 											"font": "Arial;11;0",
-											"left": 1112,
+											"left": 1188,
 											"top": 70,
 											"width": 182,
 											"height": 38,
@@ -32012,7 +32012,7 @@
 									],
 									"font": "Arial;11;0",
 									"containerChangeable": true,
-									"left": 1112,
+									"left": 1188,
 									"top": 70,
 									"width": 198,
 									"height": 64,
@@ -32052,7 +32052,7 @@
 														"$ref": "ALG2_GenerationRunLifecycle_Vertex_failed"
 													},
 													"font": "Arial;11;1",
-													"left": 1117,
+													"left": 1193,
 													"top": 285,
 													"width": 166,
 													"height": 24,
@@ -32063,7 +32063,7 @@
 												}
 											],
 											"font": "Arial;11;0",
-											"left": 1112,
+											"left": 1188,
 											"top": 275,
 											"width": 182,
 											"height": 38,
@@ -32076,7 +32076,7 @@
 									],
 									"font": "Arial;11;0",
 									"containerChangeable": true,
-									"left": 1112,
+									"left": 1188,
 									"top": 275,
 									"width": 198,
 									"height": 64,
@@ -32116,7 +32116,7 @@
 														"$ref": "ALG2_GenerationRunLifecycle_Vertex_cancelled"
 													},
 													"font": "Arial;11;1",
-													"left": 1117,
+													"left": 1193,
 													"top": 490,
 													"width": 166,
 													"height": 24,
@@ -32127,7 +32127,7 @@
 												}
 											],
 											"font": "Arial;11;0",
-											"left": 1112,
+											"left": 1188,
 											"top": 480,
 											"width": 182,
 											"height": 38,
@@ -32140,7 +32140,7 @@
 									],
 									"font": "Arial;11;0",
 									"containerChangeable": true,
-									"left": 1112,
+									"left": 1188,
 									"top": 480,
 									"width": 198,
 									"height": 64,
@@ -32167,7 +32167,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_PseudoView_initial"
 									},
 									"lineStyle": 1,
-									"points": "78:311;229:307",
+									"points": "81:311;251:307",
 									"showVisibility": true,
 									"lineColor": "#800000",
 									"fillColor": "#FFFFB9"
@@ -32189,7 +32189,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_StateView_draft"
 									},
 									"lineStyle": 1,
-									"points": "229:307;463:307",
+									"points": "251:307;503:307",
 									"showVisibility": true,
 									"subViews": [
 										{
@@ -32202,7 +32202,7 @@
 												"$ref": "ALG2_GenerationRunLifecycle_Transition_t2"
 											},
 											"font": "Arial;11;0",
-											"left": 256,
+											"left": 269,
 											"top": 190,
 											"width": 205,
 											"height": 54,
@@ -32241,7 +32241,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_StateView_validated"
 									},
 									"lineStyle": 1,
-									"points": "463:307;463:197;229:197;229:307",
+									"points": "503:307;491:197;241:197;251:307",
 									"showVisibility": true,
 									"subViews": [
 										{
@@ -32254,7 +32254,7 @@
 												"$ref": "ALG2_GenerationRunLifecycle_Transition_t3"
 											},
 											"font": "Arial;11;0",
-											"left": 263,
+											"left": 277,
 											"top": 85,
 											"width": 205,
 											"height": 38,
@@ -32293,7 +32293,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_StateView_validated"
 									},
 									"lineStyle": 1,
-									"points": "463:307;698:307",
+									"points": "503:307;753:307",
 									"showVisibility": true,
 									"subViews": [
 										{
@@ -32306,7 +32306,7 @@
 												"$ref": "ALG2_GenerationRunLifecycle_Transition_t4"
 											},
 											"font": "Arial;11;0",
-											"left": 491,
+											"left": 522,
 											"top": 190,
 											"width": 205,
 											"height": 54,
@@ -32345,7 +32345,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_StateView_queued"
 									},
 									"lineStyle": 1,
-									"points": "698:307;932:307",
+									"points": "753:307;1006:307",
 									"showVisibility": true,
 									"subViews": [
 										{
@@ -32358,7 +32358,7 @@
 												"$ref": "ALG2_GenerationRunLifecycle_Transition_t5"
 											},
 											"font": "Arial;11;0",
-											"left": 726,
+											"left": 774,
 											"top": 190,
 											"width": 205,
 											"height": 38,
@@ -32397,7 +32397,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_StateView_running"
 									},
 									"lineStyle": 1,
-									"points": "932:307;1064:307;1064:102;1195:102",
+									"points": "1006:307;1136:307;1136:102;1287:102",
 									"showVisibility": true,
 									"subViews": [
 										{
@@ -32410,7 +32410,7 @@
 												"$ref": "ALG2_GenerationRunLifecycle_Transition_t6"
 											},
 											"font": "Arial;11;0",
-											"left": 884,
+											"left": 943,
 											"top": 95,
 											"width": 205,
 											"height": 54,
@@ -32449,7 +32449,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_StateView_running"
 									},
 									"lineStyle": 1,
-									"points": "932:307;1195:307",
+									"points": "1006:307;1287:307",
 									"showVisibility": true,
 									"subViews": [
 										{
@@ -32462,7 +32462,7 @@
 												"$ref": "ALG2_GenerationRunLifecycle_Transition_t7"
 											},
 											"font": "Arial;11;0",
-											"left": 988,
+											"left": 1055,
 											"top": 190,
 											"width": 205,
 											"height": 54,
@@ -32501,7 +32501,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_StateView_queued"
 									},
 									"lineStyle": 1,
-									"points": "698:307;946:307;946:512;1195:512",
+									"points": "753:307;753:420;1130:420;1130:512;1287:512",
 									"showVisibility": true,
 									"subViews": [
 										{
@@ -32514,7 +32514,7 @@
 												"$ref": "ALG2_GenerationRunLifecycle_Transition_t8"
 											},
 											"font": "Arial;11;0",
-											"left": 788,
+											"left": 840,
 											"top": 365,
 											"width": 205,
 											"height": 54,
@@ -32553,7 +32553,7 @@
 										"$ref": "ALG2_GenerationRunLifecycle_StateView_running"
 									},
 									"lineStyle": 1,
-									"points": "932:307;1064:307;1064:512;1195:512",
+									"points": "1006:307;1145:307;1145:512;1287:512",
 									"showVisibility": true,
 									"subViews": [
 										{
@@ -32566,7 +32566,7 @@
 												"$ref": "ALG2_GenerationRunLifecycle_Transition_t9"
 											},
 											"font": "Arial;11;0",
-											"left": 1001,
+											"left": 1068,
 											"top": 415,
 											"width": 205,
 											"height": 54,
