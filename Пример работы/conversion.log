@@ -1,0 +1,48 @@
+[INFO] Чтение структуры DOCX
+[INFO] Сохранён ресурс word/media/image1.emf → assets/images/image1.emf
+[WARN] GitHub может не отображать изображение assets/images/image1.emf; оригинальные байты сохранены.
+[INFO] Сохранён ресурс word/media/image2.jpeg → assets/images/image2.jpeg
+[WARN] Markdown не поддерживает объединённые ячейки: структура таблицы упрощена.
+[INFO] Сохранён ресурс word/media/image3.jpeg → assets/images/image3.jpeg
+[INFO] Сохранён ресурс word/media/image4.jpeg → assets/images/image4.jpeg
+[WARN] Word-символы из нестандартных шрифтов могут быть не воспроизведены.
+[INFO] Сохранён ресурс word/media/image5.jpeg → assets/images/image5.jpeg
+[INFO] Сохранён ресурс word/media/image6.jpeg → assets/images/image6.jpeg
+[INFO] Сохранён ресурс word/media/image7.jpeg → assets/images/image7.jpeg
+[INFO] Сохранён ресурс word/media/image8.jpeg → assets/images/image8.jpeg
+[INFO] Сохранён ресурс word/media/image9.jpeg → assets/images/image9.jpeg
+[INFO] Сохранён ресурс word/media/image10.jpeg → assets/images/image10.jpeg
+[INFO] Сохранён ресурс word/media/image11.jpeg → assets/images/image11.jpeg
+[INFO] Сохранён ресурс word/media/image12.jpeg → assets/images/image12.jpeg
+[INFO] Сохранён ресурс word/media/image13.jpeg → assets/images/image13.jpeg
+[INFO] Сохранён ресурс word/media/image14.jpeg → assets/images/image14.jpeg
+[INFO] Сохранён ресурс word/media/image15.jpeg → assets/images/image15.jpeg
+[INFO] Сохранён ресурс word/media/image16.jpeg → assets/images/image16.jpeg
+[INFO] Сохранён ресурс word/media/image17.jpeg → assets/images/image17.jpeg
+[INFO] Сохранён ресурс word/media/image18.jpeg → assets/images/image18.jpeg
+[INFO] Сохранён ресурс word/media/image19.jpeg → assets/images/image19.jpeg
+[INFO] Сохранён ресурс word/media/image20.jpeg → assets/images/image20.jpeg
+[INFO] Сохранён ресурс word/media/image21.jpeg → assets/images/image21.jpeg
+[INFO] Сохранён ресурс word/media/image22.jpeg → assets/images/image22.jpeg
+[INFO] Сохранён ресурс word/media/image23.jpeg → assets/images/image23.jpeg
+[INFO] Сохранён ресурс word/media/image24.jpeg → assets/images/image24.jpeg
+[INFO] Сохранён ресурс word/media/image25.jpeg → assets/images/image25.jpeg
+[INFO] Сохранён ресурс word/media/image26.jpeg → assets/images/image26.jpeg
+[INFO] Сохранён ресурс word/media/image27.jpeg → assets/images/image27.jpeg
+[INFO] Сохранён ресурс word/media/image28.jpeg → assets/images/image28.jpeg
+[INFO] Сохранён ресурс word/media/image29.png → assets/images/image29.png
+[INFO] Сохранён ресурс word/media/image30.png → assets/images/image30.png
+[INFO] Сохранён ресурс word/media/image31.png → assets/images/image31.png
+[INFO] Сохранён ресурс word/media/image32.png → assets/images/image32.png
+[INFO] Сохранён ресурс word/media/image33.png → assets/images/image33.png
+[INFO] Сохранён ресурс word/media/image34.png → assets/images/image34.png
+[INFO] Сохранён ресурс word/media/image35.png → assets/images/image35.png
+[INFO] Сохранён ресурс word/media/image36.png → assets/images/image36.png
+[INFO] Сохранён ресурс word/media/image37.png → assets/images/image37.png
+[INFO] Сохранён ресурс word/media/image38.png → assets/images/image38.png
+[INFO] Сохранён ресурс word/media/image39.png → assets/images/image39.png
+[INFO] Сохранён ресурс word/media/image40.png → assets/images/image40.png
+[INFO] Сохранён ресурс word/media/image41.png → assets/images/image41.png
+[INFO] Сохранён ресурс word/media/image42.png → assets/images/image42.png
+[INFO] Изображений/медиафайлов: 42; предупреждений: 3
+[INFO] Готово: index.md и assets/images/; лог: conversion.log
