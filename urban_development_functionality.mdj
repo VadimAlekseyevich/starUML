@@ -18512,7 +18512,7 @@
 										"$ref": "COURSE_DataManagement_ControlView_format"
 									},
 									"lineStyle": 1,
-									"points": "850:467;850:689",
+									"points": "844:467;844:610;850:610;850:689",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -18526,8 +18526,8 @@
 												"$ref": "COURSE_DataManagement_Flow_05"
 											},
 											"font": "Arial;12;0",
-											"left": 620,
-											"top": 480,
+											"left": 610,
+											"top": 520,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -18561,7 +18561,7 @@
 										"$ref": "COURSE_DataManagement_ControlView_format"
 									},
 									"lineStyle": 1,
-									"points": "850:467;850:513;1010:513;1010:559",
+									"points": "856:467;900:467;900:513;1010:513;1010:559",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -18575,8 +18575,8 @@
 												"$ref": "COURSE_DataManagement_Flow_06"
 											},
 											"font": "Arial;12;0",
-											"left": 980,
-											"top": 455,
+											"left": 935,
+											"top": 470,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -18610,7 +18610,7 @@
 										"$ref": "COURSE_DataManagement_ActionView_unsupported"
 									},
 									"lineStyle": 1,
-									"points": "1010:559;1210:570;1210:1337;255:1337;255:1337",
+									"points": "1010:559;1180:559;1180:1310;267:1310;267:1337",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -18757,7 +18757,7 @@
 										"$ref": "COURSE_DataManagement_ControlView_quality"
 									},
 									"lineStyle": 1,
-									"points": "850:1142;850:1569",
+									"points": "844:1142;844:1450;850:1450;850:1569",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -18771,8 +18771,8 @@
 												"$ref": "COURSE_DataManagement_Flow_14"
 											},
 											"font": "Arial;12;0",
-											"left": 610,
-											"top": 1170,
+											"left": 600,
+											"top": 1190,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -18806,7 +18806,7 @@
 										"$ref": "COURSE_DataManagement_ControlView_quality"
 									},
 									"lineStyle": 1,
-									"points": "850:1142;850:1206;1010:1206;1010:1269",
+									"points": "856:1142;900:1142;900:1206;1010:1206;1010:1269",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -18820,8 +18820,8 @@
 												"$ref": "COURSE_DataManagement_Flow_15"
 											},
 											"font": "Arial;12;0",
-											"left": 980,
-											"top": 1135,
+											"left": 930,
+											"top": 1145,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -18855,7 +18855,7 @@
 										"$ref": "COURSE_DataManagement_ActionView_report"
 									},
 									"lineStyle": 1,
-									"points": "1010:1269;1210:1269;1210:1337;255:1337;255:1337",
+									"points": "1010:1269;1210:1269;1210:1360;243:1360;243:1337",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -18897,7 +18897,7 @@
 										"$ref": "COURSE_DataManagement_ActionView_fix"
 									},
 									"lineStyle": 1,
-									"points": "255:1419;20:1419;20:157;255:157;255:157",
+									"points": "255:1419;20:1419;20:157;255:157",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -20478,7 +20478,7 @@
 										"$ref": "COURSE_ScenarioConfiguration_ControlView_modeDecision"
 									},
 									"lineStyle": 1,
-									"points": "255:442;420:442;420:662;255:662;255:662",
+									"points": "255:442;420:442;420:662;255:662",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -20737,7 +20737,7 @@
 										"$ref": "COURSE_ScenarioConfiguration_ControlView_valid"
 									},
 									"lineStyle": 1,
-									"points": "850:1492;850:1919",
+									"points": "844:1492;844:1810;850:1810;850:1919",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -20751,8 +20751,8 @@
 												"$ref": "COURSE_ScenarioConfiguration_Flow_16"
 											},
 											"font": "Arial;12;0",
-											"left": 610,
-											"top": 1510,
+											"left": 600,
+											"top": 1530,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -20786,7 +20786,7 @@
 										"$ref": "COURSE_ScenarioConfiguration_ControlView_valid"
 									},
 									"lineStyle": 1,
-									"points": "850:1492;850:1556;1010:1556;1010:1619",
+									"points": "856:1492;900:1492;900:1556;1010:1556;1010:1619",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -20800,8 +20800,8 @@
 												"$ref": "COURSE_ScenarioConfiguration_Flow_17"
 											},
 											"font": "Arial;12;0",
-											"left": 980,
-											"top": 1490,
+											"left": 930,
+											"top": 1500,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -20856,7 +20856,7 @@
 										"$ref": "COURSE_ScenarioConfiguration_ActionView_fix"
 									},
 									"lineStyle": 1,
-									"points": "255:1769;20:1769;20:662;255:662;255:662",
+									"points": "255:1769;20:1769;20:662;255:662",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -22255,7 +22255,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ControlView_ready"
 									},
 									"lineStyle": 1,
-									"points": "850:457;850:548;255:548;255:639",
+									"points": "838:457;760:457;760:548;255:548;255:639",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -22269,8 +22269,8 @@
 												"$ref": "COURSE_ScenarioLaunch_Flow_04"
 											},
 											"font": "Arial;12;0",
-											"left": 500,
-											"top": 475,
+											"left": 510,
+											"top": 490,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -22304,7 +22304,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ControlView_ready"
 									},
 									"lineStyle": 1,
-									"points": "850:457;850:508;1010:508;1010:559",
+									"points": "862:457;930:457;930:508;1010:508;1010:559",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -22318,8 +22318,8 @@
 												"$ref": "COURSE_ScenarioLaunch_Flow_05"
 											},
 											"font": "Arial;12;0",
-											"left": 980,
-											"top": 455,
+											"left": 940,
+											"top": 460,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -22353,7 +22353,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ActionView_invalid"
 									},
 									"lineStyle": 1,
-									"points": "1010:559;1210:559;1210:1702;850:1702;850:1702",
+									"points": "1010:559;1210:559;1210:1670;862:1670;862:1702",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -22465,7 +22465,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ControlView_confirmed"
 									},
 									"lineStyle": 1,
-									"points": "255:872;20:872;20:1702;850:1702;850:1702",
+									"points": "255:872;20:872;20:1735;838:1735;838:1702",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -22556,7 +22556,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ControlView_result"
 									},
 									"lineStyle": 1,
-									"points": "850:1252;850:1336;670:1336;670:1419",
+									"points": "838:1252;670:1252;670:1419",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -22570,8 +22570,8 @@
 												"$ref": "COURSE_ScenarioLaunch_Flow_13"
 											},
 											"font": "Arial;12;0",
-											"left": 510,
-											"top": 1270,
+											"left": 500,
+											"top": 1260,
 											"width": 280,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -22605,7 +22605,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ControlView_result"
 									},
 									"lineStyle": 1,
-									"points": "850:1252;850:1336;1040:1336;1040:1419",
+									"points": "862:1252;1040:1252;1040:1419",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -22619,8 +22619,8 @@
 												"$ref": "COURSE_ScenarioLaunch_Flow_14"
 											},
 											"font": "Arial;12;0",
-											"left": 965,
-											"top": 1250,
+											"left": 940,
+											"top": 1260,
 											"width": 270,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -22654,7 +22654,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ControlView_result"
 									},
 									"lineStyle": 1,
-									"points": "850:1252;850:1325;855:1325;855:1569;855:1569",
+									"points": "850:1264;850:1490;855:1490;855:1569",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -22669,7 +22669,7 @@
 											},
 											"font": "Arial;12;0",
 											"left": 855,
-											"top": 1325,
+											"top": 1330,
 											"width": 300,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -22703,7 +22703,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ActionView_success"
 									},
 									"lineStyle": 1,
-									"points": "670:1419;670:1419;670:1702;850:1702;850:1702",
+									"points": "670:1419;670:1650;844:1650;844:1690",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -22724,7 +22724,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ActionView_error"
 									},
 									"lineStyle": 1,
-									"points": "1040:1419;1040:1419;1040:1702;850:1702;850:1702",
+									"points": "1040:1419;1040:1650;856:1650;856:1690",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -22745,7 +22745,7 @@
 										"$ref": "COURSE_ScenarioLaunch_ActionView_stopped"
 									},
 									"lineStyle": 1,
-									"points": "855:1569;855:1636;850:1636;850:1702",
+									"points": "855:1569;855:1690",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -24650,7 +24650,7 @@
 										"$ref": "COURSE_GenerationExecution_ControlView_critical"
 									},
 									"lineStyle": 1,
-									"points": "580:692;580:746;900:746;900:799",
+									"points": "592:692;900:692;900:799",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -24664,7 +24664,7 @@
 												"$ref": "COURSE_GenerationExecution_Flow_08"
 											},
 											"font": "Arial;12;0",
-											"left": 740,
+											"left": 720,
 											"top": 690,
 											"width": 300,
 											"height": 42,
@@ -24699,7 +24699,7 @@
 										"$ref": "COURSE_GenerationExecution_ControlView_critical"
 									},
 									"lineStyle": 1,
-									"points": "580:692;580:939",
+									"points": "574:704;574:850;580:850;580:939",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -24713,7 +24713,7 @@
 												"$ref": "COURSE_GenerationExecution_Flow_09"
 											},
 											"font": "Arial;12;0",
-											"left": 390,
+											"left": 380,
 											"top": 720,
 											"width": 230,
 											"height": 42,
@@ -24748,7 +24748,7 @@
 										"$ref": "COURSE_GenerationExecution_ActionView_earlyFail"
 									},
 									"lineStyle": 1,
-									"points": "900:799;1090:799;1090:2552;580:2552;580:2552",
+									"points": "900:799;1120:799;1120:2525;592:2525;592:2552",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -25000,7 +25000,7 @@
 										"$ref": "COURSE_GenerationExecution_ControlView_finalOk"
 									},
 									"lineStyle": 1,
-									"points": "580:2122;580:2379",
+									"points": "574:2134;574:2300;580:2300;580:2379",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -25014,8 +25014,8 @@
 												"$ref": "COURSE_GenerationExecution_Flow_22"
 											},
 											"font": "Arial;12;0",
-											"left": 380,
-											"top": 2145,
+											"left": 370,
+											"top": 2160,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -25049,7 +25049,7 @@
 										"$ref": "COURSE_GenerationExecution_ControlView_finalOk"
 									},
 									"lineStyle": 1,
-									"points": "580:2122;580:2181;900:2181;900:2239",
+									"points": "592:2122;900:2122;900:2239",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -25098,7 +25098,7 @@
 										"$ref": "COURSE_GenerationExecution_ActionView_lateFail"
 									},
 									"lineStyle": 1,
-									"points": "900:2239;900:2239;900:2552;580:2552;580:2552",
+									"points": "900:2239;1000:2239;1000:2580;580:2580;580:2564",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -25119,7 +25119,7 @@
 										"$ref": "COURSE_GenerationExecution_ActionView_save"
 									},
 									"lineStyle": 1,
-									"points": "580:2379;580:2552",
+									"points": "580:2379;580:2540",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -26477,7 +26477,7 @@
 										"$ref": "COURSE_ScenarioComparison_ControlView_comparable"
 									},
 									"lineStyle": 1,
-									"points": "850:597;850:678;255:678;255:759",
+									"points": "838:597;760:597;760:678;255:678;255:759",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -26491,8 +26491,8 @@
 												"$ref": "COURSE_ScenarioComparison_Flow_05"
 											},
 											"font": "Arial;12;0",
-											"left": 500,
-											"top": 610,
+											"left": 510,
+											"top": 615,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -26526,7 +26526,7 @@
 										"$ref": "COURSE_ScenarioComparison_ControlView_comparable"
 									},
 									"lineStyle": 1,
-									"points": "850:597;850:643;1010:643;1010:689",
+									"points": "862:597;930:597;930:643;1010:643;1010:689",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -26540,8 +26540,8 @@
 												"$ref": "COURSE_ScenarioComparison_Flow_06"
 											},
 											"font": "Arial;12;0",
-											"left": 980,
-											"top": 590,
+											"left": 940,
+											"top": 600,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -26575,7 +26575,7 @@
 										"$ref": "COURSE_ScenarioComparison_ActionView_unavailable"
 									},
 									"lineStyle": 1,
-									"points": "1010:689;1210:689;1210:1752;850:1752;850:1752",
+									"points": "1010:689;1210:689;1210:1752;850:1752",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -26792,7 +26792,7 @@
 										"$ref": "COURSE_ScenarioComparison_ControlView_detailsDecision"
 									},
 									"lineStyle": 1,
-									"points": "255:1462;20:1462;20:1752;850:1752;850:1752",
+									"points": "255:1462;20:1462;20:1752;850:1752",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -28541,7 +28541,7 @@
 										"$ref": "COURSE_ResultExport_ControlView_compatible"
 									},
 									"lineStyle": 1,
-									"points": "850:797;850:981;845:981;845:1164",
+									"points": "838:797;760:797;760:1040;845:1040;845:1164",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -28555,7 +28555,7 @@
 												"$ref": "COURSE_ResultExport_Flow_07"
 											},
 											"font": "Arial;12;0",
-											"left": 600,
+											"left": 545,
 											"top": 820,
 											"width": 300,
 											"height": 42,
@@ -28590,7 +28590,7 @@
 										"$ref": "COURSE_ResultExport_ControlView_compatible"
 									},
 									"lineStyle": 1,
-									"points": "850:797;850:843;1010:843;1010:889",
+									"points": "862:797;930:797;930:843;1010:843;1010:889",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -28604,8 +28604,8 @@
 												"$ref": "COURSE_ResultExport_Flow_08"
 											},
 											"font": "Arial;12;0",
-											"left": 980,
-											"top": 790,
+											"left": 940,
+											"top": 805,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -28660,7 +28660,7 @@
 										"$ref": "COURSE_ResultExport_ActionView_fix"
 									},
 									"lineStyle": 1,
-									"points": "255:1019;20:1019;20:467;255:467;255:467",
+									"points": "255:1019;20:1019;20:467;255:467",
 									"showVisibility": true,
 									"showProperty": true
 								},
@@ -28807,7 +28807,7 @@
 										"$ref": "COURSE_ResultExport_ControlView_formed"
 									},
 									"lineStyle": 1,
-									"points": "850:1642;850:1849",
+									"points": "838:1642;760:1642;760:1810;850:1810;850:1849",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -28821,8 +28821,8 @@
 												"$ref": "COURSE_ResultExport_Flow_17"
 											},
 											"font": "Arial;12;0",
-											"left": 610,
-											"top": 1660,
+											"left": 570,
+											"top": 1665,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -28856,7 +28856,7 @@
 										"$ref": "COURSE_ResultExport_ControlView_formed"
 									},
 									"lineStyle": 1,
-									"points": "850:1642;850:1691;1010:1691;1010:1739",
+									"points": "862:1642;930:1642;930:1691;1010:1691;1010:1739",
 									"showVisibility": true,
 									"showProperty": true,
 									"subViews": [
@@ -28870,8 +28870,8 @@
 												"$ref": "COURSE_ResultExport_Flow_18"
 											},
 											"font": "Arial;12;0",
-											"left": 980,
-											"top": 1640,
+											"left": 940,
+											"top": 1650,
 											"width": 230,
 											"height": 42,
 											"alpha": 1.5707963267948966,
@@ -28905,7 +28905,7 @@
 										"$ref": "COURSE_ResultExport_ActionView_error"
 									},
 									"lineStyle": 1,
-									"points": "1010:1739;1210:1739;1210:2002;850:2002;850:2002",
+									"points": "1010:1739;1210:1739;1210:2002;850:2002",
 									"showVisibility": true,
 									"showProperty": true
 								},
