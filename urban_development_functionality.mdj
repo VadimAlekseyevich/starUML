@@ -30495,6 +30495,12 @@
 										},
 										{
 											"$ref": "ALG2_ScenarioValidation_ActionView_result"
+										},
+										{
+											"$ref": "ALG2_ScenarioValidation_ActionView_dataReady"
+										},
+										{
+											"$ref": "ALG2_ScenarioValidation_ActionView_compat"
 										}
 									],
 									"font": "Arial;13;0",
@@ -31614,10 +31620,40 @@
 											"$ref": "ALG2_GenerationExecution_ActionView_failed"
 										},
 										{
-											"$ref": "ALG2_GenerationExecution_ActionView_cancelled"
+											"$ref": "ALG2_GenerationExecution_ActionView_completed"
 										},
 										{
-											"$ref": "ALG2_GenerationExecution_ActionView_completed"
+											"$ref": "ALG2_GenerationExecution_ActionView_constraints"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_suitability"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_zoning"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_roads"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_blocks"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_buildings"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_demography"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_infra"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_validation"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_metrics"
+										},
+										{
+											"$ref": "ALG2_GenerationExecution_ActionView_manifest"
 										}
 									],
 									"font": "Arial;13;0",
