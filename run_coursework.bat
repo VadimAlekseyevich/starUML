@@ -23,7 +23,7 @@ cd /d "%ROOT%"
 if errorlevel 1 goto :fail_root
 
 echo [1/3] Pulling latest changes...
-git pull --ff-only
+git force-pull
 if errorlevel 1 goto :fail_git
 
 echo.
