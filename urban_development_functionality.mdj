@@ -19262,6 +19262,15 @@
               },
               "name": "Синхронизация проверок геоданных",
               "documentation": "Общий статус качества определяется после получения обоих результатов."
+            },
+            {
+              "_type": "UMLActivityFinalNode",
+              "_id": "LG28_Data_Final_OtherOps",
+              "_parent": {
+                "$ref": "LG26_Data_Activity"
+              },
+              "name": "Завершение",
+              "documentation": "Операция с наборами геоданных завершена; отображаемый список обновлён."
             }
           ],
           "edges": [
@@ -19360,9 +19369,9 @@
                 "$ref": "LG26_Data_N_apply"
               },
               "target": {
-                "$ref": "LG26_Data_N_result"
+                "$ref": "LG28_Data_Final_OtherOps"
               },
-              "documentation": "После действия «Выполнить выбранную операцию» управление переходит к «Обновить список и статус геоданных» без дополнительного условия."
+              "documentation": "Переход после «Выполнить выбранную операцию»: Операция с наборами геоданных завершена; отображаемый список обновлён."
             },
             {
               "_type": "UMLControlFlow",
@@ -19698,7 +19707,7 @@
                   "_parent": {
                     "$ref": "LG26_Data_Lane_1"
                   },
-                  "name": "Выполнить выбранную операцию",
+                  "name": "Выполнить операцию и обновить список",
                   "documentation": "Показать свойства слоя, сохранить его интерпретацию или удалить набор после проверки зависимостей."
                 },
                 {
@@ -20044,13 +20053,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Data_View_result"
+                    "$ref": "LG28_Data_FinalView_OtherOps"
                   },
                   "tail": {
                     "$ref": "LG27_Data_View_apply"
                   },
                   "lineStyle": 1,
-                  "points": "849:445;1062:445;1062:1067;849:1067",
+                  "points": "849:445;962:445",
                   "showVisibility": true
                 },
                 {
@@ -20155,7 +20164,7 @@
                     "$ref": "LG27_Data_View_formatError"
                   },
                   "lineStyle": 1,
-                  "points": "184:615;21:615;21:445;184:445",
+                  "points": "184:615;64:615;64:445;184:445",
                   "showVisibility": true
                 },
                 {
@@ -20218,7 +20227,7 @@
                     "$ref": "LG27_Data_View_bad"
                   },
                   "lineStyle": 1,
-                  "points": "184:954;25:954;25:445;184:445",
+                  "points": "184:954;41:954;41:415;287:415;287:425",
                   "showVisibility": true
                 },
                 {
@@ -20239,7 +20248,7 @@
                     "$ref": "LG27_Data_View_qualityDecision"
                   },
                   "lineStyle": 1,
-                  "points": "759:898;1062:898;1062:1011;849:1011",
+                  "points": "746:911;746:991",
                   "showVisibility": true
                 },
                 {
@@ -20741,7 +20750,7 @@
                           "top": 428,
                           "width": 194,
                           "height": 34,
-                          "text": "Выполнить выбранную операцию",
+                          "text": "Выполнить операцию и обновить список",
                           "wordWrap": true,
                           "verticalAlignment": 3,
                           "horizontalAlignment": 2
@@ -21445,6 +21454,24 @@
                   "top": 1115,
                   "width": 19,
                   "height": 19
+                },
+                {
+                  "_type": "UMLControlNodeView",
+                  "_id": "LG28_Data_FinalView_OtherOps",
+                  "_parent": {
+                    "$ref": "LG26_Data_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG28_Data_Final_OtherOps"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#75161B",
+                  "fillColor": "#FFF8BB",
+                  "containerChangeable": true,
+                  "left": 962,
+                  "top": 435,
+                  "width": 20,
+                  "height": 20
                 }
               ]
             }
@@ -23319,6 +23346,42 @@
               },
               "name": "Предварительные проверки завершены",
               "documentation": "Подтверждение запуска допускается только при завершении всех предварительных проверок."
+            },
+            {
+              "_type": "UMLActivityFinalNode",
+              "_id": "LG28_Launch_Final_Blocked",
+              "_parent": {
+                "$ref": "LG26_Launch_Activity"
+              },
+              "name": "Завершение",
+              "documentation": "Запуск невозможен из-за некорректных исходных данных или параметров."
+            },
+            {
+              "_type": "UMLActivityFinalNode",
+              "_id": "LG28_Launch_Final_Canceled",
+              "_parent": {
+                "$ref": "LG26_Launch_Activity"
+              },
+              "name": "Завершение",
+              "documentation": "Пользователь отказался запускать расчёт."
+            },
+            {
+              "_type": "UMLActivityFinalNode",
+              "_id": "LG28_Launch_Final_Failed",
+              "_parent": {
+                "$ref": "LG26_Launch_Activity"
+              },
+              "name": "Завершение",
+              "documentation": "Произошла ошибка генерации, причина зафиксирована."
+            },
+            {
+              "_type": "UMLActivityFinalNode",
+              "_id": "LG28_Launch_Final_Stopped",
+              "_parent": {
+                "$ref": "LG26_Launch_Activity"
+              },
+              "name": "Завершение",
+              "documentation": "Генерация прекращена по инициативе пользователя."
             }
           ],
           "edges": [
@@ -23361,9 +23424,9 @@
                 "$ref": "LG26_Launch_N_blocked"
               },
               "target": {
-                "$ref": "LG26_Launch_N_end"
+                "$ref": "LG28_Launch_Final_Blocked"
               },
-              "documentation": "После действия «Показать причины запрета запуска» управление переходит к «Завершение» без дополнительного условия."
+              "documentation": "Переход после «Показать причины запрета запуска»: Запуск невозможен из-за некорректных исходных данных или параметров."
             },
             {
               "_type": "UMLControlFlow",
@@ -23433,9 +23496,9 @@
                 "$ref": "LG26_Launch_N_cancel"
               },
               "target": {
-                "$ref": "LG26_Launch_N_end"
+                "$ref": "LG28_Launch_Final_Canceled"
               },
-              "documentation": "После действия «Отменить запуск без расчёта» управление переходит к «Завершение» без дополнительного условия."
+              "documentation": "Переход после «Отменить запуск без расчёта»: Пользователь отказался запускать расчёт."
             },
             {
               "_type": "UMLControlFlow",
@@ -23535,9 +23598,9 @@
                 "$ref": "LG26_Launch_N_failed"
               },
               "target": {
-                "$ref": "LG26_Launch_N_end"
+                "$ref": "LG28_Launch_Final_Failed"
               },
-              "documentation": "После действия «Показать причину ошибки» управление переходит к «Завершение» без дополнительного условия."
+              "documentation": "Переход после «Показать причину ошибки»: Произошла ошибка генерации, причина зафиксирована."
             },
             {
               "_type": "UMLControlFlow",
@@ -23563,9 +23626,9 @@
                 "$ref": "LG26_Launch_N_stopped"
               },
               "target": {
-                "$ref": "LG26_Launch_N_end"
+                "$ref": "LG28_Launch_Final_Stopped"
               },
-              "documentation": "После действия «Показать статус остановки» управление переходит к «Завершение» без дополнительного условия."
+              "documentation": "Переход после «Показать статус остановки»: Генерация прекращена по инициативе пользователя."
             },
             {
               "_type": "UMLControlFlow",
@@ -23984,13 +24047,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Launch_View_end"
+                    "$ref": "LG28_Launch_FinalView_Blocked"
                   },
                   "tail": {
                     "$ref": "LG27_Launch_View_blocked"
                   },
                   "lineStyle": 1,
-                  "points": "643:445;25:445;25:1067;737:1067",
+                  "points": "849:445;962:445",
                   "showVisibility": true
                 },
                 {
@@ -24089,13 +24152,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Launch_View_end"
+                    "$ref": "LG28_Launch_FinalView_Canceled"
                   },
                   "tail": {
                     "$ref": "LG27_Launch_View_cancel"
                   },
                   "lineStyle": 1,
-                  "points": "184:671;21:671;21:1067;737:1067",
+                  "points": "390:671;435:671",
                   "showVisibility": true
                 },
                 {
@@ -24221,7 +24284,7 @@
                     "$ref": "LG27_Launch_View_status"
                   },
                   "lineStyle": 1,
-                  "points": "759:841;1062:841;1062:954;849:954",
+                  "points": "734:841;483:841;483:954;643:954",
                   "showVisibility": true
                 },
                 {
@@ -24236,13 +24299,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Launch_View_end"
+                    "$ref": "LG28_Launch_FinalView_Failed"
                   },
                   "tail": {
                     "$ref": "LG27_Launch_View_failed"
                   },
                   "lineStyle": 1,
-                  "points": "849:898;1058:898;1058:1067;756:1067",
+                  "points": "849:898;962:898",
                   "showVisibility": true
                 },
                 {
@@ -24278,13 +24341,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Launch_View_end"
+                    "$ref": "LG28_Launch_FinalView_Stopped"
                   },
                   "tail": {
                     "$ref": "LG27_Launch_View_stopped"
                   },
                   "lineStyle": 1,
-                  "points": "746:975;746:1058",
+                  "points": "849:954;962:954",
                   "showVisibility": true
                 },
                 {
@@ -25318,6 +25381,78 @@
                   "top": 1058,
                   "width": 19,
                   "height": 19
+                },
+                {
+                  "_type": "UMLControlNodeView",
+                  "_id": "LG28_Launch_FinalView_Blocked",
+                  "_parent": {
+                    "$ref": "LG26_Launch_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG28_Launch_Final_Blocked"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#75161B",
+                  "fillColor": "#FFF8BB",
+                  "containerChangeable": true,
+                  "left": 962,
+                  "top": 435,
+                  "width": 20,
+                  "height": 20
+                },
+                {
+                  "_type": "UMLControlNodeView",
+                  "_id": "LG28_Launch_FinalView_Canceled",
+                  "_parent": {
+                    "$ref": "LG26_Launch_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG28_Launch_Final_Canceled"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#75161B",
+                  "fillColor": "#FFF8BB",
+                  "containerChangeable": true,
+                  "left": 435,
+                  "top": 661,
+                  "width": 20,
+                  "height": 20
+                },
+                {
+                  "_type": "UMLControlNodeView",
+                  "_id": "LG28_Launch_FinalView_Failed",
+                  "_parent": {
+                    "$ref": "LG26_Launch_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG28_Launch_Final_Failed"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#75161B",
+                  "fillColor": "#FFF8BB",
+                  "containerChangeable": true,
+                  "left": 962,
+                  "top": 888,
+                  "width": 20,
+                  "height": 20
+                },
+                {
+                  "_type": "UMLControlNodeView",
+                  "_id": "LG28_Launch_FinalView_Stopped",
+                  "_parent": {
+                    "$ref": "LG26_Launch_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG28_Launch_Final_Stopped"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#75161B",
+                  "fillColor": "#FFF8BB",
+                  "containerChangeable": true,
+                  "left": 962,
+                  "top": 944,
+                  "width": 20,
+                  "height": 20
                 }
               ]
             }
@@ -25397,6 +25532,15 @@
               },
               "name": "Синхронизация представлений",
               "documentation": "Карта и таблица показываются после подготовки обоих наборов данных."
+            },
+            {
+              "_type": "UMLActivityFinalNode",
+              "_id": "LG28_Compare_Final_NoResults",
+              "_parent": {
+                "$ref": "LG26_Compare_Activity"
+              },
+              "name": "Завершение",
+              "documentation": "В проекте нет завершённых результатов сценариев для сравнения."
             }
           ],
           "edges": [
@@ -25467,9 +25611,9 @@
                 "$ref": "LG26_Compare_N_empty"
               },
               "target": {
-                "$ref": "LG26_Compare_N_end"
+                "$ref": "LG28_Compare_Final_NoResults"
               },
-              "documentation": "После действия «Показать отсутствие результатов» управление переходит к «Завершение» без дополнительного условия."
+              "documentation": "Переход после «Показать отсутствие результатов»: В проекте нет завершённых результатов сценариев для сравнения."
             },
             {
               "_type": "UMLControlFlow",
@@ -25568,9 +25712,9 @@
                 "$ref": "LG26_Compare_N_detail"
               },
               "target": {
-                "$ref": "LG26_Compare_N_inspect"
+                "$ref": "LG26_Compare_N_end"
               },
-              "documentation": "После действия «Показать параметры выбранного сценария» управление переходит к «Просмотреть различия результатов» без дополнительного условия."
+              "documentation": "Дополнительные сведения просмотрены, деятельность завершается."
             },
             {
               "_type": "UMLControlFlow",
@@ -25582,9 +25726,9 @@
                 "$ref": "LG26_Compare_N_log"
               },
               "target": {
-                "$ref": "LG26_Compare_N_inspect"
+                "$ref": "LG26_Compare_N_end"
               },
-              "documentation": "После действия «Просмотреть журнал выполнения» управление переходит к «Просмотреть различия результатов» без дополнительного условия."
+              "documentation": "Дополнительные сведения просмотрены, деятельность завершается."
             },
             {
               "_type": "UMLControlFlow",
@@ -26044,13 +26188,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Compare_View_end"
+                    "$ref": "LG28_Compare_FinalView_NoResults"
                   },
                   "tail": {
                     "$ref": "LG27_Compare_View_empty"
                   },
                   "lineStyle": 1,
-                  "points": "849:332;1058:332;1058:841;756:841",
+                  "points": "849:332;962:332",
                   "showVisibility": true
                 },
                 {
@@ -26191,13 +26335,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Compare_View_inspect"
+                    "$ref": "LG27_Compare_View_end"
                   },
                   "tail": {
                     "$ref": "LG27_Compare_View_detail"
                   },
                   "lineStyle": 1,
-                  "points": "849:784;1058:784;1058:671;390:671",
+                  "points": "746:805;746:831",
                   "showVisibility": true
                 },
                 {
@@ -26212,13 +26356,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Compare_View_inspect"
+                    "$ref": "LG27_Compare_View_end"
                   },
                   "tail": {
                     "$ref": "LG27_Compare_View_log"
                   },
                   "lineStyle": 1,
-                  "points": "184:784;29:784;29:671;184:671",
+                  "points": "390:784;465:784;465:841;737:841",
                   "showVisibility": true
                 },
                 {
@@ -27190,6 +27334,24 @@
                   "top": 832,
                   "width": 19,
                   "height": 19
+                },
+                {
+                  "_type": "UMLControlNodeView",
+                  "_id": "LG28_Compare_FinalView_NoResults",
+                  "_parent": {
+                    "$ref": "LG26_Compare_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG28_Compare_Final_NoResults"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#75161B",
+                  "fillColor": "#FFF8BB",
+                  "containerChangeable": true,
+                  "left": 962,
+                  "top": 322,
+                  "width": 20,
+                  "height": 20
                 }
               ]
             }
