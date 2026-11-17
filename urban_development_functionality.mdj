@@ -24345,7 +24345,7 @@
                     "$ref": "LG27_Launch_View_status"
                   },
                   "lineStyle": 1,
-                  "points": "734:841;483:841;483:954;643:954",
+                  "points": "734:841;734:855;483:855;483:954;643:954",
                   "showVisibility": true
                 },
                 {
