@@ -19271,6 +19271,15 @@
               },
               "name": "Завершение",
               "documentation": "Операция с наборами геоданных завершена; отображаемый список обновлён."
+            },
+            {
+              "_type": "UMLMergeNode",
+              "_id": "LG29_Data_Merge_Retry",
+              "_parent": {
+                "$ref": "LG26_Data_Activity"
+              },
+              "name": "Повторить выбор источника",
+              "documentation": "Объединяет альтернативные возвраты к выбору геоданных: импорт, ошибка формата или исправление некачественного источника."
             }
           ],
           "edges": [
@@ -19383,7 +19392,7 @@
                 "$ref": "LG26_Data_N_operation"
               },
               "target": {
-                "$ref": "LG26_Data_N_file"
+                "$ref": "LG29_Data_Merge_Retry"
               },
               "documentation": "После действия «Какое действие выбрано?» управление переходит к «Выбрать файл геоданных» при выполнении условия [выбран импорт].",
               "guard": "выбран импорт"
@@ -19441,7 +19450,7 @@
                 "$ref": "LG26_Data_N_formatError"
               },
               "target": {
-                "$ref": "LG26_Data_N_file"
+                "$ref": "LG29_Data_Merge_Retry"
               },
               "documentation": "После действия «Выбрать другой файл» управление переходит к «Выбрать файл геоданных» без дополнительного условия."
             },
@@ -19485,7 +19494,7 @@
                 "$ref": "LG26_Data_N_bad"
               },
               "target": {
-                "$ref": "LG26_Data_N_file"
+                "$ref": "LG29_Data_Merge_Retry"
               },
               "documentation": "После действия «Исправить источник данных» управление переходит к «Выбрать файл геоданных» без дополнительного условия."
             },
@@ -19615,6 +19624,20 @@
                 "$ref": "LG26_Data_N_qualityDecision"
               },
               "documentation": "После действия «Синхронизация проверок геоданных» управление переходит к «Есть критические ошибки?» без дополнительного условия."
+            },
+            {
+              "_type": "UMLControlFlow",
+              "_id": "LG29_Data_Edge_MergeFile",
+              "_parent": {
+                "$ref": "LG26_Data_Activity"
+              },
+              "source": {
+                "$ref": "LG29_Data_Merge_Retry"
+              },
+              "target": {
+                "$ref": "LG26_Data_N_file"
+              },
+              "documentation": "После объединения альтернатив возвращаемся к выбору источника геоданных."
             }
           ],
           "groups": [
@@ -20074,13 +20097,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Data_View_file"
+                    "$ref": "LG29_Data_MergeView_Retry"
                   },
                   "tail": {
                     "$ref": "LG27_Data_View_operation"
                   },
                   "lineStyle": 1,
-                  "points": "734:332;21:332;21:445;184:445",
+                  "points": "734:332;21:332;21:430;125:430;125:435",
                   "showVisibility": true
                 },
                 {
@@ -20158,13 +20181,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Data_View_file"
+                    "$ref": "LG29_Data_MergeView_Retry"
                   },
                   "tail": {
                     "$ref": "LG27_Data_View_formatError"
                   },
                   "lineStyle": 1,
-                  "points": "184:615;64:615;64:445;184:445",
+                  "points": "184:615;35:615;35:445;115:445",
                   "showVisibility": true
                 },
                 {
@@ -20206,7 +20229,7 @@
                     "$ref": "LG27_Data_View_qualityDecision"
                   },
                   "lineStyle": 1,
-                  "points": "746:911;746:923;287:923;287:934",
+                  "points": "734:898;512:898;512:954;390:954",
                   "showVisibility": true
                 },
                 {
@@ -20221,13 +20244,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Data_View_file"
+                    "$ref": "LG29_Data_MergeView_Retry"
                   },
                   "tail": {
                     "$ref": "LG27_Data_View_bad"
                   },
                   "lineStyle": 1,
-                  "points": "184:954;41:954;41:415;287:415;287:425",
+                  "points": "184:954;41:954;41:465;125:465;125:455",
                   "showVisibility": true
                 },
                 {
@@ -21472,6 +21495,44 @@
                   "top": 435,
                   "width": 20,
                   "height": 20
+                },
+                {
+                  "_type": "UMLControlNodeView",
+                  "_id": "LG29_Data_MergeView_Retry",
+                  "_parent": {
+                    "$ref": "LG26_Data_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG29_Data_Merge_Retry"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#75161B",
+                  "fillColor": "#FFF8BB",
+                  "left": 115,
+                  "top": 435,
+                  "width": 20,
+                  "height": 20
+                },
+                {
+                  "_type": "UMLControlFlowView",
+                  "_id": "LG29_Data_EdgeView_MergeFile",
+                  "_parent": {
+                    "$ref": "LG26_Data_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG29_Data_Edge_MergeFile"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#832129",
+                  "lineStyle": 1,
+                  "points": "135:445;184:445",
+                  "head": {
+                    "$ref": "LG27_Data_View_file"
+                  },
+                  "tail": {
+                    "$ref": "LG29_Data_MergeView_Retry"
+                  },
+                  "showVisibility": true
                 }
               ]
             }
@@ -29441,6 +29502,24 @@
               },
               "name": "Завершение",
               "documentation": "Элемент «Завершение» алгоритма «07 — Алгоритм генерации сценария»."
+            },
+            {
+              "_type": "UMLActivityFinalNode",
+              "_id": "LG29_Generation_Final_Input",
+              "_parent": {
+                "$ref": "LG26_Generation_Activity"
+              },
+              "name": "Завершение",
+              "documentation": "Генерация завершена без выполнения: исходные данные некорректны."
+            },
+            {
+              "_type": "UMLActivityFinalNode",
+              "_id": "LG29_Generation_Final_Failure",
+              "_parent": {
+                "$ref": "LG26_Generation_Activity"
+              },
+              "name": "Завершение",
+              "documentation": "Генерация завершилась критическим нарушением, ошибка зарегистрирована."
             }
           ],
           "edges": [
@@ -29511,9 +29590,9 @@
                 "$ref": "LG26_Generation_N_reject"
               },
               "target": {
-                "$ref": "LG26_Generation_N_end"
+                "$ref": "LG29_Generation_Final_Input"
               },
-              "documentation": "После действия «Завершить с ошибкой входных данных» управление переходит к «Завершение» без дополнительного условия."
+              "documentation": "Генерация завершена без выполнения: исходные данные некорректны."
             },
             {
               "_type": "UMLControlFlow",
@@ -29724,9 +29803,9 @@
                 "$ref": "LG26_Generation_N_failed"
               },
               "target": {
-                "$ref": "LG26_Generation_N_end"
+                "$ref": "LG29_Generation_Final_Failure"
               },
-              "documentation": "После действия «Зафиксировать ошибку генерации» управление переходит к «Завершение» без дополнительного условия."
+              "documentation": "Генерация завершилась критическим нарушением, ошибка зарегистрирована."
             },
             {
               "_type": "UMLControlFlow",
@@ -30151,13 +30230,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Generation_View_end"
+                    "$ref": "LG29_Generation_FinalView_Input"
                   },
                   "tail": {
                     "$ref": "LG27_Generation_View_reject"
                   },
                   "lineStyle": 1,
-                  "points": "643:332;21:332;21:1124;737:1124",
+                  "points": "849:332;962:332",
                   "showVisibility": true
                 },
                 {
@@ -30466,13 +30545,13 @@
                   "font": "Arial;9;0",
                   "lineColor": "#832129",
                   "head": {
-                    "$ref": "LG27_Generation_View_end"
+                    "$ref": "LG29_Generation_FinalView_Failure"
                   },
                   "tail": {
                     "$ref": "LG27_Generation_View_failed"
                   },
                   "lineStyle": 1,
-                  "points": "184:954;29:954;29:1124;737:1124",
+                  "points": "390:954;434:954",
                   "showVisibility": true
                 },
                 {
@@ -31534,6 +31613,40 @@
                   "top": 1115,
                   "width": 19,
                   "height": 19
+                },
+                {
+                  "_type": "UMLControlNodeView",
+                  "_id": "LG29_Generation_FinalView_Input",
+                  "_parent": {
+                    "$ref": "LG26_Generation_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG29_Generation_Final_Input"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#75161B",
+                  "fillColor": "#FFF8BB",
+                  "left": 962,
+                  "top": 322,
+                  "width": 20,
+                  "height": 20
+                },
+                {
+                  "_type": "UMLControlNodeView",
+                  "_id": "LG29_Generation_FinalView_Failure",
+                  "_parent": {
+                    "$ref": "LG26_Generation_Diagram"
+                  },
+                  "model": {
+                    "$ref": "LG29_Generation_Final_Failure"
+                  },
+                  "font": "Arial;9;0",
+                  "lineColor": "#75161B",
+                  "fillColor": "#FFF8BB",
+                  "left": 434,
+                  "top": 944,
+                  "width": 20,
+                  "height": 20
                 }
               ]
             }
