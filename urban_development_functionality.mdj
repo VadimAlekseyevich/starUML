@@ -21838,7 +21838,8 @@
 													"top": 1015,
 													"width": 114.75634765625,
 													"height": 13,
-													"text": "Закрытие формы"
+													"text": "Закрыть форму проекта",
+													"wordWrap": true
 												},
 												{
 													"_type": "LabelView",
@@ -22009,14 +22010,6 @@
 							"documentation": "Альтернативные причины выбора CRS — первый выбор после проверки границ либо повторный после ошибки — объединяются без требования одновременного получения токенов."
 						},
 						{
-							"_type": "UMLAction",
-							"_id": "AAAAAAGiDWmiHP4eTXQ=",
-							"_parent": {
-								"$ref": "LG26_Project_Activity"
-							},
-							"name": "Action1"
-						},
-						{
 							"_type": "UMLInitialNode",
 							"_id": "LG26_Project_N_start",
 							"_parent": {
@@ -22168,20 +22161,6 @@
 							},
 							"target": {
 								"$ref": "LG30_N_1"
-							}
-						},
-						{
-							"_type": "UMLControlFlow",
-							"_id": "LG27_Project_Edge_13",
-							"_parent": {
-								"$ref": "LG26_Project_Activity"
-							},
-							"documentation": "Поток управления «CRS поддерживается?» → «Завершение работы с формой». Переход выполняется при условии «CRS поддерживается».",
-							"source": {
-								"$ref": "LG26_Project_N_crs"
-							},
-							"target": {
-								"$ref": "AAAAAAGh6gtqGFP/Sdc="
 							}
 						},
 						{
@@ -22359,7 +22338,7 @@
 								"$ref": "LG26_Project_Activity"
 							},
 							"name": "Вызвано закрытие формы",
-							"documentation": "Поток управления «Отображать форму нового проекта» → «Завершение работы с формой». Переход без дополнительного условия.",
+							"documentation": "Триггерное событие «Вызвано закрытие формы» поступает только после успешного ввода и проверки CRS, когда система инициировала закрытие формы проекта; до этого отображение не прекращается.",
 							"source": {
 								"$ref": "LG26_Project_N_form"
 							},
@@ -22407,7 +22386,8 @@
 							"target": {
 								"$ref": "AAAAAAGiDWyJh/6rNQ4="
 							},
-							"guard": "CRS поддерживается"
+							"guard": "CRS поддерживается",
+							"documentation": "При [CRS поддерживается] система инициирует закрытие формы проекта; в противном случае пользователь возвращается к выбору CRS."
 						},
 						{
 							"_type": "UMLControlFlow",
@@ -22420,7 +22400,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAGh6gtqGFP/Sdc="
-							}
+							},
+							"documentation": "После инициирования закрытия формы пользовательская ветвь передаёт управление Join, который ожидает прекращения отображения формы по триггерному событию."
 						}
 					],
 					"groups": [
@@ -22567,7 +22548,8 @@
 									"_parent": {
 										"$ref": "LG26_Project_Lane_1"
 									},
-									"name": "Закрытие формы"
+									"name": "Закрыть форму проекта",
+									"documentation": "После успешной проверки системы координат система инициирует закрытие формы проекта. Это вызывает событие «Вызвано закрытие формы» в параллельной ветви её отображения; затем оба потока синхронизируются на Join."
 								}
 							]
 						}
@@ -27190,18 +27172,20 @@
 											"model": {
 												"$ref": "LG30_E_22"
 											},
-											"visible": false,
-											"font": "Arial;9;0",
+											"visible": true,
+											"font": "Arial;10;0",
 											"parentStyle": false,
-											"left": 637,
-											"top": 311,
-											"height": 9,
-											"alpha": 1.5707963267948966,
-											"distance": 15,
+											"left": 719,
+											"top": 284,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 20,
 											"hostEdge": {
 												"$ref": "LG30_EV_23"
 											},
-											"edgePosition": 1
+											"edgePosition": 1,
+											"text": "Выбрано действие с геослоем",
+											"width": 207
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -28007,13 +27991,14 @@
 							"_parent": {
 								"$ref": "LG26_Data_Activity"
 							},
-							"documentation": "Система сохраняет список видимым до выбора операции; завершение ветки совпадает с окончанием пользовательского выбора.",
+							"documentation": "Триггерное событие «Выбрано действие с геослоем» возникает после выбора пользователем операции с набором; до этого список геослоёв продолжает отображаться. Ветка отображения синхронизируется с веткой выбора на Join.",
 							"source": {
 								"$ref": "LG26_Data_N_list"
 							},
 							"target": {
 								"$ref": "LG30_N_10"
-							}
+							},
+							"name": "Выбрано действие с геослоем"
 						},
 						{
 							"_type": "UMLControlFlow",
@@ -28121,7 +28106,7 @@
 										"$ref": "LG26_Data_Lane_1"
 									},
 									"name": "Отображать список геослоёв",
-									"documentation": "Система поддерживает список геослоёв доступным и видимым, пока пользователь выбирает операцию с набором; завершается одновременно с фиксацией выбора."
+									"documentation": "Система непрерывно отображает доступные геослои и ожидает выбора действия. Длительное отображение завершается по событию «Выбрано действие с геослоем»; список может быть обновлён при выполнении операции."
 								},
 								{
 									"_type": "UMLAction",
@@ -29352,8 +29337,8 @@
 											},
 											"font": "Arial;13;0",
 											"parentStyle": false,
-											"left": 862,
-											"top": 757,
+											"left": 803,
+											"top": 772,
 											"width": 79.6630859375,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -29419,7 +29404,7 @@
 										"$ref": "LG27_Config_View_valid"
 									},
 									"lineStyle": 1,
-									"points": "760:759;887:759;848:883",
+									"points": "760:759;791:759;791:883",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAGh6cIFVCah9ck="
@@ -31781,18 +31766,20 @@
 											"model": {
 												"$ref": "LG30_E_46"
 											},
-											"visible": false,
-											"font": "Arial;9;0",
+											"visible": true,
+											"font": "Arial;10;0",
 											"parentStyle": false,
-											"left": 1015,
-											"top": 851,
-											"height": 9,
-											"alpha": 1.5707963267948966,
-											"distance": 15,
+											"left": 825,
+											"top": 282,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 20,
 											"hostEdge": {
 												"$ref": "LG30_EV_47"
 											},
-											"edgePosition": 1
+											"edgePosition": 1,
+											"text": "Вызвано закрытие формы настроек",
+											"width": 215
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -31843,13 +31830,13 @@
 									"font": "Arial;9;0",
 									"parentStyle": false,
 									"head": {
-										"$ref": "LG30_V_35"
+										"$ref": "LG31_Config_CloseView"
 									},
 									"tail": {
 										"$ref": "LG27_Config_View_form"
 									},
 									"lineStyle": 1,
-									"points": "850:250;1015:251;1016:840;888:840;850:883",
+									"points": "850:250;1024:250;1024:839;1011:839",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "LG30_L_48"
@@ -31958,6 +31945,232 @@
 									},
 									"propertyLabel": {
 										"$ref": "LG30_L_55"
+									}
+								},
+								{
+									"_type": "UMLActionView",
+									"_id": "LG31_Config_CloseView",
+									"_parent": {
+										"$ref": "LG26_Config_Diagram"
+									},
+									"model": {
+										"$ref": "LG31_Config_CloseAction"
+									},
+									"subViews": [
+										{
+											"_type": "UMLNameCompartmentView",
+											"_id": "LG31_Config_CloseView_2",
+											"_parent": {
+												"$ref": "LG31_Config_CloseView"
+											},
+											"model": {
+												"$ref": "LG31_Config_CloseAction"
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Config_CloseView_3",
+													"_parent": {
+														"$ref": "LG31_Config_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"height": 9
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Config_CloseView_4",
+													"_parent": {
+														"$ref": "LG31_Config_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"width": 62.74072265625,
+													"height": 9,
+													"text": "(from Система)"
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Config_CloseView_5",
+													"_parent": {
+														"$ref": "LG31_Config_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"horizontalAlignment": 1,
+													"wordWrap": true
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Config_CloseView_6",
+													"_parent": {
+														"$ref": "LG31_Config_CloseView_2"
+													},
+													"model": {
+														"$ref": "LG31_Config_CloseAction"
+													},
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;1",
+													"parentStyle": true,
+													"left": 835,
+													"top": 826,
+													"width": 171,
+													"height": 20,
+													"text": "Закрыть форму настроек",
+													"verticalAlignment": 3,
+													"wordWrap": true
+												}
+											],
+											"lineColor": "#75161B",
+											"fillColor": "#FFF8BB",
+											"fontColor": "#262020",
+											"font": "Arial;9;0",
+											"parentStyle": true,
+											"left": 830,
+											"top": 819,
+											"width": 181,
+											"height": 21,
+											"stereotypeLabel": {
+												"$ref": "LG31_Config_CloseView_3"
+											},
+											"nameLabel": {
+												"$ref": "LG31_Config_CloseView_6"
+											},
+											"namespaceLabel": {
+												"$ref": "LG31_Config_CloseView_4"
+											},
+											"propertyLabel": {
+												"$ref": "LG31_Config_CloseView_5"
+											}
+										}
+									],
+									"lineColor": "#75161B",
+									"fillColor": "#FFF8BB",
+									"fontColor": "#262020",
+									"font": "Arial;9;0",
+									"parentStyle": false,
+									"containerChangeable": true,
+									"left": 830,
+									"top": 819,
+									"width": 180,
+									"height": 41,
+									"nameCompartment": {
+										"$ref": "LG31_Config_CloseView_2"
+									},
+									"wordWrap": true
+								},
+								{
+									"_type": "UMLControlFlowView",
+									"_id": "LG31_Config_JoinFlowView",
+									"_parent": {
+										"$ref": "LG26_Config_Diagram"
+									},
+									"model": {
+										"$ref": "LG31_Config_JoinFlow"
+									},
+									"subViews": [
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Config_JoinFlowView_Label_1",
+											"_parent": {
+												"$ref": "LG31_Config_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Config_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;10;0",
+											"parentStyle": false,
+											"left": 825,
+											"top": 282,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 20,
+											"hostEdge": {
+												"$ref": "LG31_Config_JoinFlowView"
+											},
+											"edgePosition": 1,
+											"width": 215
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Config_JoinFlowView_Label_2",
+											"_parent": {
+												"$ref": "LG31_Config_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Config_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;9;0",
+											"parentStyle": false,
+											"left": 1015,
+											"top": 866,
+											"height": 9,
+											"alpha": 1.5707963267948966,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "LG31_Config_JoinFlowView"
+											},
+											"edgePosition": 1
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Config_JoinFlowView_Label_3",
+											"_parent": {
+												"$ref": "LG31_Config_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Config_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;9;0",
+											"parentStyle": false,
+											"left": 1016,
+											"top": 821,
+											"height": 9,
+											"alpha": -1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "LG31_Config_JoinFlowView"
+											},
+											"edgePosition": 1
+										}
+									],
+									"lineColor": "#832129",
+									"font": "Arial;9;0",
+									"parentStyle": false,
+									"head": {
+										"$ref": "LG30_V_35"
+									},
+									"tail": {
+										"$ref": "LG31_Config_CloseView"
+									},
+									"lineStyle": 1,
+									"points": "920:860;920:883",
+									"showVisibility": true,
+									"nameLabel": {
+										"$ref": "LG31_Config_JoinFlowView_Label_1"
+									},
+									"stereotypeLabel": {
+										"$ref": "LG31_Config_JoinFlowView_Label_2"
+									},
+									"propertyLabel": {
+										"$ref": "LG31_Config_JoinFlowView_Label_3"
 									}
 								}
 							]
@@ -32209,7 +32422,7 @@
 							"_parent": {
 								"$ref": "LG26_Config_Activity"
 							},
-							"documentation": "Поток управления «Конфигурация корректна?» → «Параметры приняты, форма закрыта». Переход выполняется при условии «ошибок нет».",
+							"documentation": "После проверки [ошибок нет] система вызывает закрытие формы настроек; ветвь ввода поступает к Join, который ожидает также завершения отображения формы.",
 							"source": {
 								"$ref": "LG26_Config_N_valid"
 							},
@@ -32350,13 +32563,14 @@
 							"_parent": {
 								"$ref": "LG26_Config_Activity"
 							},
-							"documentation": "Форма остаётся открытой при проверке и исправлении введённых параметров и завершает работу только после успешной валидации.",
+							"documentation": "Триггерное событие «Вызвано закрытие формы настроек» поступает после успешной проверки конфигурации и вызова действия закрытия; пока идёт ввод и исправление ошибок, форма продолжает отображаться.",
 							"source": {
 								"$ref": "LG26_Config_N_form"
 							},
 							"target": {
-								"$ref": "LG30_N_34"
-							}
+								"$ref": "LG31_Config_CloseAction"
+							},
+							"name": "Вызвано закрытие формы настроек"
 						},
 						{
 							"_type": "UMLControlFlow",
@@ -32370,6 +32584,20 @@
 							},
 							"target": {
 								"$ref": "LG26_Config_N_save"
+							}
+						},
+						{
+							"_type": "UMLControlFlow",
+							"_id": "LG31_Config_JoinFlow",
+							"_parent": {
+								"$ref": "LG26_Config_Activity"
+							},
+							"documentation": "После действия «Закрыть форму настроек» интерфейсная ветвь достигает Join «Параметры приняты, форма закрыта» и синхронизируется с пользовательской ветвью перед продолжением процесса.",
+							"source": {
+								"$ref": "LG31_Config_CloseAction"
+							},
+							"target": {
+								"$ref": "LG30_N_34"
 							}
 						}
 					],
@@ -32483,6 +32711,15 @@
 									},
 									"name": "Проверить готовность исходных геоданных",
 									"documentation": "Проверяется наличие исходного слоя, корректность CRS и пригодность слоя к выбранному режиму."
+								},
+								{
+									"_type": "UMLAction",
+									"_id": "LG31_Config_CloseAction",
+									"_parent": {
+										"$ref": "LG26_Config_Lane_1"
+									},
+									"name": "Закрыть форму настроек",
+									"documentation": "После успешной валидации параметров система закрывает форму настройки сценария и инициирует событие завершения её отображения. При ошибках форма остаётся открытой для повторного ввода."
 								}
 							]
 						}
@@ -36195,18 +36432,20 @@
 											"model": {
 												"$ref": "LG30_E_70"
 											},
-											"visible": false,
-											"font": "Arial;9;0",
+											"visible": true,
+											"font": "Arial;10;0",
 											"parentStyle": false,
-											"left": 637,
-											"top": 614,
-											"height": 9,
-											"alpha": 1.5707963267948966,
-											"distance": 15,
+											"left": 857,
+											"top": 578,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 20,
 											"hostEdge": {
 												"$ref": "LG30_EV_71"
 											},
-											"edgePosition": 1
+											"edgePosition": 1,
+											"text": "Получено решение о запуске",
+											"width": 172
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -36257,13 +36496,13 @@
 									"font": "Arial;9;0",
 									"parentStyle": false,
 									"head": {
-										"$ref": "LG30_V_59"
+										"$ref": "LG31_Launch_CloseView"
 									},
 									"tail": {
 										"$ref": "LG27_Launch_View_summary"
 									},
 									"lineStyle": 1,
-									"points": "699:574;564:637",
+									"points": "746:574;746:583",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "LG30_L_72"
@@ -37011,6 +37250,232 @@
 										"$ref": "LG27_Launch_Comp_confirm"
 									},
 									"wordWrap": true
+								},
+								{
+									"_type": "UMLActionView",
+									"_id": "LG31_Launch_CloseView",
+									"_parent": {
+										"$ref": "LG26_Launch_Diagram"
+									},
+									"model": {
+										"$ref": "LG31_Launch_CloseAction"
+									},
+									"subViews": [
+										{
+											"_type": "UMLNameCompartmentView",
+											"_id": "LG31_Launch_CloseView_2",
+											"_parent": {
+												"$ref": "LG31_Launch_CloseView"
+											},
+											"model": {
+												"$ref": "LG31_Launch_CloseAction"
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Launch_CloseView_3",
+													"_parent": {
+														"$ref": "LG31_Launch_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"height": 9
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Launch_CloseView_4",
+													"_parent": {
+														"$ref": "LG31_Launch_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"width": 62.74072265625,
+													"height": 9,
+													"text": "(from Система)"
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Launch_CloseView_5",
+													"_parent": {
+														"$ref": "LG31_Launch_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"horizontalAlignment": 1,
+													"wordWrap": true
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Launch_CloseView_6",
+													"_parent": {
+														"$ref": "LG31_Launch_CloseView_2"
+													},
+													"model": {
+														"$ref": "LG31_Launch_CloseAction"
+													},
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;1",
+													"parentStyle": true,
+													"left": 648,
+													"top": 591,
+													"width": 197,
+													"height": 20,
+													"text": "Закрыть окно подтверждения",
+													"verticalAlignment": 3,
+													"wordWrap": true
+												}
+											],
+											"lineColor": "#75161B",
+											"fillColor": "#FFF8BB",
+											"fontColor": "#262020",
+											"font": "Arial;9;0",
+											"parentStyle": true,
+											"left": 643,
+											"top": 584,
+											"width": 207,
+											"height": 21,
+											"stereotypeLabel": {
+												"$ref": "LG31_Launch_CloseView_3"
+											},
+											"nameLabel": {
+												"$ref": "LG31_Launch_CloseView_6"
+											},
+											"namespaceLabel": {
+												"$ref": "LG31_Launch_CloseView_4"
+											},
+											"propertyLabel": {
+												"$ref": "LG31_Launch_CloseView_5"
+											}
+										}
+									],
+									"lineColor": "#75161B",
+									"fillColor": "#FFF8BB",
+									"fontColor": "#262020",
+									"font": "Arial;9;0",
+									"parentStyle": false,
+									"containerChangeable": true,
+									"left": 643,
+									"top": 584,
+									"width": 206,
+									"height": 41,
+									"nameCompartment": {
+										"$ref": "LG31_Launch_CloseView_2"
+									},
+									"wordWrap": true
+								},
+								{
+									"_type": "UMLControlFlowView",
+									"_id": "LG31_Launch_JoinFlowView",
+									"_parent": {
+										"$ref": "LG26_Launch_Diagram"
+									},
+									"model": {
+										"$ref": "LG31_Launch_JoinFlow"
+									},
+									"subViews": [
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Launch_JoinFlowView_Label_1",
+											"_parent": {
+												"$ref": "LG31_Launch_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Launch_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;10;0",
+											"parentStyle": false,
+											"left": 857,
+											"top": 578,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 20,
+											"hostEdge": {
+												"$ref": "LG31_Launch_JoinFlowView"
+											},
+											"edgePosition": 1,
+											"width": 172
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Launch_JoinFlowView_Label_2",
+											"_parent": {
+												"$ref": "LG31_Launch_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Launch_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;9;0",
+											"parentStyle": false,
+											"left": 643,
+											"top": 628,
+											"height": 9,
+											"alpha": 1.5707963267948966,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "LG31_Launch_JoinFlowView"
+											},
+											"edgePosition": 1
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Launch_JoinFlowView_Label_3",
+											"_parent": {
+												"$ref": "LG31_Launch_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Launch_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;9;0",
+											"parentStyle": false,
+											"left": 624,
+											"top": 587,
+											"height": 9,
+											"alpha": -1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "LG31_Launch_JoinFlowView"
+											},
+											"edgePosition": 1
+										}
+									],
+									"lineColor": "#832129",
+									"font": "Arial;9;0",
+									"parentStyle": false,
+									"head": {
+										"$ref": "LG30_V_59"
+									},
+									"tail": {
+										"$ref": "LG31_Launch_CloseView"
+									},
+									"lineStyle": 1,
+									"points": "746:626;746:637",
+									"showVisibility": true,
+									"nameLabel": {
+										"$ref": "LG31_Launch_JoinFlowView_Label_1"
+									},
+									"stereotypeLabel": {
+										"$ref": "LG31_Launch_JoinFlowView_Label_2"
+									},
+									"propertyLabel": {
+										"$ref": "LG31_Launch_JoinFlowView_Label_3"
+									}
 								}
 							]
 						}
@@ -37451,13 +37916,14 @@
 							"_parent": {
 								"$ref": "LG26_Launch_Activity"
 							},
-							"documentation": "Окно подтверждения остаётся видимым до осмысленного ответа пользователя.",
+							"documentation": "Триггер «Получено решение о запуске» возникает только после явного выбора пользователем подтвердить или отменить запуск; до этого окно подтверждения остаётся отображаемым.",
 							"source": {
 								"$ref": "LG26_Launch_N_summary"
 							},
 							"target": {
-								"$ref": "LG30_N_58"
-							}
+								"$ref": "LG31_Launch_CloseAction"
+							},
+							"name": "Получено решение о запуске"
 						},
 						{
 							"_type": "UMLControlFlow",
@@ -37499,6 +37965,20 @@
 							},
 							"target": {
 								"$ref": "LG26_Launch_N_status"
+							}
+						},
+						{
+							"_type": "UMLControlFlow",
+							"_id": "LG31_Launch_JoinFlow",
+							"_parent": {
+								"$ref": "LG26_Launch_Activity"
+							},
+							"documentation": "После действия «Закрыть окно подтверждения» интерфейсная ветвь достигает Join «Выбор запуска завершён» и синхронизируется с пользовательской ветвью перед продолжением процесса.",
+							"source": {
+								"$ref": "LG31_Launch_CloseAction"
+							},
+							"target": {
+								"$ref": "LG30_N_58"
 							}
 						}
 					],
@@ -37648,6 +38128,15 @@
 									},
 									"name": "Завершение",
 									"documentation": "Произошла ошибка генерации, причина зафиксирована."
+								},
+								{
+									"_type": "UMLAction",
+									"_id": "LG31_Launch_CloseAction",
+									"_parent": {
+										"$ref": "LG26_Launch_Lane_1"
+									},
+									"name": "Закрыть окно подтверждения",
+									"documentation": "После получения ответа пользователя система закрывает окно подтверждения запуска. Независимо от выбранного варианта — подтверждение или отмена — интерфейсная ветвь завершается до оценки решения."
 								}
 							]
 						}
@@ -41377,18 +41866,20 @@
 											"model": {
 												"$ref": "LG30_E_94"
 											},
-											"visible": false,
-											"font": "Arial;9;0",
+											"visible": true,
+											"font": "Arial;10;0",
 											"parentStyle": false,
-											"left": 638,
-											"top": 706,
-											"height": 9,
-											"alpha": 1.5707963267948966,
-											"distance": 15,
+											"left": 856,
+											"top": 676,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 20,
 											"hostEdge": {
 												"$ref": "LG30_EV_95"
 											},
-											"edgePosition": 1
+											"edgePosition": 1,
+											"text": "Завершён просмотр различий",
+											"width": 174
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -41439,13 +41930,13 @@
 									"font": "Arial;9;0",
 									"parentStyle": false,
 									"head": {
-										"$ref": "LG30_V_83"
+										"$ref": "LG31_Compare_CloseView"
 									},
 									"tail": {
 										"$ref": "LG27_Compare_View_display"
 									},
 									"lineStyle": 1,
-									"points": "700:666;564:728",
+									"points": "748:666;748:679",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "LG30_L_96"
@@ -41690,6 +42181,238 @@
 										"$ref": "LG27_Compare_Comp_inspect"
 									},
 									"wordWrap": true
+								},
+								{
+									"_type": "UMLActionView",
+									"_id": "LG31_Compare_CloseView",
+									"_parent": {
+										"$ref": "LG26_Compare_Diagram"
+									},
+									"model": {
+										"$ref": "LG31_Compare_CloseAction"
+									},
+									"subViews": [
+										{
+											"_type": "UMLNameCompartmentView",
+											"_id": "LG31_Compare_CloseView_2",
+											"_parent": {
+												"$ref": "LG31_Compare_CloseView"
+											},
+											"model": {
+												"$ref": "LG31_Compare_CloseAction"
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Compare_CloseView_3",
+													"_parent": {
+														"$ref": "LG31_Compare_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"left": 4,
+													"top": 54,
+													"height": 9
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Compare_CloseView_4",
+													"_parent": {
+														"$ref": "LG31_Compare_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"left": 4,
+													"top": 54,
+													"width": 62.74072265625,
+													"height": 9,
+													"text": "(from Система)"
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Compare_CloseView_5",
+													"_parent": {
+														"$ref": "LG31_Compare_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"left": 4,
+													"top": 54,
+													"horizontalAlignment": 1,
+													"wordWrap": true
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Compare_CloseView_6",
+													"_parent": {
+														"$ref": "LG31_Compare_CloseView_2"
+													},
+													"model": {
+														"$ref": "LG31_Compare_CloseAction"
+													},
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;1",
+													"parentStyle": true,
+													"left": 650,
+													"top": 687,
+													"width": 197,
+													"height": 20,
+													"text": "Завершить показ сравнения",
+													"verticalAlignment": 3,
+													"wordWrap": true
+												}
+											],
+											"lineColor": "#75161B",
+											"fillColor": "#FFF8BB",
+											"fontColor": "#262020",
+											"font": "Arial;9;0",
+											"parentStyle": true,
+											"left": 645,
+											"top": 680,
+											"width": 207,
+											"height": 21,
+											"stereotypeLabel": {
+												"$ref": "LG31_Compare_CloseView_3"
+											},
+											"nameLabel": {
+												"$ref": "LG31_Compare_CloseView_6"
+											},
+											"namespaceLabel": {
+												"$ref": "LG31_Compare_CloseView_4"
+											},
+											"propertyLabel": {
+												"$ref": "LG31_Compare_CloseView_5"
+											}
+										}
+									],
+									"lineColor": "#75161B",
+									"fillColor": "#FFF8BB",
+									"fontColor": "#262020",
+									"font": "Arial;9;0",
+									"parentStyle": false,
+									"containerChangeable": true,
+									"left": 645,
+									"top": 680,
+									"width": 206,
+									"height": 41,
+									"nameCompartment": {
+										"$ref": "LG31_Compare_CloseView_2"
+									},
+									"wordWrap": true
+								},
+								{
+									"_type": "UMLControlFlowView",
+									"_id": "LG31_Compare_JoinFlowView",
+									"_parent": {
+										"$ref": "LG26_Compare_Diagram"
+									},
+									"model": {
+										"$ref": "LG31_Compare_JoinFlow"
+									},
+									"subViews": [
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Compare_JoinFlowView_Label_1",
+											"_parent": {
+												"$ref": "LG31_Compare_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Compare_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;10;0",
+											"parentStyle": false,
+											"left": 856,
+											"top": 676,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 20,
+											"hostEdge": {
+												"$ref": "LG31_Compare_JoinFlowView"
+											},
+											"edgePosition": 1,
+											"width": 174
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Compare_JoinFlowView_Label_2",
+											"_parent": {
+												"$ref": "LG31_Compare_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Compare_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;9;0",
+											"parentStyle": false,
+											"left": 644,
+											"top": 720,
+											"height": 9,
+											"alpha": 1.5707963267948966,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "LG31_Compare_JoinFlowView"
+											},
+											"edgePosition": 1
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Compare_JoinFlowView_Label_3",
+											"_parent": {
+												"$ref": "LG31_Compare_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Compare_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;9;0",
+											"parentStyle": false,
+											"left": 625,
+											"top": 679,
+											"height": 9,
+											"alpha": -1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "LG31_Compare_JoinFlowView"
+											},
+											"edgePosition": 1
+										}
+									],
+									"lineColor": "#832129",
+									"font": "Arial;9;0",
+									"parentStyle": false,
+									"head": {
+										"$ref": "LG30_V_83"
+									},
+									"tail": {
+										"$ref": "LG31_Compare_CloseView"
+									},
+									"lineStyle": 1,
+									"points": "748:721;748:728",
+									"showVisibility": true,
+									"nameLabel": {
+										"$ref": "LG31_Compare_JoinFlowView_Label_1"
+									},
+									"stereotypeLabel": {
+										"$ref": "LG31_Compare_JoinFlowView_Label_2"
+									},
+									"propertyLabel": {
+										"$ref": "LG31_Compare_JoinFlowView_Label_3"
+									}
 								}
 							]
 						}
@@ -42096,13 +42819,14 @@
 							"_parent": {
 								"$ref": "LG26_Compare_Activity"
 							},
-							"documentation": "Система продолжает показывать карту и таблицу, пока пользователь изучает различия.",
+							"documentation": "Триггерное событие «Завершён просмотр различий» возникает после окончания пользователем основного просмотра картографических и табличных различий; до этого представления остаются видимыми.",
 							"source": {
 								"$ref": "LG26_Compare_N_display"
 							},
 							"target": {
-								"$ref": "LG30_N_82"
-							}
+								"$ref": "LG31_Compare_CloseAction"
+							},
+							"name": "Завершён просмотр различий"
 						},
 						{
 							"_type": "UMLControlFlow",
@@ -42116,6 +42840,20 @@
 							},
 							"target": {
 								"$ref": "LG26_Compare_N_more"
+							}
+						},
+						{
+							"_type": "UMLControlFlow",
+							"_id": "LG31_Compare_JoinFlow",
+							"_parent": {
+								"$ref": "LG26_Compare_Activity"
+							},
+							"documentation": "После действия «Завершить показ сравнения» интерфейсная ветвь достигает Join «Основной просмотр завершён» и синхронизируется с пользовательской ветвью перед продолжением процесса.",
+							"source": {
+								"$ref": "LG31_Compare_CloseAction"
+							},
+							"target": {
+								"$ref": "LG30_N_82"
 							}
 						}
 					],
@@ -42238,6 +42976,15 @@
 									},
 									"name": "Подготовить картографические слои",
 									"documentation": "Слои выбранных сценариев приводятся к общему представлению для сопоставления на карте."
+								},
+								{
+									"_type": "UMLAction",
+									"_id": "LG31_Compare_CloseAction",
+									"_parent": {
+										"$ref": "LG26_Compare_Lane_1"
+									},
+									"name": "Завершить показ сравнения",
+									"documentation": "После завершения пользователем основного просмотра система прекращает длительное отображение карты и таблицы сравнения. Дополнительные сведения при необходимости запрашиваются на следующем шаге."
 								}
 							]
 						}
@@ -43115,8 +43862,8 @@
 											},
 											"font": "Arial;13;0",
 											"parentStyle": false,
-											"left": 896,
-											"top": 512,
+											"left": 807,
+											"top": 496,
 											"width": 76.29248046875,
 											"height": 13,
 											"alpha": 3.9626898373098856,
@@ -43182,7 +43929,7 @@
 										"$ref": "LG27_Export_View_compatible"
 									},
 									"lineStyle": 1,
-									"points": "760:495;882:495;880:576;776:576;777:589",
+									"points": "760:495;800:495;800:575;776:575;776:589",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAGh6cIFXCnNvmU="
@@ -46158,18 +46905,20 @@
 											"model": {
 												"$ref": "LG30_E_118"
 											},
-											"visible": false,
-											"font": "Arial;9;0",
+											"visible": true,
+											"font": "Arial;10;0",
 											"parentStyle": false,
-											"left": 1030,
-											"top": 414,
-											"height": 9,
-											"alpha": 1.5707963267948966,
-											"distance": 15,
+											"left": 834,
+											"top": 277,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 20,
 											"hostEdge": {
 												"$ref": "LG30_EV_119"
 											},
-											"edgePosition": 1
+											"edgePosition": 1,
+											"text": "Вызвано закрытие формы экспорта",
+											"width": 206
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -46220,13 +46969,13 @@
 									"font": "Arial;9;0",
 									"parentStyle": false,
 									"head": {
-										"$ref": "LG30_V_107"
+										"$ref": "LG31_Export_CloseView"
 									},
 									"tail": {
 										"$ref": "LG27_Export_View_formats"
 									},
 									"lineStyle": 1,
-									"points": "850:249;1015:249;1015:590;946:591",
+									"points": "850:249;1024:249;1024:547;1011:547",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "LG30_L_120"
@@ -46471,6 +47220,232 @@
 										"$ref": "LG27_Export_Comp_warn"
 									},
 									"wordWrap": true
+								},
+								{
+									"_type": "UMLActionView",
+									"_id": "LG31_Export_CloseView",
+									"_parent": {
+										"$ref": "LG26_Export_Diagram"
+									},
+									"model": {
+										"$ref": "LG31_Export_CloseAction"
+									},
+									"subViews": [
+										{
+											"_type": "UMLNameCompartmentView",
+											"_id": "LG31_Export_CloseView_2",
+											"_parent": {
+												"$ref": "LG31_Export_CloseView"
+											},
+											"model": {
+												"$ref": "LG31_Export_CloseAction"
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Export_CloseView_3",
+													"_parent": {
+														"$ref": "LG31_Export_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"height": 9
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Export_CloseView_4",
+													"_parent": {
+														"$ref": "LG31_Export_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"width": 62.74072265625,
+													"height": 9,
+													"text": "(from Система)"
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Export_CloseView_5",
+													"_parent": {
+														"$ref": "LG31_Export_CloseView_2"
+													},
+													"visible": false,
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;0",
+													"parentStyle": true,
+													"horizontalAlignment": 1,
+													"wordWrap": true
+												},
+												{
+													"_type": "LabelView",
+													"_id": "LG31_Export_CloseView_6",
+													"_parent": {
+														"$ref": "LG31_Export_CloseView_2"
+													},
+													"model": {
+														"$ref": "LG31_Export_CloseAction"
+													},
+													"lineColor": "#75161B",
+													"fillColor": "#FFF8BB",
+													"fontColor": "#262020",
+													"font": "Arial;9;1",
+													"parentStyle": true,
+													"left": 835,
+													"top": 534,
+													"width": 171,
+													"height": 20,
+													"text": "Закрыть форму экспорта",
+													"verticalAlignment": 3,
+													"wordWrap": true
+												}
+											],
+											"lineColor": "#75161B",
+											"fillColor": "#FFF8BB",
+											"fontColor": "#262020",
+											"font": "Arial;9;0",
+											"parentStyle": true,
+											"left": 830,
+											"top": 527,
+											"width": 181,
+											"height": 21,
+											"stereotypeLabel": {
+												"$ref": "LG31_Export_CloseView_3"
+											},
+											"nameLabel": {
+												"$ref": "LG31_Export_CloseView_6"
+											},
+											"namespaceLabel": {
+												"$ref": "LG31_Export_CloseView_4"
+											},
+											"propertyLabel": {
+												"$ref": "LG31_Export_CloseView_5"
+											}
+										}
+									],
+									"lineColor": "#75161B",
+									"fillColor": "#FFF8BB",
+									"fontColor": "#262020",
+									"font": "Arial;9;0",
+									"parentStyle": false,
+									"containerChangeable": true,
+									"left": 830,
+									"top": 527,
+									"width": 180,
+									"height": 41,
+									"nameCompartment": {
+										"$ref": "LG31_Export_CloseView_2"
+									},
+									"wordWrap": true
+								},
+								{
+									"_type": "UMLControlFlowView",
+									"_id": "LG31_Export_JoinFlowView",
+									"_parent": {
+										"$ref": "LG26_Export_Diagram"
+									},
+									"model": {
+										"$ref": "LG31_Export_JoinFlow"
+									},
+									"subViews": [
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Export_JoinFlowView_Label_1",
+											"_parent": {
+												"$ref": "LG31_Export_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Export_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;10;0",
+											"parentStyle": false,
+											"left": 834,
+											"top": 277,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 20,
+											"hostEdge": {
+												"$ref": "LG31_Export_JoinFlowView"
+											},
+											"edgePosition": 1,
+											"width": 206
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Export_JoinFlowView_Label_2",
+											"_parent": {
+												"$ref": "LG31_Export_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Export_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;9;0",
+											"parentStyle": false,
+											"left": 1045,
+											"top": 414,
+											"height": 9,
+											"alpha": 1.5707963267948966,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "LG31_Export_JoinFlowView"
+											},
+											"edgePosition": 1
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "LG31_Export_JoinFlowView_Label_3",
+											"_parent": {
+												"$ref": "LG31_Export_JoinFlowView"
+											},
+											"model": {
+												"$ref": "LG31_Export_JoinFlow"
+											},
+											"visible": false,
+											"font": "Arial;9;0",
+											"parentStyle": false,
+											"left": 1000,
+											"top": 415,
+											"height": 9,
+											"alpha": -1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "LG31_Export_JoinFlowView"
+											},
+											"edgePosition": 1
+										}
+									],
+									"lineColor": "#832129",
+									"font": "Arial;9;0",
+									"parentStyle": false,
+									"head": {
+										"$ref": "LG30_V_107"
+									},
+									"tail": {
+										"$ref": "LG31_Export_CloseView"
+									},
+									"lineStyle": 1,
+									"points": "920:568;920:589",
+									"showVisibility": true,
+									"nameLabel": {
+										"$ref": "LG31_Export_JoinFlowView_Label_1"
+									},
+									"stereotypeLabel": {
+										"$ref": "LG31_Export_JoinFlowView_Label_2"
+									},
+									"propertyLabel": {
+										"$ref": "LG31_Export_JoinFlowView_Label_3"
+									}
 								}
 							]
 						}
@@ -46677,7 +47652,7 @@
 							"_parent": {
 								"$ref": "LG26_Export_Activity"
 							},
-							"documentation": "Поток управления «Формат совместим?» → «Настройки экспорта приняты». Переход выполняется при условии «совместим».",
+							"documentation": "При [совместим] пользовательский поток передаётся к Join, а интерфейсная ветвь получает событие закрытия формы экспорта. Продолжение возможно только после завершения обеих ветвей.",
 							"source": {
 								"$ref": "LG26_Export_N_compatible"
 							},
@@ -46890,13 +47865,14 @@
 							"_parent": {
 								"$ref": "LG26_Export_Activity"
 							},
-							"documentation": "Интерфейс сохраняется во время повторного ввода и закрывается при принятии валидных настроек.",
+							"documentation": "Триггерное событие «Вызвано закрытие формы экспорта» возникает после успешной проверки совместимости и инициирования закрытия формы; повторный выбор при ошибке не прекращает её отображение.",
 							"source": {
 								"$ref": "LG26_Export_N_formats"
 							},
 							"target": {
-								"$ref": "LG30_N_106"
-							}
+								"$ref": "LG31_Export_CloseAction"
+							},
+							"name": "Вызвано закрытие формы экспорта"
 						},
 						{
 							"_type": "UMLControlFlow",
@@ -46910,6 +47886,20 @@
 							},
 							"target": {
 								"$ref": "LG26_Export_N_collect"
+							}
+						},
+						{
+							"_type": "UMLControlFlow",
+							"_id": "LG31_Export_JoinFlow",
+							"_parent": {
+								"$ref": "LG26_Export_Activity"
+							},
+							"documentation": "После действия «Закрыть форму экспорта» интерфейсная ветвь достигает Join «Настройки экспорта приняты» и синхронизируется с пользовательской ветвью перед продолжением процесса.",
+							"source": {
+								"$ref": "LG31_Export_CloseAction"
+							},
+							"target": {
+								"$ref": "LG30_N_106"
 							}
 						}
 					],
@@ -47041,6 +48031,15 @@
 									},
 									"name": "Показать ограничения формата",
 									"documentation": "Элемент «Показать ограничения формата» алгоритма «06 — Экспорт результатов»."
+								},
+								{
+									"_type": "UMLAction",
+									"_id": "LG31_Export_CloseAction",
+									"_parent": {
+										"$ref": "LG26_Export_Lane_1"
+									},
+									"name": "Закрыть форму экспорта",
+									"documentation": "При подтверждении совместимого набора форматов, слоёв и метрик система закрывает окно экспорта. При несовместимости выбранного состава окно остаётся открытым для повторного выбора."
 								}
 							]
 						}
